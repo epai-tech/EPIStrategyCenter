@@ -1,0 +1,3701 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Services</name>
+    </assembly>
+    <members>
+        <member name="M:EPI.Services.AnalyzeService.#ctor(System.Collections.Generic.List{EPI.Model.BarData},System.Collections.Generic.List{EPI.Model.Contracts},System.Collections.Generic.List{EPI.Model.RspTrades})">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:EPI.Services.AnalyzeService.DoSettle(System.String,System.String,System.DateTime,System.Collections.Generic.List{EPI.Model.AnalyzeDay}@,System.Collections.Generic.List{EPI.Model.AnalyzeObject}@)">
+            <summary>
+            结算：输入需要结算的用户名，策略名，合约及结算日期
+            </summary>
+            <param name="UserName"></param>
+            <param name="StrategyId"></param>
+            <param name="SettleDay"></param>
+            <param name="adList"></param>
+            <param name="aoList"></param>
+        </member>
+        <member name="M:EPI.Services.AnalyzeService.openTrade(System.String,System.String,System.String,System.Double,System.Double,EPI.Model.EnumSide,System.DateTime,System.String,System.Double,System.Int32,System.Double,System.Double)">
+            <summary>
+            开仓
+            </summary>
+        </member>
+        <member name="M:EPI.Services.AnalyzeService.closeTrade(EPI.Model.AnalyzeObject,System.Int32,System.DateTime,System.String,System.Double,System.Double,System.Double)">
+            <summary>
+            平仓
+            </summary>
+        </member>
+        <member name="M:EPI.Services.AnalyzeService.Calculate(System.String,System.String)">
+            <summary>
+            结算表的计算修改
+            </summary>
+        </member>
+        <member name="M:EPI.Services.AnalyzeService.AnalyzeTrade(EPI.Model.AnalyzeObject)">
+            <summary>
+            资金及交易指标的计算修改
+            </summary>
+        </member>
+        <member name="M:EPI.Services.AnalyzeService.AnalyzeDayCapital(EPI.Model.AnalyzeDay)">
+            <summary>
+            日资金曲线指标的计算修改
+            </summary>
+            <param name="analyzeLastDay"></param>
+        </member>
+        <member name="E:EPI.Services.BaseService.OnProgressEvent">
+            <summary>
+            处理过程事件
+            </summary>
+        </member>
+        <member name="E:EPI.Services.BaseService.OnRtnLogEvent">
+            <summary>
+            日志事件
+            </summary>
+        </member>
+        <member name="E:EPI.Services.BaseService.OnRtnErrorEvent">
+            <summary>
+            错误事件
+            </summary>
+        </member>
+        <member name="M:EPI.Services.BaseService.Progress(EPI.Model.EnumProgressType,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            进度回馈
+            </summary>
+            <param name="type"></param>
+            <param name="value"></param>
+            <param name="total"></param>
+            <param name="isLast"></param>
+        </member>
+        <member name="M:EPI.Services.BaseService.Log(System.String,System.Boolean)">
+            <summary>
+            日志
+            </summary>
+            <param name="msg">消息</param>
+            <param name="isError">是否错误消息</param>
+        </member>
+        <member name="M:EPI.Services.BaseService.Log(System.String,System.Exception)">
+            <summary>
+            日志
+            </summary>
+            <param name="title">标题</param>
+            <param name="ex">异常</param>
+        </member>
+        <member name="T:EPI.Services.ContractService.LoadedContractsDelegate">
+            <summary>
+            加载完所有合约
+            </summary>
+        </member>
+        <member name="M:EPI.Services.ContractService.LoadTradedContracts">
+            <summary>
+            获取交易合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.ContractService.GetCustomContracts(System.String[],System.Boolean)">
+            <summary>
+            获取用户合约
+            </summary>
+            <param name="contracts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.ContractService.GetContractTypes">
+            <summary>
+            获取合约类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.ContractService.GetMainContracts">
+            <summary>
+            获取主力合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.ContractService.GetExchanges">
+            <summary>
+            获取交易所
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.ContractService.GetTimeTpDetails(System.Boolean)">
+            <summary>
+            获取时间模版明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.ContractService.GetTimeTemplates">
+            <summary>
+            获取时间模版明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.JService.ExportToCsv``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            导出到Csv
+            </summary>
+            <param name="fullName"></param>
+            <param name="recordList"></param>
+        </member>
+        <member name="T:EPI.Services.MDService">
+            <summary>
+            市场数据
+            </summary>
+        </member>
+        <member name="M:EPI.Services.MDService.CreateTempMDFile(System.String,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,System.String)">
+            <summary>
+            创建临时数据文件
+            </summary>
+            <param name="fileServerName">文件服务器名称</param>
+            <param name="contracts">合约清单</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="cycle">周期</param>
+            <returns>文件信息</returns>
+        </member>
+        <member name="M:EPI.Services.MDService.CreateMDFile(System.String,System.Collections.Generic.List{System.String},System.String,System.String,System.Int32)">
+            <summary>
+            创建数据文件
+            </summary>
+            <param name="fileServerName">文件服务器名称</param>
+            <param name="contractTypes">合约类别清单</param>
+            <param name="tradeDay">交易日</param>
+            <param name="cycle">周期</param>
+            <param name="mainType">主力类型（1-按成交量，2-按持仓量）</param>
+        </member>
+        <member name="M:EPI.Services.MDService.ZipDBFile(System.String,System.String)">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="destFile"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindBar(System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            获取Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="time">时间</param>
+            <param name="identity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllBars(System.String,System.String,System.Int32,System.Boolean,System.String)">
+            <summary>
+            查询Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="takeNumber">获取条数</param>
+            <param name="isFuzzy">是否模糊查询</param>
+            <param name="beforeTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllDays(System.String,System.Int32,System.Boolean,System.String)">
+            <summary>
+            查询日线数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="takeNumber">获取条数</param>
+            <param name="isFuzzy">是否模糊查询</param>
+            <param name="beforeTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllBars(System.String,System.String,System.DateTime,System.DateTime,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            查询Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isFuzzy">是否模糊查询</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isDesc">是否倒序</param>        
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.GetLastTwoTradeDays(System.DateTime@,System.DateTime@)">
+            <summary>
+            获取倒数2个交易日
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllBars(System.String,System.String,System.DateTime,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            查询Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（左包含）</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isDesc">是否倒序</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllBars(System.String,System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            查询Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isDesc">是否倒序</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllBars(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            查询所有Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="condition">条件</param>
+            <param name="commandParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllDays(System.String[],System.DateTime,System.DateTime,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            查询日线数据
+            </summary>
+            <param name="contracts">合约清单</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="isFuzzy">是否模糊查询</param>
+            <param name="isDesc">是否倒序</param>
+            <param name="isAll">是否所有</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllFutureDays(System.DateTime,System.DateTime)">
+            <summary>
+            获取日线数据（结算用）
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllDays(System.String[],System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            查询日线
+            </summary>
+            <param name="codes">合约代码</param>
+            <param name="start">开始日期（包含）</param>
+            <param name="end">结束日期（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindAllDays(System.String,System.String)">
+            <summary>
+            获取日线数据
+            </summary>
+            <param name="day">日期（yyyy-MM-dd 留空为最新一天数据）</param>
+            <param name="exchange">交易所</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.FindTotalDays">
+            <summary>
+            查询所有日线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.SetPreCloseToDayData(System.String)">
+            <summary>
+            设置前收盘至日线
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.GetLastBarData(System.String,System.String,System.String)">
+            <summary>
+            获取最新Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="startTime">开始时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.GetPreTradeDate">
+            <summary>
+            获取前一交易日
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.SaveDayData(EPI.Model.BarData)">
+            <summary>
+            保存日线数据（存在修改，不存在添加）
+            </summary>
+            <param name="barData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.GetBarsCount(System.String,System.String,System.String)">
+            <summary>
+            获取Bar数量
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="tradeDay">交易日(yyyyMMdd)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.BatchAdd(System.String,System.String,System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            批量添加Bar数据
+            </summary>
+            <param name="contract"></param>
+            <param name="cycle"></param>
+            <param name="barList"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.BatchAdd(System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            批量添加日线数据
+            </summary>
+            <param name="barList"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.UpdateVolMainFlagToDayData(System.String,System.DateTime,System.String,System.Double)">
+            <summary>
+            更新日线成交量主力标记
+            </summary>
+            <param name="contract">合约</param>
+            <param name="day">日期</param>
+            <param name="flag">标记</param>
+            <param name="offset">偏移量</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.ResetVolMainFlagToDayData(System.DateTime)">
+            <summary>
+            重置日线成交量主力标记
+            </summary>
+            <param name="startDay">开始日期（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.UpdateOpenIntMainFlagToDayData(System.String,System.DateTime,System.String,System.Double)">
+            <summary>
+            更新日线主力标记
+            </summary>
+            <param name="contract">合约</param>
+            <param name="day">日期</param>
+            <param name="flag">标记</param>
+            <param name="offset">偏移量</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.ResetOpenIntMainFlagToDayData(System.DateTime)">
+            <summary>
+            重置日线主力标记
+            </summary>
+            <param name="startDay">开始日期（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.UpdateSeriesFlagToDayData(System.String,System.DateTime,System.String)">
+            <summary>
+            更新日线连续标记
+            </summary>
+            <param name="contract">合约</param>
+            <param name="day">日期</param>
+            <param name="seq">标记</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.ResetSeriesFlagToDayData(System.DateTime)">
+            <summary>
+            重置日线连续标记
+            </summary>
+            <param name="startDay">开始日期（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.Delete(System.String,System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            删除Bar
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.DeleteDayDatas(System.DateTime)">
+            <summary>
+            删除日线数据
+            </summary>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.ClearFlags(System.DateTime)">
+            <summary>
+            清除标记
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.DeleteDirty(System.String,System.String,System.String)">
+            <summary>
+            删除脏数据
+            </summary>
+            <param name="contractType"></param>
+            <param name="cycle"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.DeleteSPDirty(System.String,System.String,System.DateTime)">
+            <summary>
+            删除脏数据
+            </summary>
+            <param name="contractType"></param>
+            <param name="cycle"></param>
+            <param name="startTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.BarOracleService.AutoCheckTable(System.String)">
+            <summary>
+            检查表是否存在，不存在则自动创建
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.ResetStatus">
+            <summary>
+            重置合约状态为0
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetSysCustomContracts">
+            <summary>
+            获取系统自定义合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.UpdateSysCustomContract(System.String,System.String,System.String)">
+            <summary>
+            更新系统自定义合约主力
+            </summary>
+            <param name="code"></param>
+            <param name="subContractStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.AddContract(EPI.Model.Contracts)">
+            <summary>
+            添加合约
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.UpdateRTDContract">
+            <summary>
+            更新实时数据合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.AddContractType(EPI.Model.ContractTypes)">
+            <summary>
+            添加合约类别
+            </summary>
+            <param name="contractType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.ExistsContract(System.String)">
+            <summary>
+            合约是否存在
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.ExistsContractType(System.String,System.String)">
+            <summary>
+            合约类别是否存在
+            </summary>
+            <param name="contractType"></param>
+            <param name="exchange"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.ResetSPContracts">
+            <summary>
+            重置SP合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.UpdateStatus(System.String,System.Boolean)">
+            <summary>
+            更新合约状态
+            </summary>
+            <param name="contract"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetContract(System.String)">
+            <summary>
+            获取合约信息
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetMainContractsFromRedis">
+            <summary>
+            获取主力合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetContractTypes">
+            <summary>
+            获取合约类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetContractsByType(System.String)">
+            <summary>
+            根据合约类别获取合约
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetContractType(System.String)">
+            <summary>
+            获取合约类别
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetAllContractTypes">
+            <summary>
+            获取所有合约类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.UpdateVolMainFlagToCode(System.String,System.String,System.String,System.Double,System.Double)">
+            <summary>
+            更新成交量主力标记
+            </summary>
+            <param name="code">合约类别</param>
+            <param name="mainContract">主力合约</param>
+            <param name="closePrice">收盘价</param>
+            <param name="offset">偏移量</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.UpdateOpenIntMainFlagToCode(System.String,System.String,System.String,System.Double,System.Double)">
+            <summary>
+            更新持仓量主力标记
+            </summary>
+            <param name="code">合约类别</param>
+            <param name="mainContract">主力合约</param>
+            <param name="closePrice">收盘价</param>
+            <param name="offset">偏移量</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.UpdateSpotPrice(System.String,System.String,System.Double)">
+            <summary>
+            更新现货价格
+            </summary>
+            <param name="code"></param>
+            <param name="spotPrice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetExchanges">
+            <summary>
+            获取交易所信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetCustomContracts(System.String[])">
+            <summary>
+            获取自定义合约
+            </summary>
+            <param name="contracts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetTradeContracts(System.String)">
+            <summary>
+            获取交易合约
+            </summary>
+            <param name="exchange">交易所</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetAllContracts">
+            <summary>
+            获取交易合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetTradeContracts">
+            <summary>
+            获取交易合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetFuturesContracts">
+            <summary>
+            获取所有期货交易合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetFuturesTradeContracts">
+            <summary>
+            获取期货交易合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetMainContracts">
+            <summary>
+            获取主力(成交量)合约(真实交易日)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetMainContractFromRedis(System.String)">
+            <summary>
+            从Redis获取主力合约
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetTimeTpDetails">
+            <summary>
+            获取时间模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetTimeTpDetails(System.Int32)">
+            <summary>
+            获取时间模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetTimeTemplates">
+            <summary>
+            获取时间模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.ExistSpotData(EPI.Model.SpotDatas)">
+            <summary>
+            存在现货数据
+            </summary>
+            <param name="spotData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.AddSpotData(EPI.Model.SpotDatas)">
+            <summary>
+            添加现货数据
+            </summary>
+            <param name="spotData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.DeleteSpotDatas(System.DateTime)">
+            <summary>
+            删除现货数据
+            </summary>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.ContractOracleService.GetSpotDatas(System.DateTime)">
+            <summary>
+            获取现货数据
+            </summary>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.SaveFastTest(EPI.Model.FastTests)">
+            <summary>
+            保存回测
+            </summary>
+            <param name="ft"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.DelFastTest(EPI.Model.FastTests)">
+            <summary>
+            删除回测
+            </summary>
+            <param name="ft"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.AddFTDetail1(EPI.Model.FTDetails)">
+            <summary>
+            添加回测明细
+            </summary>
+            <param name="dtDetail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.BatchAddDetails(System.Collections.Generic.List{EPI.Model.FTDetails})">
+            <summary>
+            批量添加回测明细
+            </summary>
+            <param name="deDetails"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.BatchAddReport(System.Collections.Generic.List{EPI.Model.FTReports})">
+            <summary>
+            批量添加报告
+            </summary>
+            <param name="reports"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.BatchAddRptDetails(System.Collections.Generic.List{EPI.Model.FTRptDetails})">
+            <summary>
+            批量添加报告明细
+            </summary>
+            <param name="rptDetails"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.AddFTReport1(EPI.Model.FTReports)">
+            <summary>
+            添加回测报告
+            </summary>
+            <param name="report"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.FastTestOracleService.AddFTRptDetail1(EPI.Model.FTRptDetails)">
+            <summary>
+            添加报表明细
+            </summary>
+            <param name="detail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindOrder(System.String,System.String)">
+            <summary>
+            查找订单
+            </summary>
+            <param name="clientOrderId"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindAllUserOrders(System.String,System.String)">
+            <summary>
+            查询所有用户订单
+            </summary>
+            <param name="client"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.SaveOrder(EPI.Model.Orders)">
+            <summary>
+            保存订单
+            </summary>
+            <param name="order"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindRspOrder(System.String,System.String)">
+            <summary>
+            查找订单回报
+            </summary>
+            <param name="clientOrderId"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.SaveRspOrder(EPI.Model.RspOrders)">
+            <summary>
+            保存订单回报
+            </summary>
+            <param name="rspOrder"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindRspTrade(System.String,System.String,System.String)">
+            <summary>
+            查找成交回报
+            </summary>
+            <param name="clientOrderId"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.SaveRspTrade(EPI.Model.RspTrades)">
+            <summary>
+            保存成交回报
+            </summary>
+            <param name="rspTrade"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindAllRspTrades(System.String,System.String)">
+            <summary>
+            查询成交回报
+            </summary>
+            <param name="client"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindAllSettles(System.String,System.String)">
+            <summary>
+            查询结算信息
+            </summary>
+            <param name="client">用户</param>
+            <param name="tradeDay">当前交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindAllRspOrders(System.String,System.String)">
+            <summary>
+            查询委托回报
+            </summary>
+            <param name="client"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindGTCOrders(System.String,System.String)">
+            <summary>
+            查询GTC订单
+            </summary>
+            <param name="client"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.CancelPartTradedGTCOrders">
+            <summary>
+            撤销部成GTC单
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.ResetGTCRef(System.String)">
+            <summary>
+            重置GTC Ref
+            </summary>
+            <param name="tradeDay"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.UpdateGTCValidDay">
+            <summary>
+            更新GTC有效时间
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindAllRspTrades(System.DateTime)">
+            <summary>
+            查询所有成交回报
+            </summary>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.FindAllRspOrders(System.DateTime)">
+            <summary>
+            查询所有订单委托
+            </summary>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.GetSettles(System.DateTime)">
+            <summary>
+            获取结算数据
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.BatchAddSettles(System.Collections.Generic.List{EPI.Model.Settles})">
+            <summary>
+            批量添加结算记录
+            </summary>
+            <param name="settles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.DeleteSettles(System.DateTime)">
+            <summary>
+            删除结算数据
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.OrderOracleService.GetSuConditions(System.String)">
+            <summary>
+            获取超级条件单
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.RiskOracleService.FindAllRiskConditions">
+            <summary>
+            查询所有风控条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindStrategyDetail(System.String)">
+            <summary>
+            查询策略明细
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindAllStrategies">
+            <summary>
+            查询所有策略
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindAllStrategyTypes">
+            <summary>
+            查询所有策略类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindStrategyNames(System.String,System.Int32)">
+            <summary>
+            获取策略名
+            </summary>
+            <param name="client"></param>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindStrategyGroups(System.String,System.Int32)">
+            <summary>
+            获取策略组
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindStrategyGroupDetails(System.String,System.String)">
+            <summary>
+            获取策略组明细
+            </summary>
+            <param name="client"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindTraceNames(System.String,System.Int32)">
+            <summary>
+            获取跟单名
+            </summary>
+            <param name="client"></param>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindTraceDetails(System.String,System.String)">
+            <summary>
+            获取跟单名
+            </summary>
+            <param name="client"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindAllStrategies(System.String)">
+            <summary>
+            查询所有策略
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindAllStrategyDetails(System.String)">
+            <summary>
+            查询策略明细
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.ExistsStrategyDetail(System.String,System.String)">
+            <summary>
+            是否存在策略明细
+            </summary>
+            <param name="userStrategyName"></param>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.AddStrategy(EPI.Model.Strategies)">
+            <summary>
+            添加策略
+            </summary>
+            <param name="strategy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.ResetStrategyStatus">
+            <summary>
+            重置策略状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.ResetStrategyStatus(System.String)">
+            <summary>
+            重置策略状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.AddStrategyDetail(EPI.Model.StrategyDetails)">
+            <summary>
+            添加策略明细
+            </summary>
+            <param name="strategyDetail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.DeleteStrategyDetail(System.String)">
+            <summary>
+            删除策略明细
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.UpdateStrategyDetail(EPI.Model.StrategyDetails)">
+            <summary>
+            更新策略明细
+            </summary>
+            <param name="strategyDetail"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.UpdateStrategyDetail(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            更新策略明细
+            </summary>
+            <param name="id"></param>
+            <param name="strategyId"></param>
+            <param name="userStrategyName"></param>
+            <param name="userParams"></param>
+            <param name="subStrategies"></param>
+            <param name="isAuto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindFastTest(System.String)">
+            <summary>
+            查找快速回测
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.ResetStrategy(System.String,System.String)">
+            <summary>
+            重置策略
+            </summary>
+            <param name="strategyName"></param>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.FindStrategy(System.String,System.String,System.String)">
+            <summary>
+            查询策略
+            </summary>
+            <param name="name"></param>
+            <param name="version"></param>
+            <param name="publisher"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.AddStrategy(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            更新策略
+            </summary>
+            <param name="id"></param>
+            <param name="publisher"></param>
+            <param name="name"></param>
+            <param name="zhName"></param>
+            <param name="typeCode"></param>
+            <param name="defaultSetting"></param>
+            <param name="defaultParam"></param>
+            <param name="paramDesc"></param>
+            <param name="isOpenedChannel"></param>
+            <param name="desc"></param>
+            <param name="isPublic"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.UpdateStrategy(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            更新策略
+            </summary>
+            <param name="id"></param>
+            <param name="zhName"></param>
+            <param name="typeCode"></param>
+            <param name="defaultSetting"></param>
+            <param name="defaultParam"></param>
+            <param name="paramDesc"></param>
+            <param name="isOpenedChannel"></param>
+            <param name="desc"></param>
+            <param name="isPublic"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.DelStrategy(System.String)">
+            <summary>
+            删除策略
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.UpdateStrategyCode(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新策略代码
+            </summary>
+            <param name="id"></param>
+            <param name="defaultParam"></param>
+            <param name="defaultSetting"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.SaveStrategy(EPI.Model.Strategies)">
+            <summary>
+            保存策略
+            </summary>
+            <param name="strategy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.DeleteStrategy(System.String,System.String,System.String)">
+            <summary>
+            删除策略
+            </summary>
+            <param name="name"></param>
+            <param name="version"></param>
+            <param name="publisher"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.StrategyOracleService.SaveUserFields(System.String,System.String,System.String)">
+            <summary>
+            保存用户字段
+            </summary>
+            <param name="usrFields"></param>
+            <param name="strategyName"></param>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.FindAllTicks(System.String,System.DateTime,System.DateTime,System.String,System.Boolean)">
+            <summary>
+            查询Tick数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isDesc">是否倒序</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.FindAllTicks(System.String,System.DateTime,System.String,System.Boolean)">
+            <summary>
+            查询Tick数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isDesc">是否倒序</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.FindAllTicks(System.String,System.String,System.Boolean)">
+            <summary>
+            查询Tick数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isDesc">是否倒序</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.FindLastTick(System.String,System.DateTime)">
+            <summary>
+            查找最新一条数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="day">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.GetTicksCount(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            获取Tick数量
+            </summary>
+            <param name="contract">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.GetRealTimeDatas">
+            <summary>
+            获取实时Tick数据
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.ReaderTickDatas(System.String,System.DateTime,System.DateTime,System.Action{EPI.Model.TickData,System.Int32,System.Boolean})">
+            <summary>
+            读取Tick数据
+            </summary>
+            <param name="contracts"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="readerFun"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.GetRealTimeData(System.String)">
+            <summary>
+            获取实时Tick数据
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.GetOpenPrice(System.String,System.String)">
+            <summary>
+            获取开盘价
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tradeDay">交易日(yyyyMMdd)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.GetCFFEXSettleStartData(System.String,System.String)">
+            <summary>
+            获取中金所结算开始数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.BatchAdd(System.String,System.Collections.Generic.List{EPI.Model.TickData})">
+            <summary>
+            批量添加
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tickList">数据</param>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.GetMaxTime(System.String,System.String)">
+            <summary>
+            获取最大时间
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.Delete(System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            删除Tick
+            </summary>
+            <param name="contract">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.DeleteDirty(System.String,System.String)">
+            <summary>
+            删除脏数据
+            </summary>
+            <param name="contractType"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.DeleteSPDirty(System.String,System.DateTime)">
+            <summary>
+            删除SP脏数据
+            </summary>
+            <param name="contractType"></param>
+            <param name="startTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.CreateTickOracle">
+            <summary>
+            创建TickOracle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.TickOracleService.AutoCheckTable(System.String)">
+            <summary>
+            检查表是否存在，不存在则自动创建
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.CheckLogin(System.String,System.String)">
+            <summary>
+            检查登录
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetUserTradeTPDetails(System.String[],System.String)">
+            <summary>
+            获取用户交易模版明细
+            </summary>
+            <param name="tpCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetUserTradeTemplates">
+            <summary>
+            获取所有用户交易模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAllAudits(System.String[],System.String[],System.DateTime,System.DateTime)">
+            <summary>
+            查询所有审核信息
+            </summary>
+            <param name="userNames"></param>
+            <param name="funTypes"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAudit(System.Int32)">
+            <summary>
+            查询审核信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FinishedAudit(System.Int32)">
+            <summary>
+            完成审核
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.AddAudit(EPI.Model.Audits)">
+            <summary>
+            添加审核
+            </summary>
+            <param name="audit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.UpdateAudit(EPI.Model.Audits)">
+            <summary>
+            更新审核
+            </summary>
+            <param name="audit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DeleteAudit(System.Int32)">
+            <summary>
+            删除审核
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetUserSkins(System.Int32)">
+            <summary>
+            获取用户皮肤
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GenerateUserKey(System.String,System.String)">
+            <summary>
+            生成用户密钥
+            </summary>
+            <param name="userName"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.UploadUserLayouts(System.Int32,System.String[],System.Collections.Generic.List{EPI.Model.UserLayouts})">
+            <summary>
+            上传用户配置
+            </summary>
+            <param name="userLayouts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DownloadUserLayouts(System.Int32,System.String[])">
+            <summary>
+            下载用户配置
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetAllNoGroupContractList">
+            <summary>
+            获取所有组合合约
+            </summary>
+            <param name="contract"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.UploadCustomContracts(System.Collections.Generic.List{EPI.Model.CustomContracts})">
+            <summary>
+            上传自定义合约
+            </summary>
+            <param name="ccList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.UpdateCustomContract(EPI.Model.CustomContracts)">
+            <summary>
+            更新自定义合约
+            </summary>
+            <param name="cc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DownloadCustomContracts(System.String)">
+            <summary>
+            下载自定义合约
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindCustomContract(System.String,System.String)">
+            <summary>
+            获取自定义合约  
+            </summary>
+            <param name="client"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetCommonCustomContracts">
+            <summary>
+            获取公共自定义合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetCustomContract(System.String,System.String)">
+            <summary>
+            获取自定义合约
+            </summary>
+            <param name="name"></param>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.ChangePassword(System.String,System.String,System.String)">
+            <summary>
+            更新密码
+            </summary>
+            <param name="userName"></param>
+            <param name="oldPwd"></param>
+            <param name="newPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.UpdateUser(System.String,System.Boolean)">
+            <summary>
+            更新用户
+            </summary>
+            <param name="userName"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.AddUser(EPI.Model.Users,System.String@)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="user"></param>
+            <param name="errMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.AddMoney(System.String,System.Double,System.Boolean,System.Boolean)">
+            <summary>
+            入金
+            </summary>
+            <param name="userName"></param>
+            <param name="money"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindUser(System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetInitialMoney(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            获取初始资金
+            </summary>
+            <param name="userName"></param>
+            <param name="isVirtual"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetDailySettle(System.String,System.String,System.Boolean)">
+            <summary>
+            获取日结算单
+            </summary>
+            <param name="client">用户</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isVirtual">是否模拟</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.ConfirmedSettle(System.String)">
+            <summary>
+            确认结算单
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.ResetConfirmSettle">
+            <summary>
+            重置策略结算
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.SaveForzenAccount(System.Int32,System.Boolean,System.Double,System.Double)">
+            <summary>
+            保存冻结信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetAllUsers(System.String[])">
+            <summary>
+            获取所有用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.SavePosition(EPI.Model.Positions,System.Boolean)">
+            <summary>
+            保存持仓
+            </summary>
+            <param name="position"></param>
+            <param name="isSettle">是否用于结算</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DeletePosition(EPI.Model.Positions)">
+            <summary>
+            删除持仓
+            </summary>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DeletePositions(System.String[])">
+            <summary>
+            删除持仓
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DeleteSettles(System.DateTime,System.DateTime,System.String[])">
+            <summary>
+            删除结算
+            </summary>
+            <param name="startTime">开始时间（不包含）</param>
+            <param name="endTime">结束时间（包含）</param>
+            <param name="users"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DeleteAccountDetails(System.DateTime,System.DateTime,System.String[])">
+            <summary>
+            删除账户明细
+            </summary>
+            <param name="startTime">开始时间（不包含）</param>
+            <param name="endTime">结束时间（包含）</param>
+            <param name="users"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.SaveAccount(System.String,EPI.Model.Accounts,System.Double,System.Double,System.DateTime,System.Boolean)">
+            <summary>
+            保存账户
+            </summary>
+            <param name="flowNo"></param>
+            <param name="account"></param>
+            <param name="profit"></param>
+            <param name="settleProfit"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetWorkerGroups(System.String)">
+            <summary>
+            获取工人组
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.AddWorkerGroup(EPI.Model.WorkerGroups)">
+            <summary>
+            添加工人组
+            </summary>
+            <param name="workerGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DelWorkerGroup(System.String,System.String)">
+            <summary>
+            删除工人组
+            </summary>
+            <param name="client"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetStaticRight(System.String,System.Boolean)">
+            <summary>
+            获取静态权益
+            </summary>
+            <param name="client"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.SaveAccount(EPI.Model.Accounts)">
+            <summary>
+            保存账户
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAllAccounts">
+            <summary>
+            查询所有账户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAllUsrRiskTpls">
+            <summary>
+            返回所有用户对应风控模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAccountDetails(System.DateTime)">
+            <summary>
+            查询账户明细（结算）
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DeleteAccountDetails(System.DateTime)">
+            <summary>
+            删除账户明细（结算）
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.DestoryUser(System.String)">
+            <summary>
+            销毁用户
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAllSettles(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            查询所有结算
+            </summary>
+            <param name="userName">用户</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAllTrades(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            查询所有成交
+            </summary>
+            <param name="userName">用户</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.FindAllOrders(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            查询所有委托订单
+            </summary>
+            <param name="userName"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.UserOracleService.GetIndicators">
+            <summary>
+            获取所有指标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.VersionOracleService.Find(System.String,System.String)">
+            <summary>
+            查询版本
+            </summary>
+            <param name="name">程序名</param>
+            <param name="version">版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.VersionOracleService.FindAll">
+            <summary>
+            查询所有版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.VersionOracleService.Add(EPI.Model.Versions)">
+            <summary>
+            添加版本
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.VersionOracleService.Update(EPI.Model.Versions)">
+            <summary>
+            更新版本
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.VersionOracleService.Delete(EPI.Model.Versions)">
+            <summary>
+            删除版本
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Oracle.VersionOracleService.CheckUpdate(System.String,System.String)">
+            <summary>
+            检查更新
+            </summary>
+            <param name="name">程序名称</param>
+            <param name="userVersion">版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DataManager.SynDayData(System.String,System.String,System.String)">
+            <summary>
+            同步日线数据
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Others.DataManager.DealSysCustomContracts">
+            <summary>
+            处理系统自定义合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DataManager.StartDealSeriesData(System.String,System.String)">
+            <summary>
+            处理连续数据
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DataManager.StartDealMainData(System.String,System.String)">
+            <summary>
+            处理主力数据
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.PRODUCTNAME">
+            <summary>
+            大合约名称
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.DELIVERYMONTH">
+            <summary>
+            交割年
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.PRESETTLEMENTPRICE">
+            <summary>
+            前结算
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.OPENPRICE">
+            <summary>
+            开盘
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.HIGHESTPRICE">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.LOWESTPRICE">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.CLOSEPRICE">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.SETTLEMENTPRICE">
+            <summary>
+            结算价
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.ZD1_CHG">
+            <summary>
+            涨跌1
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.ZD2_CHG">
+            <summary>
+            涨跌2
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.VOLUME">
+            <summary>
+            成交手
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.OPENINTEREST">
+            <summary>
+            持仓量
+            </summary>
+        </member>
+        <member name="P:EPI.Services.Others.DayData.OPENINTERESTCHG">
+            <summary>
+            持仓变化
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.StartAll(System.String,System.String[],System.String,System.String)">
+            <summary>
+            同步日线数据
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.Init(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.DataToDB(System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            入库
+            </summary>
+            <param name="dayList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.SynDec_Old(System.String,System.String,System.String)">
+            <summary>
+            大连商品交易所20161113日前
+            </summary>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.SynCzce(System.String,System.String,System.String)">
+            <summary>
+            郑州交易所
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.SynCffex(System.String,System.String,System.String)">
+            <summary>
+            中金所
+            </summary>
+            <param name="year"></param>
+            <param name="month"></param>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.GetStringByUrlPost_Old(System.String,System.Text.Encoding,System.String)">
+             <summary>
+             Post方法读取页面详细信息 
+             </summary>  
+            <param name="Url">需要读取的地址</param> 
+             <param name="encoding">读取的编码方式</param>  
+             <returns></returns>          
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.GetUrlByXml(System.String,System.Text.Encoding,System.String,System.String,System.String)">
+            <summary>
+            XML方法读取页面详细信息 
+            </summary>
+            <param name="Url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.GetUrlByNewXml(System.String,System.Text.Encoding,System.String,System.String,System.String)">
+            <summary>
+            XML方法读取页面详细信息 
+            </summary>
+            <param name="Url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.DayDataCrawler.RemoveSpaceHtmlTag(System.String)">
+            <summary>
+            去掉HTML符号
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.SettleManager.SetUsedMarginMode(System.String)">
+            <summary>
+            设置占保规则
+            </summary>
+            <param name="mode"></param>
+        </member>
+        <member name="M:EPI.Services.Others.SettleManager.SettleTrades(System.String,System.Collections.Generic.List{EPI.Model.RspOrders},System.Collections.Generic.List{EPI.Model.RspTrades},System.Boolean,System.Collections.Generic.List{EPI.Model.Settles},System.DateTime,System.Collections.Generic.List{EPI.Model.Contracts},System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            结算成交明细
+            </summary>
+            <param name="client"></param>
+            <param name="rspOrders"></param>
+            <param name="rspTrades"></param>
+            <param name="isVirtual"></param>
+            <param name="settleList"></param>
+            <param name="settleDay"></param>
+            <param name="contractList"></param>
+            <param name="dayDatas"></param>
+        </member>
+        <member name="M:EPI.Services.Others.StrategyManager.StartSettle(System.Int32)">
+            <summary>
+            开始策略结算（只结最新一天）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.Others.StrategyManager.ResetSettle">
+            <summary>
+            重置结算
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetCloudFiles">
+            <summary>
+            获取云端文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetCloudAddress">
+            <summary>
+            获取云端地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetLastBarData(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            获取最新Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="startTime">开始时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetCFFEXSettleStartData(System.String,System.String)">
+            <summary>
+            获取中金所结算开始数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tradeDay">交易日</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetBarDownloadLink(System.String[],System.String,System.DateTime,System.DateTime,EPI.Services.QuotationCallBack)">
+            <summary>
+            获取Bar下载链接
+            </summary>
+            <param name="contracts"></param>
+            <param name="cycle"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetDayDownloadLink(System.String[],System.DateTime,System.DateTime,EPI.Services.QuotationCallBack)">
+            <summary>
+            获取日线下载连接
+            </summary>
+            <param name="codes"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetRealTimeData(System.String)">
+            <summary>
+            获取实时Tick数据
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetRealTimeDatas(System.Int32,EPI.Services.QuotationCallBack)">
+            <summary>
+             获取实时Tick数据
+            </summary>
+            <param name="identity"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindBar(System.String,System.String,System.DateTime)">
+            <summary>
+            获取Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="time">时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllBars(System.String,System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            查询Bar数据（适用于少量数据）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="isFuzzy">是否模糊</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllBars(System.String,System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            查询Bar数据（适用于少量数据）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="takeNumber">数量</param>
+            <param name="beforeTime">结束时间</param>
+            <param name="isFuzzy">是否模糊</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllDays(System.String[],System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            查询日线数据（适用于少量数据）
+            </summary>
+            <param name="contracts"></param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isFuzzy">是否模糊</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetOneDayDatas(System.String,System.Boolean)">
+            <summary>
+            获取某天日线数据
+            </summary>
+            <param name="day">日期(留空为前一交易日）</param>
+            <param name="isFuzzy">是否模糊</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllDays(System.Int32,System.Int32,System.String[],System.DateTime,System.DateTime,System.Boolean,System.Boolean,EPI.Services.QuotationCallBack,System.Boolean@,System.Boolean@)">
+            <summary>
+            查询日线数据
+            </summary>
+            <param name="identity1">标识1</param>
+            <param name="identity2">标识2</param>
+            <param name="contracts">合约清单</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（包含）</param>
+            <param name="isFuzzy">是否模糊</param>
+            <param name="isTemp">是否临时</param>
+            <param name="callBack">行情回报</param>
+            <param name="isFinished1">是否完成1</param>
+            <param name="isFinished2">是否完成2</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllDays(System.String,System.DateTime,System.DateTime,System.Boolean,EPI.Services.QuotationCallBack,System.Int32)">
+            <summary>
+            查询日线数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（包含）</param>
+            <param name="isFuzzy">是否模糊查询</param>
+            <param name="callBack"></param>
+            <param name="identity"></param>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetDaysByType(System.String[],System.DateTime,System.DateTime,EPI.Services.QuotationCallBack)">
+            <summary>
+            根据类别查询日线
+            </summary>
+            <param name="codes">代码</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间(不包含）</param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllBars(System.String,System.String,System.DateTime,System.DateTime,System.Boolean,EPI.Services.QuotationCallBack,System.Int32)">
+            <summary>
+            查询Bar数据（包含日线）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isFuzzy">是否模糊</param>
+            <param name="callBack">行情回报</param>
+            <param name="identity">标识</param>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllBars(System.String,System.String,System.Int32,System.Boolean,EPI.Services.QuotationCallBack,System.Int32)">
+            <summary>
+            查询Bar数据（包含日线）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="takeNumber">获取条数</param>
+            <param name="isFuzzy">是否模糊</param>
+            <param name="callBack">行情回报</param>
+            <param name="identity">标识</param>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllBars(System.Int32,System.Int32,System.String,System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean,EPI.Services.QuotationCallBack,System.Boolean@,System.Boolean@)">
+            <summary>
+            查找Bar数据
+            </summary>
+            <param name="identity1">标识1</param>
+            <param name="identity2">标识2</param>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isFuzzy">是否模糊</param>
+            <param name="isTemp">是否临时数据</param>
+            <param name="callBack">行情回报</param>
+            <param name="isFinished1">是否完成1</param>
+            <param name="isFinished2">是否完成2</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GetTempTicks(System.Int32,System.String,EPI.Services.QuotationCallBack)">
+            <summary>
+            获取临时Ticks数据
+            </summary>
+            <param name="identity">标识</param>
+            <param name="contract">合约</param>
+            <param name="callBack">行情回报</param>
+        </member>
+        <member name="M:EPI.Services.QuotationService.FindAllTicks(System.Int32,System.Int32,System.String,System.DateTime,System.DateTime,EPI.Services.QuotationCallBack,System.Boolean@,System.Boolean@)">
+            <summary>
+            查询Ticks数据
+            </summary>
+            <param name="identity1">标识1</param>
+            <param name="identity2">标识2</param>
+            <param name="contract">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="callBack">行情回报</param>
+            <param name="isFinished1">是否完成1</param>
+            <param name="isFinished2">是否完成2</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.CreateCustomBarData(System.String,System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{EPI.Model.BarData},System.Boolean)">
+            <summary>
+            创建自定义合约数据（包含组合合约)
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="formula">公式</param>
+            <param name="subContracts">子合约</param>
+            <param name="realBarDatas">子合约数据</param>
+            <param name="isSave">是否保存</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GenerateCustomData(System.String,System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{EPI.Model.BarData},System.Boolean)">
+            <summary>
+            生成自定义合约数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="formula">公式</param>
+            <param name="subContracts">子合约</param>
+            <param name="ccDatas">子合约数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.CreateCustomTickData(System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{EPI.Model.TickData})">
+            <summary>
+            创建自定义合约数据（包含组合合约)
+            </summary>
+            <param name="contract">合约</param>
+            <param name="formula">公式</param>
+            <param name="subContracts">子合约</param>
+            <param name="realTickDatas">子合约数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GenerateCustomData(System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{EPI.Model.TickData})">
+            <summary>
+            生成自定义合约数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="formula">公式</param>
+            <param name="subContracts">子合约(如:[IF000],或指定买卖[IF000:1])</param>
+            <param name="ccDatas">子合约数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealCommonBar(EPI.Model.BarData@,System.String,EPI.Model.TickData,EPI.Model.TickData,System.Boolean,System.Collections.Generic.List{EPI.Model.TimeTpDetails})">
+            <summary>
+            处理公共Bar
+            </summary>
+            <param name="thisBarData">当前Bar</param>
+            <param name="cycle">周期</param>
+            <param name="preTickData">前一根Tick</param>
+            <param name="thisTickData">当前Tick</param>
+            <param name="isEndofDay">是否结束（用于处理日线）</param>
+            <param name="timeTpDetailList">时间模版</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.NewCommonBar(System.String,EPI.Model.TickData,EPI.Model.TickData,EPI.Model.TimeTpDetails,System.Boolean)">
+            <summary>
+            创建新Bar
+            </summary>
+            <param name="cycle"></param>
+            <param name="preTickData"></param>
+            <param name="thisTickData"></param>
+            <param name="ttDetail"></param>
+            <param name="isCFFEX"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.Deal1M(EPI.Model.BarData@,EPI.Model.TickData,EPI.Model.TickData,System.Boolean,System.Collections.Generic.List{EPI.Model.TimeTpDetails},System.Boolean)">
+            <summary>
+            处理1分钟
+            </summary>
+            <param name="thisBarData"></param>
+            <param name="preTickData"></param>
+            <param name="thisTickData"></param>
+            <param name="isEndofDay"></param>
+            <param name="ttDetailList"></param>
+            <param name="isCFFEX"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.Deal3M(EPI.Model.BarData@,EPI.Model.TickData,EPI.Model.TickData,System.Boolean,System.Collections.Generic.List{EPI.Model.TimeTpDetails},System.Boolean)">
+            <summary>
+            处理3分钟
+            </summary>
+            <param name="thisBarData"></param>
+            <param name="preTickData"></param>
+            <param name="thisTickData"></param>
+            <param name="isEndofDay"></param>
+            <param name="ttDetailList"></param>
+            <param name="isCFFEX"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.Deal5M(EPI.Model.BarData@,EPI.Model.TickData,EPI.Model.TickData,System.Boolean,System.Collections.Generic.List{EPI.Model.TimeTpDetails},System.Boolean)">
+            <summary>
+            处理5分钟
+            </summary>
+            <param name="thisBarData"></param>
+            <param name="preTickData"></param>
+            <param name="thisTickData"></param>
+            <param name="isEndofDay"></param>
+            <param name="ttDetailList"></param>
+            <param name="isCFFEX"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.Deal15M(EPI.Model.BarData@,EPI.Model.TickData,EPI.Model.TickData,System.Boolean,System.Collections.Generic.List{EPI.Model.TimeTpDetails},System.Boolean)">
+            <summary>
+            处理15分钟
+            </summary>
+            <param name="thisBarData"></param>
+            <param name="preTickData"></param>
+            <param name="thisTickData"></param>
+            <param name="isEndofDay"></param>
+            <param name="ttDetailList"></param>
+            <param name="isCFFEX"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.Deal1D(EPI.Model.BarData@,EPI.Model.TickData,EPI.Model.TickData,System.Boolean,System.Collections.Generic.List{EPI.Model.TimeTpDetails},System.Boolean)">
+            <summary>
+            处理1D
+            </summary>
+            <param name="thisBarData"></param>
+            <param name="preTickData"></param>
+            <param name="thisTickData"></param>
+            <param name="isEndofDay"></param>
+            <param name="ttDetailList"></param>
+            <param name="isCFFEX"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserBars(System.Collections.Generic.List{EPI.Model.BarData},System.Collections.Generic.List{System.String},System.String,System.Boolean,EPI.Model.CustomContracts,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            处理用户自定义周期
+            </summary>
+            <param name="barDatas">数据</param>
+            <param name="cycle">周期</param>
+            <param name="isRcvRealData">是否接收实时数据</param>
+            <param name="cc"></param>
+            <param name="isLocalDB"></param>
+            <param name="isChangeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserBar(EPI.Model.BarData@,System.String,EPI.Model.TickData,EPI.Model.TickData,EPI.Model.BarData,System.Boolean,System.Collections.Generic.List{EPI.Model.TimeTpDetails},System.Boolean,System.Boolean)">
+            <summary>
+            DealUserBar
+            </summary>
+            <param name="latestData"></param>
+            <param name="cycle"></param>
+            <param name="preTickData"></param>
+            <param name="thisTickData"></param>
+            <param name="composeBardata"></param>
+            <param name="isEndofDay"></param>
+            <param name="timeTpDetailList"></param>
+            <param name="isBaseOnTick"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.GenerateUserBar(EPI.Model.BarData@,System.String,EPI.Model.BarData,System.Boolean)">
+            <summary>
+            处理用户自定义周期
+            </summary>
+            <param name="objBarData">前一次Bar数据</param>
+            <param name="objCycle">周期</param>
+            <param name="thisBarData">用于构建数据的小周期Bar</param>
+            <param name="isChangeDay">是否进行换日处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.NewUserBar(EPI.Model.BarData@,System.String,EPI.Model.BarData,System.Boolean)">
+            <summary>
+            创建新Bar
+            </summary>
+            <param name="bar"></param>
+            <param name="objCycle"></param>
+            <param name="thisBarData"></param>
+            <param name="blank"></param>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserY(EPI.Model.BarData@,System.String,EPI.Model.BarData)">
+            <summary>
+            处理年线
+            </summary>
+            <param name="objBarData"></param>
+            <param name="objCycle"></param>
+            <param name="thisBarData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserU(EPI.Model.BarData@,System.String,EPI.Model.BarData)">
+            <summary>
+            处理月线
+            </summary>
+            <param name="objBarData"></param>
+            <param name="objCycle"></param>
+            <param name="thisBarData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserW(EPI.Model.BarData@,System.String,EPI.Model.BarData)">
+            <summary>
+            处理周线
+            </summary>
+            <param name="objBarData"></param>
+            <param name="objCycle"></param>
+            <param name="thisBarData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserD(EPI.Model.BarData@,System.String,EPI.Model.BarData)">
+            <summary>
+            处理日线
+            </summary>
+            <param name="objBarData"></param>
+            <param name="objCycle"></param>
+            <param name="thisBarData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserH(EPI.Model.BarData@,System.String,EPI.Model.BarData,System.Boolean)">
+            <summary>
+            处理小时
+            </summary>
+            <param name="objBarData"></param>
+            <param name="objCycle"></param>
+            <param name="thisBarData"></param>
+            <param name="isChangeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.QuotationService.DealUserM(EPI.Model.BarData@,System.String,EPI.Model.BarData,System.Boolean)">
+            <summary>
+            处理分钟
+            </summary>
+            <param name="objBarData"></param>
+            <param name="objCycle"></param>
+            <param name="thisBarData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.#ctor(System.String,System.Boolean)">
+            <summary>
+            Tick服务(路径)
+            </summary>
+            <param name="fileName">完整路径</param>
+            <param name="isFullPath">是否完整路径</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.#ctor(System.String,System.String)">
+            <summary>
+            Tick服务(Data文件夹下)
+            </summary>
+            <param name="user">用户名</param>
+            <param name="strategy">策略名</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.#ctor(System.String)">
+            <summary>
+            Tick服务(Data文件夹下)
+            </summary>
+            <param name="dbName">数据库名</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.BindData(System.Data.DataSet@,System.Data.SQLite.SQLiteDataAdapter@,System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            绑定数据
+            </summary>
+            <param name="ds">数据集</param>
+            <param name="sda">适配器</param>
+            <param name="contract">合约</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.BatchAdd(System.String,System.String,System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            批量添加Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="barDatas">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.BatchAdd(System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            批量添加日线
+            </summary>
+            <param name="barDatas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.GetDayDatas(System.String[],System.DateTime,System.DateTime)">
+            <summary>
+            获取日线数据
+            </summary>
+            <param name="contracts">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.GetDayDatas(System.String)">
+            <summary>
+            获取某天日线数据
+            </summary>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.GetBarDatas(System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            获取Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.GetLastestTime(System.String,System.String)">
+            <summary>
+            获取最新日期
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.GetLastestTime(System.String[])">
+            <summary>
+            获取最新日线日期
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.GetOldestTime(System.String,System.String)">
+            <summary>
+            获取最远日期
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.GetOldestTime(System.String[])">
+            <summary>
+            获取最远日期
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.BarSQLiteService.ClearDayData">
+            <summary>
+            清除日线数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BaseSQLiteService.CheckTable``1">
+            <summary>
+            初始化表信息
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:EPI.Services.SQLite.BaseSQLiteService.DropQuotTable(System.String,System.String)">
+            <summary>
+            删除行情表
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BaseSQLiteService.DropQuotTable">
+            <summary>
+            删除行情表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BaseSQLiteService.DropContractTable">
+            <summary>
+            删除合约表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.BaseSQLiteService.DropPrePayOrderTable">
+            <summary>
+            删除合约表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.GetTradeContracts">
+            <summary>
+            获取交易合约(只取当天更新合约)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.GetContracts(System.String[])">
+            <summary>
+            获取自定义合约
+            </summary>
+            <param name="contracts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.BatchAddContracts(System.Collections.Generic.List{EPI.Model.Contracts})">
+            <summary>
+            批量添加合约
+            </summary>
+            <param name="contracts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.ClearContracts">
+            <summary>
+            清除合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.GetContractTypes">
+            <summary>
+            获取合约类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.GetTimeTpDetails">
+            <summary>
+            获取时间模版明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.GetTimeTemplates">
+            <summary>
+            获取时间模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.BatchAddContractTypes(System.Collections.Generic.List{EPI.Model.ContractTypes})">
+            <summary>
+            批量添加合约类别
+            </summary>
+            <param name="contractTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.ClearContractTypes">
+            <summary>
+            清除合约类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.GetExchanges">
+            <summary>
+            获取合约类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.BatchAddExchanges(System.Collections.Generic.List{EPI.Model.Exchanges})">
+            <summary>
+            批量添加合约类别
+            </summary>
+            <param name="exchanges"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.BatchAddTimeTpDetails(System.Collections.Generic.List{EPI.Model.TimeTpDetails})">
+            <summary>
+            批量添加时间模版明细
+            </summary>
+            <param name="timeTpDetails"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.BatchAddTimeTemplates(System.Collections.Generic.List{EPI.Model.TimeTemplates})">
+            <summary>
+            批量添加时间模版
+            </summary>
+            <param name="timeTemplates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.ClearExchanges">
+            <summary>
+            清除合约类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.ClearTimeTpDetails">
+            <summary>
+            清除时间模版明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.ClearTimeTemplates">
+            <summary>
+            清除时间模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.FindCustomContract(System.String,System.String)">
+            <summary>
+            查找自定义合约
+            </summary>
+            <param name="client"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.FindAllCustomContracts(System.String)">
+            <summary>
+            查询所有自定义合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.AddCustomContract(EPI.Model.CustomContracts)">
+            <summary>
+            添加自定义合约
+            </summary>
+            <param name="cc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.UpdateCustomContract(EPI.Model.CustomContracts)">
+            <summary>
+            更新自定义合约
+            </summary>
+            <param name="cc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ContractSQLiteService.DelCustomContract(System.String,System.String)">
+            <summary>
+            删除自定义合约
+            </summary>
+            <param name="client"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.GetMDSetting(System.String)">
+            <summary>
+            获取配置信息
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.SaveMDSetting(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            保存配置信息
+            </summary>
+            <param name="name"></param>
+            <param name="dir"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.FindMDFile(System.String)">
+            <summary>
+            查询数据文件
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.FindAllMDFiles">
+            <summary>
+            获取所有文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.Clear">
+            <summary>
+            清除文件
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.GenerateMDFileList(System.String)">
+            <summary>
+            生成市场数据文件清单
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.AddMDFile(EPI.Model.MDFileInfo)">
+            <summary>
+            添加文件
+            </summary>
+            <param name="mdFile"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.MDFileSQLiteService.DelMDFile(EPI.Model.MDFileInfo)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="mdFile"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.AddTrade(EPI.Model.RspTrades)">
+            <summary>
+            添加成交单
+            </summary>
+            <param name="trade"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.FindAllPrePayOrders(System.String)">
+            <summary>
+            查询所有预埋单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.AddPrePayOrder(EPI.Model.PrePayOrder)">
+            <summary>
+            添加预埋单
+            </summary>
+            <param name="ppOrder"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.RemovePrePayOrder(EPI.Model.PrePayOrder)">
+            <summary>
+            删除预埋单
+            </summary>
+            <param name="ppOrder"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.UpdatePrePayOrder(EPI.Model.PrePayOrder)">
+            <summary>
+            更新预埋单
+            </summary>
+            <param name="ppOrder"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.GetTrades(System.String)">
+            <summary>
+            获取成交
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.GetRealSettles(System.DateTime)">
+            <summary>
+            获取真实结算数据
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.GetRealSettles">
+            <summary>
+            获取真实结算
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.GetRealTrades">
+            <summary>
+            获取真实成交
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.GetRealTrades(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            获取真实成交
+            </summary>
+            <param name="contract">合约</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.ExistRealSettles(System.DateTime)">
+            <summary>
+            是否存在真实结算数据
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.DeleteRealSettles(System.DateTime)">
+            <summary>
+            删除真实结算数据
+            </summary>
+            <param name="tradeDay"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.DeleteRealTrades(System.DateTime)">
+            <summary>
+            删除真实成交明细
+            </summary>
+            <param name="tradeDay"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.BatchAddRealTrades(System.Collections.Generic.List{EPI.Model.RealTrades})">
+            <summary>
+            批量添加真实成交
+            </summary>
+            <param name="rtList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.OrderSQLiteService.BatchAddRealSettles(System.Collections.Generic.List{EPI.Model.RealSettles})">
+            <summary>
+            批量添加真实结算
+            </summary>
+            <param name="rsList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.ClearAnalyzeData">
+            <summary>
+            清除策略结算数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastestAnalyzeDayData(System.String,System.String)">
+            <summary>
+            获取最新结算日期
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetPrePositionContracts(System.String)">
+            <summary>
+            获取前一次持仓合约
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastPostion(System.String,System.String,System.DateTime)">
+            <summary>
+            得到上一结算日期的持仓
+            </summary>
+            <param name="userName"></param>
+            <param name="strategyId"></param>
+            <param name="lastSettleDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.UpdateAOFinished(System.Int32)">
+            <summary>
+            更新AnalyzeObject已完成
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.UpdateAOFinished(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            更新AnalyzeObject已完成
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastAnalyzeDay(System.String,System.String)">
+            <summary>
+            得到上一个AnalyzeDay数据
+            </summary>
+            <param name="userName"></param>
+            <param name="strategyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastAnalyzeDays(System.String)">
+            <summary>
+            获取每个用户的最后一条分析数据
+            </summary>
+            <param name="strategyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.AddAnalyzeDay(EPI.Model.AnalyzeDay)">
+            <summary>
+            AnalyzeDay入库
+            </summary>
+            <param name="analyzeDay"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.BatchAddAnalyzeObject(System.Collections.Generic.List{EPI.Model.AnalyzeObject})">
+            <summary>
+            AnalyzeObject入库
+            </summary>
+            <param name="aoList"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.BatchAddSettles(System.Collections.Generic.List{EPI.Model.Settles})">
+            <summary>
+            批量添加结算
+            </summary>
+            <param name="settles"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.BatchAddTrades(System.Collections.Generic.List{EPI.Model.RspTrades})">
+            <summary>
+            批量添加成交
+            </summary>
+            <param name="trades"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.BatchAddOrders(System.Collections.Generic.List{EPI.Model.RspOrders})">
+            <summary>
+            批量添加订单
+            </summary>
+            <param name="orders"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.ClearReportCache">
+            <summary>
+            清除报表缓存
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetDailyReports(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取日报表
+            </summary>
+            <param name="client">用户</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastestMonthReportTime(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取最新报告时间
+            </summary>
+            <param name="client"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetMonthReports(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取月报
+            </summary>
+            <param name="client"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetContractTypeReports(System.String,System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取合约类别报告
+            </summary>
+            <param name="client"></param>
+            <param name="contractTypes"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetContractTypeReports(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取合约类别报告
+            </summary>
+            <param name="client"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetSettleDetails(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取结算明细
+            </summary>
+            <param name="client"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetOrderDetails(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取订单明细
+            </summary>
+            <param name="client"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetTradeDetails(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取成交明细
+            </summary>
+            <param name="client"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastestDailyReportTime(System.String,System.Boolean)">
+            <summary>
+            获取最新日报时间
+            </summary>
+            <param name="client"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetDailyReportCount(System.String,System.Boolean)">
+            <summary>
+            获取日报记录数
+            </summary>
+            <param name="client"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastestDailyReport(System.String,System.Boolean)">
+            <summary>
+            获取最新日报初始化金额
+            </summary>
+            <param name="client"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.GetLastestCTReport(System.String,System.String,System.Boolean)">
+            <summary>
+            获取最新合约类别报告
+            </summary>
+            <param name="client"></param>
+            <param name="contractType"></param>
+            <param name="isVirtual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.ReportSQLiteService.CreateDailyReport(System.String,System.Collections.Generic.List{EPI.Model.Settles},System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean)">
+            <summary>
+            添加结算汇总
+            </summary>
+            <param name="client"></param>
+            <param name="datas"></param>
+            <param name="initMoney"></param>
+            <param name="preMoney"></param>
+            <param name="preAvg"></param>
+            <param name="preStd"></param>
+            <param name="preCount"></param>
+            <param name="preMaxBack"></param>
+            <param name="preCurBack"></param>
+            <param name="isVirtual"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.StockSQLiteService.GetAllStocks">
+            <summary>
+            获取所有股票
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.StockSQLiteService.GetStock(System.String)">
+            <summary>
+            获取股票
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.StrategySQLiteService.FindStrategy(System.String,System.String,System.String)">
+            <summary>
+            查询策略
+            </summary>
+            <param name="name"></param>
+            <param name="version"></param>
+            <param name="publisher"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.StrategySQLiteService.FindAllStrategies">
+            <summary>
+            查询所有策略
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.StrategySQLiteService.AddStrategy(EPI.Model.Strategies)">
+            <summary>
+            添加策略明细
+            </summary>
+            <param name="strategy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.StrategySQLiteService.DeleteStrategy(System.Int32)">
+            <summary>
+            删除策略明细
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.#ctor(System.String,System.Boolean)">
+            <summary>
+            Tick服务(路径)
+            </summary>
+            <param name="fileName">完整路径</param>
+            <param name="isFullPath">是否完整路径</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.#ctor(System.String,System.String)">
+            <summary>
+            Tick服务(Data文件夹下)
+            </summary>
+            <param name="user">用户名</param>
+            <param name="strategy">策略名</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.#ctor(System.String)">
+            <summary>
+            Tick服务(Data文件夹下)
+            </summary>
+            <param name="dbName">数据库名</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.BindData(System.Data.DataSet@,System.Data.SQLite.SQLiteDataAdapter@,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            绑定数据
+            </summary>
+            <param name="ds">数据集</param>
+            <param name="sda">适配器</param>
+            <param name="contract">合约</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.GetTickDatas(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取Tick数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.ReaderTickDatas(System.String,System.DateTime,System.DateTime,System.Action{EPI.Model.TickData,System.Int32,System.Collections.Generic.List{EPI.Model.TickData},System.Boolean})">
+            <summary>
+            读取Tick数据
+            </summary>
+            <param name="contract"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="readerFun"></param>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.GetLastestTime(System.String)">
+            <summary>
+            获取最新日期
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.GetOldestTime(System.String)">
+            <summary>
+            获取最远日期
+            </summary>
+        </member>
+        <member name="M:EPI.Services.SQLite.TickSQLiteService.BatchAdd(System.String,System.Collections.Generic.List{EPI.Model.TickData})">
+            <summary>
+            批量添加
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tickDatas">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.UpdateFileSQLiteService.Add(EPI.Model.UpdateFiles)">
+            <summary>
+            添加更新文件
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.UpdateFileSQLiteService.Find(System.String,System.String)">
+            <summary>
+            查询更新文件
+            </summary>
+            <param name="name"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.UpdateFileSQLiteService.GetDownladFiles(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            获取需下载文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.UpdateFileSQLiteService.Update(EPI.Model.UpdateFiles)">
+            <summary>
+            更新
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.SQLite.UpdateFileSQLiteService.IsDownloading(System.String)">
+            <summary>
+            是否下载中
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EPI.Services.UserCallBack">
+            <summary>
+            用户回报类
+            </summary>
+        </member>
+        <member name="T:EPI.Services.UserService">
+            <summary>
+            用户服务类
+            </summary>
+        </member>
+        <member name="M:EPI.Services.UserService.CheckLogin(System.String,System.String,System.String@)">
+            <summary>
+            检查登录
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.ChangePassword(System.String,System.String,System.String)">
+            <summary>
+            更改密码
+            </summary>
+            <param name="userName"></param>
+            <param name="oldPwd"></param>
+            <param name="newPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindUser(System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetPackageUser(System.String,System.String,System.Collections.Generic.List{EPI.Model.RspOrders}@,System.Collections.Generic.List{EPI.Model.RspTrades}@,System.Collections.Generic.List{EPI.Model.Settles}@)">
+            <summary>
+            获取打包用户
+            </summary>
+            <param name="userName"></param>
+            <param name="tradeDay"></param>
+            <param name="rspOrders"></param>
+            <param name="rspTrades"></param>
+            <param name="settles"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.FinishedAudit(System.Int32)">
+            <summary>
+            完成审核
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindAudit(System.Int32)">
+            <summary>
+            查询审核
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.AddAudit(EPI.Model.Audits)">
+            <summary>
+            添加审核
+            </summary>
+            <param name="audit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.UpdateAudit(EPI.Model.Audits)">
+            <summary>
+            更新审核
+            </summary>
+            <param name="audit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.DeleteAudit(System.Int32)">
+            <summary>
+            删除审核
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindAllAudits(System.String[],System.String[],System.DateTime,System.DateTime)">
+            <summary>
+            查询所有审核
+            </summary>
+            <param name="userNames"></param>
+            <param name="funTypes"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetUserSkins(System.Int32)">
+            <summary>
+            获取用户皮肤
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetWorkerGroups(System.String)">
+            <summary>
+            获取工人组
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.AddWorkerGroup(EPI.Model.WorkerGroups)">
+            <summary>
+            添加工人组
+            </summary>
+            <param name="workerGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.DelWorkerGroup(System.String,System.String)">
+            <summary>
+            添加工人组
+            </summary>
+            <param name="userName"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GenerateUserKey(System.String,System.String)">
+            <summary>
+            生成用户密钥
+            </summary>
+            <param name="userName"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.DownloadUserLayouts(System.Int32,System.String[],EPI.Services.UserCallBack)">
+            <summary>
+            下载用户配置
+            </summary>
+            <param name="userId"></param>
+            <param name="skins"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.UploadUserLayouts(System.Int32,System.String[],EPI.Model.UserLayouts[])">
+            <summary>
+            上传用户配置
+            </summary>
+            <param name="userId"></param>
+            <param name="skins"></param>
+            <param name="userLayouts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.DownloadCustomContracts(System.String)">
+            <summary>
+            下载自定义合约
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindCustomContract(System.String,System.String)">
+            <summary>
+            下载自定义合约
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetCommonCustomContracts">
+            <summary>
+            获取公共自定义合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.UploadCustomContracts(EPI.Model.CustomContracts[])">
+            <summary>
+            上传自定义合约
+            </summary>
+            <param name="ccArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.UpdateCustomContract(EPI.Model.CustomContracts)">
+            <summary>
+            更新自定义合约
+            </summary>
+            <param name="cc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.ClearCustomContracts(System.String)">
+            <summary>
+            清空自定义合约
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.DelCustomContract(System.String,System.String)">
+            <summary>
+            删除自定义合约
+            </summary>
+            <param name="client"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindAllRspTrades(System.Int32,System.String,System.String,EPI.Services.UserCallBack)">
+            <summary>
+            查询用户成交
+            </summary>
+            <param name="identity"></param>
+            <param name="userName"></param>
+            <param name="tradeDay"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.FindAllPreSettles(System.Int32,System.String,System.String,EPI.Services.UserCallBack)">
+            <summary>
+            查询前一结算
+            </summary>
+            <param name="identity"></param>
+            <param name="userName"></param>
+            <param name="tradeDay">当前交易日</param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.FindAllRspOrders(System.Int32,System.String,System.String,EPI.Services.UserCallBack)">
+            <summary>
+            查询用户委托回报
+            </summary>
+            <param name="identity"></param>
+            <param name="userName"></param>
+            <param name="tradeDay"></param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetAllSettles(System.String,System.DateTime,System.DateTime,System.Boolean,EPI.Services.UserCallBack)">
+            <summary>
+            查询所有结算
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isVirtual"></param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetAllOrders(System.String,System.DateTime,System.DateTime,System.Boolean,EPI.Services.UserCallBack)">
+            <summary>
+            获取所有委托订单
+            </summary>
+            <param name="userName"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isVirtual"></param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetAllTrades(System.String,System.DateTime,System.DateTime,System.Boolean,EPI.Services.UserCallBack)">
+            <summary>
+            查询所有成交
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isVirtual"></param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetCloudStrategies(System.String)">
+            <summary>
+            获取云端策略
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.AddStrategy(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            添加策略
+            </summary>
+            <param name="publisher"></param>
+            <param name="name"></param>
+            <param name="zhName"></param>
+            <param name="typeCode"></param>
+            <param name="defaultSetting"></param>
+            <param name="defaultParam"></param>
+            <param name="paramDesc"></param>
+            <param name="isOpenedChannel"></param>
+            <param name="desc"></param>
+            <param name="isPublic"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.UpdateStrategy(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            更新策略
+            </summary>
+            <param name="id"></param>
+            <param name="zhName"></param>
+            <param name="typeCode"></param>
+            <param name="defaultSetting"></param>
+            <param name="defaultParam"></param>
+            <param name="paramDesc"></param>
+            <param name="isOpenedChannel"></param>
+            <param name="desc"></param>
+            <param name="isPublic"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.RemoveStrategy(System.String)">
+            <summary>
+            删除策略
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.UpdateStrategyCode(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新策略代码
+            </summary>
+            <param name="id"></param>
+            <param name="defaultParam"></param>
+            <param name="defaultSetting"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetStrategyNames(System.String,System.Int32)">
+            <summary>
+            获取策略名
+            </summary>
+            <param name="userName"></param>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetStrategyGroups(System.String,System.Int32)">
+            <summary>
+            获取策略组
+            </summary>
+            <param name="userName"></param>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetTraceNames(System.String,System.Int32)">
+            <summary>
+            获取跟单名
+            </summary>
+            <param name="userName"></param>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetTraceDetails(System.String,System.String)">
+            <summary>
+            获取跟单明细
+            </summary>
+            <param name="userName"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetStrategyGroupDetails(System.String,System.String)">
+            <summary>
+            获取策略组明细
+            </summary>
+            <param name="userName"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindLastStrategyRptDetail(System.String,System.String,System.Boolean)">
+            <summary>
+            获取最后一条策略报告明细
+            </summary>
+            <param name="strategyName"></param>
+            <param name="userName"></param>
+            <param name="isDaily"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetStrategyDetails(System.String)">
+            <summary>
+            获取策略明细
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetStrategyTypes">
+            <summary>
+            获取策略分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.ExistsStrategyDetail(System.String,System.String)">
+            <summary>
+            是否存在策略明细
+            </summary>
+            <param name="userStrategyName"></param>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.AddStrategyDetail(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            添加策略明细
+            </summary>
+            <param name="strategyId">策略ID</param>
+            <param name="userName">用户名</param>
+            <param name="userStrategyName">自定义策略名</param>
+            <param name="userParams">用户参数</param>
+            <param name="subStrategies">子策略</param>
+            <param name="isAuto">是否自动运行</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.UpdateStrategyDetail(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            更新策略明细
+            </summary>
+            <param name="id">策略明细ID</param>
+            <param name="strategyId">策略ID</param>
+            <param name="userStrategyName">用户策略名</param>
+            <param name="userParams">策略参数</param>
+            <param name="subStrategies">订阅策略</param>
+            <param name="isAuto">是否自动</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.DeleteStrategyDetail(System.String)">
+            <summary>
+            删除策略明细
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetInitialMoney(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            获取初始资金
+            </summary>
+            <param name="userName"></param>
+            <param name="isVirtual"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetIndicators">
+            <summary>
+            获取指标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetDailySettle(System.String,System.String,System.Boolean)">
+            <summary>
+            获取日结单
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="tradeDay">交易日</param>
+            <param name="isVirtual">是否模拟</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.ConfirmedSettle(System.String,System.String)">
+            <summary>
+            确认结算单
+            </summary>
+            <param name="userName"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.AddUserOrder(System.String,System.String,EPI.Model.EnumSide,System.Int32,System.Double,System.Int32,System.Double,System.String,System.String,System.String,System.String)">
+            <summary>
+            添加用户订单
+            </summary>
+            <param name="contract"></param>
+            <param name="exchange"></param>
+            <param name="side"></param>
+            <param name="flag"></param>
+            <param name="price"></param>
+            <param name="volume"></param>
+            <param name="commission"></param>
+            <param name="userName"></param>
+            <param name="worker"></param>
+            <param name="tradeDay"></param>
+            <param name="tradeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.DelUserOrder(System.String)">
+            <summary>
+            删除用户订单
+            </summary>
+            <param name="clientOrderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindUserOrders(System.String)">
+            <summary>
+            查询用户订单
+            </summary>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetRiskUserDatas(System.String,System.Collections.Generic.List{EPI.Model.Accounts}@,System.Collections.Generic.List{EPI.Model.Positions}@)">
+            <summary>
+            获取风控下的用户
+            </summary>
+            <param name="riskManager"></param>
+            <param name="accounts"></param>
+            <param name="positions"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.GetRiskSettings(System.String,System.Collections.Generic.List{EPI.Model.RiskIndicators}@,System.Collections.Generic.List{EPI.Model.RiskCommands}@,System.Collections.Generic.List{EPI.Model.RiskTemplates}@,System.Collections.Generic.List{EPI.Model.RiskConditions}@)">
+            <summary>
+            获取风控配置信息
+            </summary>
+            <param name="riskManager"></param>
+            <param name="indicators"></param>
+            <param name="commands"></param>
+            <param name="templates"></param>
+            <param name="conditions"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.GetCategoryProfitData(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            获取品种盈亏数据
+            </summary>
+            <param name="users"></param>
+            <param name="fromDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.GetUserTradeDatas(System.String,System.String,System.Collections.Generic.List{EPI.Model.RspOrders}@,System.Collections.Generic.List{EPI.Model.RspTrades}@)">
+            <summary>
+            获取用户交易数据
+            </summary>
+            <param name="userName"></param>
+            <param name="tradeDay"></param>
+            <param name="rspOrders"></param>
+            <param name="rspTrades"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.GetWorkerData(System.Collections.Generic.List{System.String},System.Collections.Generic.List{EPI.Model.WorkerAccount}@,System.Collections.Generic.List{EPI.Model.WorkerPosition}@)">
+            <summary>
+            获取工人数据
+            </summary>
+            <param name="workerList"></param>
+            <param name="workerAccountList"></param>
+            <param name="workerPositionList"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.GetUserCurveLines(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.Double}@,System.Collections.Generic.List{System.Double}@)">
+            <summary>
+            获取用户资金曲线
+            </summary>
+            <param name="userList"></param>
+            <param name="dateList"></param>
+            <param name="valueList"></param>
+        </member>
+        <member name="M:EPI.Services.UserService.GetStrategyDatas(System.Int32,System.String)">
+            <summary>
+            获取策略缓存数据
+            </summary>
+            <param name="roleId"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Services.UserService.FindAllStrategyBars(System.Int32,System.Int32,System.String,System.String,System.DateTime,System.DateTime,EPI.Services.UserCallBack,System.Boolean@,System.Boolean@)">
+            <summary>
+            查找Bar数据
+            </summary>
+            <param name="identity1">标识1</param>
+            <param name="identity2">标识2</param>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="callBack">行情回报</param>
+            <param name="isFinished1">是否完成1</param>
+            <param name="isFinished2">是否完成2</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPI.Services.VersionService">
+            <summary>
+            版本服务类
+            </summary>
+        </member>
+        <member name="M:EPI.Services.VersionService.CheckUpdate(System.String,System.String)">
+            <summary>
+            检查更新
+            </summary>
+            <param name="name">程序名称</param>
+            <param name="ver">版本</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPI.Services.ZipService">
+            <summary>
+            ZIP服务类
+            </summary>
+        </member>
+        <member name="E:EPI.Services.ZipService.OnProgressEvent">
+            <summary>
+            进度事件
+            </summary>
+        </member>
+        <member name="F:EPI.Services.ZipService.files">
+            <summary>
+            所有文件缓存
+            </summary>
+        </member>
+        <member name="F:EPI.Services.ZipService.paths">
+            <summary>
+            所有空目录缓存
+            </summary>
+        </member>
+        <member name="M:EPI.Services.ZipService.ZipFile(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            压缩单个文件
+            </summary>
+            <param name="fileToZip">要压缩的文件</param>
+            <param name="zipedFile">压缩后的文件全名</param>
+            <param name="compressionLevel">压缩程度，范围0-9，数值越大，压缩程序越高</param>
+            <param name="blockSize">分块大小</param>
+        </member>
+        <member name="M:EPI.Services.ZipService.ZipFileFromDirectory(System.String,System.String,System.Int32)">
+            <summary>
+            压缩目录（包括子目录及所有文件）
+            </summary>
+            <param name="rootPath">要压缩的根目录</param>
+            <param name="destinationPath">保存路径</param>
+            <param name="compressLevel">压缩程度，范围0-9，数值越大，压缩程序越高</param>
+        </member>
+        <member name="M:EPI.Services.ZipService.GetAllDirectories(System.String)">
+            <summary>
+            取得目录下所有文件及文件夹，分别存入files及paths
+            </summary>
+            <param name="rootPath">根目录</param>
+        </member>
+        <member name="M:EPI.Services.ZipService.UnZipFile(System.String,System.String)">
+            <summary>
+            解压缩文件(压缩文件中含有子目录)
+            </summary>
+            <param name="zipfilepath">待解压缩的文件路径</param>
+            <param name="unzippath">解压缩到指定目录</param>
+            <returns>解压后的文件列表</returns>
+        </member>
+    </members>
+</doc>

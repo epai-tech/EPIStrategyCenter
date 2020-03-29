@@ -1,0 +1,5 @@
+E:\EPI_3.0\Asteroids\obj\Release\Asteroids.csprojResolveAssemblyReference.cache
+E:\EPI_3.0\bin_Release\Asteroids.dll
+E:\EPI_3.0\bin_Release\Asteroids.pdb
+E:\EPI_3.0\Asteroids\obj\Release\Asteroids.dll
+E:\EPI_3.0\Asteroids\obj\Release\Asteroids.pdb

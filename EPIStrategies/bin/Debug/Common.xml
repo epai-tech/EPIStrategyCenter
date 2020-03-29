@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="T:EPI.Common.AnimateImage">
+            <summary>   
+            表示一类带动画功能的图像。   
+            </summary>   
+        </member>
+        <member name="E:EPI.Common.AnimateImage.OnFrameChanged">
+            <summary>   
+            动画当前帧发生改变时触发。   
+            </summary>   
+        </member>
+        <member name="M:EPI.Common.AnimateImage.#ctor(System.Drawing.Image)">
+            <summary>   
+            实例化一个AnimateImage。   
+            </summary>   
+            <param name="img">动画图片。</param>   
+        </member>
+        <member name="P:EPI.Common.AnimateImage.Image">
+            <summary>   
+            图片。   
+            </summary>   
+        </member>
+        <member name="P:EPI.Common.AnimateImage.CanAnimate">
+            <summary>   
+            是否动画。   
+            </summary>   
+        </member>
+        <member name="P:EPI.Common.AnimateImage.FrameCount">
+            <summary>   
+            总帧数。   
+            </summary>   
+        </member>
+        <member name="P:EPI.Common.AnimateImage.CurrentFrame">
+            <summary>   
+            播放的当前帧。   
+            </summary>   
+        </member>
+        <member name="M:EPI.Common.AnimateImage.Play">
+            <summary>   
+            播放这个动画。   
+            </summary>   
+        </member>
+        <member name="M:EPI.Common.AnimateImage.Stop">
+            <summary>   
+            停止播放。   
+            </summary>   
+        </member>
+        <member name="M:EPI.Common.AnimateImage.Reset">
+            <summary>   
+            重置动画，使之停止在第0帧位置上。   
+            </summary>   
+        </member>
+        <member name="M:EPI.Common.CmdHelper.RunCmd(System.String,System.String@)">
+            <summary>
+            执行cmd命令
+            多命令请使用批处理命令连接符：
+            <![CDATA[
+            &:同时执行两个命令
+            |:将上一个命令的输出,作为下一个命令的输入
+            &&：当&&前的命令成功时,才执行&&后的命令
+            ||：当||前的命令失败时,才执行||后的命令]]>
+            其他请百度
+            </summary>
+            <param name="cmd"></param>
+            <param name="output"></param>
+        </member>
+        <member name="M:EPI.Common.DataHelper.GetList``1(System.Data.DataTable)">
+            <summary>
+            获取List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.DataHelper.ConvertToDataSet``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            转换为DataSet
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.EmailHelper.Send(System.String,System.String,System.String)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="title">邮件标题</param>
+            <param name="content">邮件内容</param>
+            <param name="toAccount">接收账户(多个以','分割)</param>
+        </member>
+        <member name="M:EPI.Common.FileHelper.GetFiles(System.String)">
+            <summary>
+            获取文件
+            </summary>
+            <param name="dirPath">文件夹路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.FileHelper.ReadMessageFile">
+            <summary>
+            读取消息文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.JSEngine.CreatJSEngine(System.Object@,System.Type@,System.String,System.String)">
+            <summary>
+            初始化引擎的方法
+            </summary>
+            <param name="evalObject">指定一个 已存在的变量 保存 使用evalType的类型生成一个实例</param>
+            <param name="evalType">指定一个 已存在的变量 保存 生成的程序集中有指定名称的对象type</param>
+            <param name="jsString">指定用来生成程序集的代码文本</param>
+            <param name="jsClassName">指定用来进行调用的程序集中的类别名称</param>
+        </member>
+        <member name="M:EPI.Common.JSEngine.StringEval(System.String)">
+            <summary>
+            StringEval
+            </summary>
+            <param name="inp_JSString">传入一个表达式</param>
+            <returns>返回一个表达式的值</returns>
+        </member>
+        <member name="M:EPI.Common.JSEngine.StringEval(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            StringEval
+            </summary>
+            <param name="inp_JSFunctionString">指定用来生成程序集的代码文本</param>
+            <param name="inp_JSFunctionClassName">指定用来进行调用的程序集中的类别名称</param>
+            <param name="inp_JSFunctionClassFuncName">指定用来进行调用的程序集中的类别中的函数的名称</param>
+            <param name="inp_ParameterObject">要传递到程序集中的变量对象数组，无参时使用 new object[0]</param>
+            <returns>返回函数调用的值</returns>
+        </member>
+        <member name="M:EPI.Common.JSEngine.StringEval(System.String,System.Type)">
+            <summary>
+            StringEval
+            </summary>
+            <param name="inp_JSString">传入一个表达式</param>
+            <param name="inp_theType">指定的要返回的值类型</param>
+            <returns>返回的值</returns>
+        </member>
+        <member name="M:EPI.Common.JsonHelper.Obj2Json``1(``0)">
+            <summary>
+            List转Json
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.JsonHelper.Json2Obj(System.String,System.Type)">
+            <summary>
+            Json转List
+            </summary>
+            <param name="json"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.JsonHelper.Json2Obj``1(System.String)">
+            <summary>
+            单个对象转JSON
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.LogHelper.WriteLogToTxt(System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            保存日志至txt文档
+            </summary>
+            <param name="msgList"></param>
+            <param name="folder"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:EPI.Common.LogHelper.WriteErrorToTxt(System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            WriteErrorToTxt
+            </summary>
+            <param name="errorList"></param>
+            <param name="folder"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:EPI.Common.LogHelper.WriteToTxt(System.Collections.Generic.List{System.String},System.Boolean,System.String,System.String)">
+            <summary>
+            WriteToTxt
+            </summary>
+            <param name="msgList"></param>
+            <param name="isError"></param>
+            <param name="folder"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:EPI.Common.LogHelper.WriteLogToTxt(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            WriteLogToTxt
+            </summary>
+            <param name="msg"></param>
+            <param name="isError"></param>
+            <param name="folder"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:EPI.Common.MathHelper.Stdev(System.Collections.Generic.List{System.Double},System.Boolean)">
+            <summary>
+            求标准差
+            </summary>
+            <param name="valList"></param>
+            <param name="isAll">数据是否完整</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.MathHelper.Variance(System.Collections.Generic.List{System.Double},System.Boolean)">
+            <summary>
+            求方差
+            </summary>
+            <param name="valList"></param>
+            <param name="isAll">数据是否完整</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.MathHelper.Correl(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double})">
+            <summary>
+            相关系数,要求两个集合数量必须相同
+            </summary>
+            <param name="array1">数组一</param>
+            <param name="array2">数组二</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.MathHelper.GetLCM(System.Int32[])">
+            <summary>
+            获得最小公倍数
+            </summary>
+            <param name="numbers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.MathHelper.GetGCD(System.Int32,System.Int32)">
+            <summary>
+            获取最大公约数
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.MathHelper.GetCustomPrice(System.String[],System.Double[],System.String)">
+            <summary>
+            获取自定义合约价格
+            </summary>
+            <param name="contracts">合约</param>
+            <param name="priceList">价格</param>
+            <param name="formula">公式</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.MathHelper.GetTimeStamp(System.DateTime,System.Boolean)">
+            <summary>
+            取时间戳
+            </summary>
+            <param name="dt">时间</param>
+            <param name="isMilliseconds">精确到毫秒</param>
+            <returns>返回一个长整数时间戳</returns>
+        </member>
+        <member name="T:EPI.Common.MessageHelper">
+            <summary>
+            消息压缩类
+            </summary>
+        </member>
+        <member name="M:EPI.Common.NetHelper.GetWebRequest(System.String)">
+            <summary>
+            Get数据接口
+            </summary>
+            <param name="getUrl">接口地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.NetHelper.PostWebRequest(System.String,System.String,System.Text.Encoding,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Post数据接口
+            </summary>
+            <param name="postUrl">接口地址</param>
+            <param name="paramData">提交json数据</param>
+            <param name="dataEncode">编码方式(Encoding.UTF8)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.RegistryHelper.GetRegistryData(Microsoft.Win32.RegistryKey,System.String,System.String)">
+            <summary>
+            读取指定名称的注册表的值
+            </summary>
+            <param name="root"></param>
+            <param name="subkey"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.RegistryHelper.SetRegistryData(Microsoft.Win32.RegistryKey,System.String,System.String,System.String,Microsoft.Win32.RegistryValueKind)">
+            <summary>
+            向注册表中写数据
+            </summary>
+            <param name="root"></param>
+            <param name="subkey"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="valueKind"></param>
+        </member>
+        <member name="M:EPI.Common.RegistryHelper.SetRegistryData(Microsoft.Win32.RegistryKey,System.String)">
+            <summary>
+            向注册表中写数据
+            </summary>
+            <param name="root"></param>
+            <param name="subkey"></param>
+        </member>
+        <member name="M:EPI.Common.RegistryHelper.SetRegistryData(Microsoft.Win32.RegistryKey,System.String,System.String,System.String)">
+            <summary>
+            向注册表中写数据
+            </summary>
+            <param name="root"></param>
+            <param name="subkey"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EPI.Common.RegistryHelper.DeleteRegist(Microsoft.Win32.RegistryKey,System.String,System.String)">
+            <summary>
+            删除注册表中指定的注册表项
+            </summary>
+            <param name="root"></param>
+            <param name="subkey"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:EPI.Common.RegistryHelper.IsRegistryExist(Microsoft.Win32.RegistryKey,System.String,System.String)">
+            <summary>
+            判断指定注册表项是否存在
+            </summary>
+            <param name="root"></param>
+            <param name="subkey"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.RSATool.Encrypt(System.String,System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="destStr">目标字符串</param>
+            <param name="publicKey">公钥</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPI.Common.StringHelper">
+            <summary>
+            字符串帮助类
+            </summary>
+        </member>
+        <member name="M:EPI.Common.StringHelper.CreateTableName(System.String,System.String)">
+            <summary>
+            创建数据库名称
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.CreateDBInStr(System.String[],System.Boolean)">
+            <summary>
+            创建数据库字符串（In内字符串）
+            </summary>
+            <param name="strArray">字符串队列</param>
+            <param name="isNumber">是否数字</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.RemoveNumber(System.String)">
+            <summary>
+            去掉字符串中的数字
+            </summary>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.RemoveNotNumber(System.String)">
+            <summary>
+            去掉字符串中的非数字
+            </summary>
+            <param name="key">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.ConvertCycleToMinute(System.String)">
+            <summary>
+            转换周期为分钟数
+            </summary>
+            <param name="cycle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.GetTakeNumber(System.String,System.String,System.Int32)">
+            <summary>
+            获取提取数据数量
+            </summary>
+            <param name="cycle"></param>
+            <param name="minCycle"></param>
+            <param name="takeNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.ConvertFuzzyContract(System.String,System.Int32)">
+            <summary>
+            转换为模糊合约
+            </summary>
+            <param name="contract"></param>
+            <param name="validYear"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.CreateErrorMsg(System.String,System.Exception)">
+            <summary>
+            创建错误消息
+            </summary>
+            <param name="title">标题</param>
+            <param name="ex">异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.Compress(System.Byte[])">
+            <summary>
+            字符串压缩
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.Decompress(System.Byte[])">
+            <summary>
+            字符串解压缩
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.CompressString(System.String,System.Boolean)">
+            <summary>
+            字符串压缩
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.DecompressString(System.String,System.Boolean)">
+            <summary>
+            字符串解压
+            </summary>
+            <param name="str"></param>
+            <param name="isUrlDecode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.ComposeCycle(System.String)">
+            <summary>
+            返回构成周期
+            </summary>
+            <param name="objCycle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.IsStandardCycle(System.String)">
+            <summary>
+            是否标准合约
+            </summary>
+            <param name="cycle">周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.GetTradeDay">
+            <summary>
+            获取交易日
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.IsTradingTime">
+            <summary>
+            是否交易时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.SplitCommand(System.String,System.String@,System.String[]@,System.String[]@,System.Int32[]@)">
+            <summary>
+            分割自定义合约命令
+            </summary>
+            <param name="command">自定义合约命令</param>
+            <param name="formula">公式</param>
+            <param name="contracts">合约</param>
+            <param name="sides">1-买 2-卖</param>
+            <param name="volumes">数量</param>
+        </member>
+        <member name="M:EPI.Common.StringHelper.GetStrLength(System.String)">
+            <summary>
+            得到字符串长度，一个汉字长度为2
+            </summary>
+            <param name="inputString">参数字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.StringHelper.GetDecLengh(System.Double)">
+            <summary>
+            获取小数点位数
+            </summary>
+            <param name="price"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Common.SystemInfo1.#ctor">
+            <summary>
+            构造函数，初始化计数器等
+            </summary>
+        </member>
+        <member name="P:EPI.Common.SystemInfo1.ProcessorCount">
+            <summary>
+            获取CPU个数
+            </summary>
+        </member>
+        <member name="P:EPI.Common.SystemInfo1.CpuLoad">
+            <summary>
+            获取CPU占用率
+            </summary>
+        </member>
+        <member name="P:EPI.Common.SystemInfo1.MemoryAvailable">
+            <summary>
+            获取可用内存
+            </summary>
+        </member>
+        <member name="P:EPI.Common.SystemInfo1.PhysicalMemory">
+            <summary>
+            获取物理内存
+            </summary>
+        </member>
+        <member name="M:EPI.Common.SystemInfo1.EndProcess(System.Int32)">
+            <summary>
+            结束指定进程
+            </summary>
+            <param name="pid">进程的 Process ID</param>
+        </member>
+        <member name="M:EPI.Common.SystemInfo1.FindAllApps(System.Int32)">
+            <summary>
+            查找所有应用程序标题
+            </summary>
+            <returns>应用程序标题范型</returns>
+        </member>
+    </members>
+</doc>

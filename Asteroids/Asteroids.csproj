@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11D664B7-3947-49CE-9127-3D73FC097BB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPI.Asteroids</RootNamespace>
+    <AssemblyName>Asteroids</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>..\Bin\Asteroids.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=2.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Model, Version=2.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Functions\AverageE.cs" />
+    <Compile Include="Functions\AverageS.cs" />
+    <Compile Include="Functions\AverageS2.cs" />
+    <Compile Include="Functions\AverageW.cs" />
+    <Compile Include="Functions\BaseFunction.cs" />
+    <Compile Include="Functions\FixSeries.cs" />
+    <Compile Include="Functions\MaxValue.cs" />
+    <Compile Include="Functions\MinValue.cs" />
+    <Compile Include="Functions\Summation.cs" />
+    <Compile Include="Functions\TrueHigh.cs" />
+    <Compile Include="Functions\TrueLow.cs" />
+    <Compile Include="Functions\TrueRange.cs" />
+    <Compile Include="Indicators\ADTM.cs" />
+    <Compile Include="Indicators\ADX.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\AMA.cs" />
+    <Compile Include="Indicators\ARBR.cs" />
+    <Compile Include="Indicators\ATR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\ATRGrid1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\ATRGrid2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\AvgStv.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\B3612.cs" />
+    <Compile Include="Indicators\BaseIndicator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\BBI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\BIAS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\BOLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\BSM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\CCI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\CDP.cs" />
+    <Compile Include="Indicators\Channel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\CR.cs" />
+    <Compile Include="Indicators\DBCD.cs" />
+    <Compile Include="Indicators\DDI.cs" />
+    <Compile Include="Indicators\DKX.cs" />
+    <Compile Include="Indicators\DMA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\DMAB.cs" />
+    <Compile Include="Indicators\DMI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\EMA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\Envalops.cs" />
+    <Compile Include="Indicators\FLOW.cs" />
+    <Compile Include="Indicators\HCL.cs" />
+    <Compile Include="Indicators\HighLow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\HISVAR.cs" />
+    <Compile Include="Indicators\IMPVAR.cs" />
+    <Compile Include="Indicators\IndicatorGraph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\JSJ.cs" />
+    <Compile Include="Indicators\KDJ.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\Kelther.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\LLT.cs" />
+    <Compile Include="Indicators\MACD.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\Mike.cs" />
+    <Compile Include="Indicators\GMA.cs" />
+    <Compile Include="Indicators\MTM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\OBV.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\OpenInst.cs" />
+    <Compile Include="Indicators\PUBU.cs" />
+    <Compile Include="Indicators\RC.cs" />
+    <Compile Include="Indicators\RJX.cs" />
+    <Compile Include="Indicators\RSI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\SAR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\SAR2.cs" />
+    <Compile Include="Indicators\SART.cs" />
+    <Compile Include="Indicators\MA.cs" />
+    <Compile Include="Indicators\SMA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\SPL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\TRA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\UpDowns.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\VOL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\Volatility.cs" />
+    <Compile Include="Indicators\VolatilityChannel.cs" />
+    <Compile Include="Indicators\VSD.cs" />
+    <Compile Include="Indicators\Williams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\WMA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Indicators\BOLLA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Indicators\SPL.cs.bak" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

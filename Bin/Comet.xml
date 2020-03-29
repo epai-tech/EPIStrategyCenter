@@ -1,0 +1,1931 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Comet</name>
+    </assembly>
+    <members>
+        <member name="T:EPI.Comet.BaseCloud">
+            <summary>
+            策略云基类
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseCloud.Identity">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseCloud.ContractList">
+            <summary>
+            合约信息
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseCloud.StartCloud">
+            <summary>
+            启动云策略端
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseCloud.StopCloud">
+            <summary>
+            停止算法服务器
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseCloud.SendMsgToClient(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            发送消息给客户端
+            </summary>
+            <param name="cloudId"></param>
+            <param name="strategyId"></param>
+            <param name="strategyName"></param>
+            <param name="client"></param>
+            <param name="isRunning"></param>
+            <param name="message"></param>
+            <param name="isError"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseCloud.SetMsgToRedis(System.String,System.String)">
+            <summary>
+            发送消息只Redis
+            </summary>
+            <param name="client"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseCloud.CheckSubUser(System.String,System.String@)">
+            <summary>
+            检查用户
+            </summary>
+            <param name="userName"></param>
+            <param name="errorMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseCloud.ConvertZMQMsg(System.String)">
+            <summary>
+            转换ZMQ消息
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseCloud.StatusMonitor">
+            <summary>
+            状态监控
+            </summary>
+        </member>
+        <member name="T:EPI.Comet.QuotationApi">
+            <summary>
+            行情接口
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.CurrentAddress">
+            <summary>
+            当前连接地址
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.ContractList">
+            <summary>
+            所有合约清单
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.TickContracts">
+            <summary>
+            Tick订阅合约
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.MoneyContracts">
+            <summary>
+            资金合约
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.BarContracts">
+            <summary>
+            Bar订阅合约
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.PreDayDataList">
+            <summary>
+            前交易日日线数据
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.MainContractList">
+            <summary>
+            主力（成交）合约列表
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.TimeTpDetails">
+            <summary>
+            时间模版明细
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.QuotationApi.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.Init(System.Collections.Generic.List{EPI.Model.Contracts},System.Collections.Generic.List{EPI.Model.CustomContracts},System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Boolean,System.Boolean)">
+            <summary>
+            行情接口
+            </summary>
+            <param name="contracts">标准合约清单</param>
+            <param name="ccList">自定义合约清单</param>
+            <param name="tickDataCenterAdd">行情中心地址</param>
+            <param name="moneyDataCenterAdd">资金中心地址</param>
+            <param name="subBarContracts">订阅Bar行情合约清单</param>
+            <param name="moneyContracts">资金信息合约</param>
+            <param name="isSubMContract">是否订阅资金信息</param>
+            <param name="isAutoCreateMain">是否创建主力合约</param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetHistoryDayData(System.String,System.String,System.Boolean)">
+            <summary>
+            获取历史日线数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tradeDay">交易日(yyyyMMdd)</param>
+            <param name="isFuzzy">是否模糊查询</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetOpenPrice(System.String)">
+            <summary>
+            获取开盘价格
+            </summary>
+            <param name="contract">合约</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetPreClosePrice(System.String)">
+            <summary>
+            获取前收盘价
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetPreOpenInst(System.String)">
+            <summary>
+            获取前持仓
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetPreSettlePrice(System.String)">
+            <summary>
+            获取前结算价
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetCFFEXSettleStartData(System.String,System.String)">
+            <summary>
+            获取中金所结算开始数据
+            </summary>
+            <param name="contract"></param>
+            <param name="tradeDay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetRealTimeBar(System.String,System.String)">
+            <summary>
+            获取实时Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetRealTimeTick(System.String)">
+            <summary>
+            获取最新Tick数据
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetCustomContracts">
+            <summary>
+            获取自定义合约队列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetCustomContract(System.String)">
+            <summary>
+            获取自定义合约
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.FindCustomContract(System.String)">
+            <summary>
+            查找子自定义合约
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.AddCustomContract(EPI.Model.CustomContracts)">
+            <summary>
+            添加自定义合约
+            </summary>
+            <param name="cc"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.UpdateCustomContract(EPI.Model.CustomContracts)">
+            <summary>
+            更新自定义合约
+            </summary>
+            <param name="cc"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.RemoveCustomContract(EPI.Model.CustomContracts)">
+            <summary>
+            删除自定义合约
+            </summary>
+            <param name="cc"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetRealContract(System.String)">
+            <summary>
+            获取888或666的真实合约
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetTradeContract(System.String)">
+            <summary>
+            获取交易合约
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetMainContract(System.String)">
+            <summary>
+            获取主力对应真实合约
+            </summary>
+            <param name="contract">连续合约或指数合约（如：IF000,IF999...）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.InitDayDatas(System.Collections.Generic.List{EPI.Model.BarData},System.String)">
+            <summary>
+            更新主力合约
+            </summary>
+            <param name="dataList">日线数据（需包含选定日期前一天的日线数据）</param>
+            <param name="date">选定日期（默认为数据源中最后一天）</param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.InitContractInfo">
+            <summary>
+            初始化合约信息
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.AppendTickContract(System.String)">
+            <summary>
+            追加订阅Tick合约至DataCenter
+            </summary>
+            <param name="contract"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.AppendTickContract(System.String,System.String)">
+            <summary>
+            追加订阅Tick合约
+            </summary>
+            <param name="identity"></param>
+            <param name="contract"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.AppendBarContract(System.String)">
+            <summary>
+            追加订阅Bar合约至DataCenter
+            </summary>
+            <param name="contract"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.AppendBarContract(System.Collections.Generic.List{System.String})">
+            <summary>
+            追加订阅Bar合约至DataCenter
+            </summary>
+            <param name="contracts">合约队列</param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.AppendBarContract(System.String,System.String)">
+            <summary>
+            追加订阅Bar合约(如果主数据中心没订阅，自动先订阅)
+            </summary>
+            <param name="identity"></param>
+            <param name="contract">合约</param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.AppendBarContract(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            追加订阅Bar合约(如果主数据中心没订阅，自动先订阅)
+            </summary>
+            <param name="identity"></param>
+            <param name="contracts">合约队列</param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.LoadTickDatas(System.String,System.DateTime,EPI.Comet.IDataCallBack)">
+            <summary>
+            加载Tick数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="tradeDay">交易日</param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.LoadBarDatas(System.String,System.String,System.DateTime,System.DateTime,System.Boolean,System.Boolean,EPI.Comet.IDataCallBack)">
+            <summary>
+            加载Bar数据(支持自定义合约）
+            </summary>
+            <param name="contract">Bar合约(如：1M_OI409,1D_OI401)</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isFuzzy">是否模糊</param>
+            <param name="isTemp">是否临时</param>
+            <param name="callBack"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.LoadDayDatas(System.Collections.Generic.List{System.String},System.DateTime,System.DateTime,System.Boolean,System.Boolean,EPI.Comet.IDataCallBack)">
+            <summary>
+            批量加载日线数据（不支持自定义合约）
+            </summary>
+            <param name="contracts">合约("如：IF000,ag1412")</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="isFuzzy">是否模糊</param>
+            <param name="isTemp">是否临时</param>
+            <param name="callBack">回报</param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.GetDayDatas(System.String[],System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            获取日线数据
+            </summary>
+            <param name="contracts">合约</param>
+            <param name="start">开始（包含）</param>
+            <param name="end">结束（不包含）</param>
+            <param name="isFuzzy">是否模糊</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.CreateTickReceiver(System.Collections.Generic.List{System.String},EPI.Comet.IDataCallBack,System.String@)">
+            <summary>
+            创建Tick数据接收器
+            </summary>
+            <param name="contracts"></param>
+            <param name="callBack"></param>
+            <param name="identity"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.CreateBarReceiver(System.Collections.Generic.List{System.String},EPI.Comet.IDataCallBack,System.String@)">
+            <summary>
+            创建Bar数据接收器
+            </summary>
+            <param name="contracts">合约列表（如：1M_ag1501）为空代表订阅所有</param>
+            <param name="callBack"></param>
+            <param name="identity"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.DestoryReceiver(System.String)">
+            <summary>
+            销毁接收器
+            </summary>
+            <param name="identity"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.Release">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.PubTickDataCenter">
+            <summary>
+            Tick数据发布中心
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.ReConnectQuotServer(System.String)">
+            <summary>
+            重连行情服务器
+            </summary>
+            <param name="newServerAddress"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.SubServerTickData">
+            <summary>
+            从服务器订阅Tick行情
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.StatusMonitor">
+            <summary>
+            状态监控
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.DealCustomTask">
+            <summary>
+            处理自定义合约
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.DealMainData">
+            <summary>
+            处理主力数据
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.UpdateIndexTickData(EPI.Model.Contracts,EPI.Model.TickData)">
+            <summary>
+            更新指数合约
+            </summary>
+            <param name="curData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.DealBarData">
+            <summary>
+            处理Bar数据
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.PubBarDataCenter">
+            <summary>
+            Bar数据发布中心
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.ClientSubTickData(System.Object)">
+            <summary>
+            客户端订阅Tick数据
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.IsTradingTime(System.Collections.Generic.List{EPI.Model.TimeTpDetails},System.TimeSpan,System.Boolean)">
+            <summary>
+            是否交易时间
+            </summary>
+            <param name="timeTpDetails">时间模版</param>
+            <param name="curTime">当前时间</param>
+            <param name="isContainBiddingTime">是否包含集合竞价</param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.QuotationApi.ClientSubBarData(System.Object)">
+            <summary>
+            客户端订阅Bar数据
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.BeginTickTest(System.Object)">
+            <summary>
+            Tick测试（逐条）
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.CheckOpenVol(System.String,System.Int32)">
+            <summary>
+            检查开仓数量
+            </summary>
+            <param name="contract">合约</param>
+            <param name="openVol">本次开仓量（区分正负）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.SendOrder(System.String,System.String,System.Double,EPI.Model.EnumSide,System.Int32)">
+            <summary>
+            发送订单
+            </summary>
+            <param name="clientOrderId"></param>
+            <param name="contract"></param>
+            <param name="price"></param>
+            <param name="side"></param>
+            <param name="volume"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.UpdatePosition(System.String,EPI.Model.EnumSide,System.Double,System.Int32)">
+            <summary>
+            更新持仓
+            </summary>
+            <param name="contract"></param>
+            <param name="side"></param>
+            <param name="tradePrice"></param>
+            <param name="openNum"></param>
+        </member>
+        <member name="P:EPI.Comet.BaseFT.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseFT.IsFastTest">
+            <summary>
+            是否快速回测
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseFT.IsChangedDay">
+            <summary>
+            是否换日
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseFT.IsCleared">
+            <summary>
+            是否已执行清仓
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseFT.LoadDataCount">
+            <summary>
+            加载数据次数
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseFT.Setting">
+            <summary>
+            是否当前Bar进行成交，否则下一根Bar
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.GetReport">
+            <summary>
+            获取策略报告
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.GetPosition(System.String)">
+            <summary>
+            获取持仓信息（当有新的买卖时请重新获取持仓信息）
+            </summary>
+            <param name="contract">合约</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.GetPositions(System.String)">
+            <summary>
+            获取持仓信息（当有新的买卖时请重新获取持仓信息）
+            </summary>
+            <param name="contractType">合约类别</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.ConvertParams(System.Object)">
+            <summary>
+            转换参数
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.InitDBFields">
+            <summary>
+            初始化数据集
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.SetAsClientTest">
+            <summary>
+            设置为客户端测试
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.AddClearOrdersTime(System.String[])">
+            <summary>
+            添加清仓时间点（如：14:59:30)
+            </summary>
+            <param name="times"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.SaveDBFields">
+            <summary>
+            保存数据库字段
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.InitLocalDB">
+            <summary>
+            初始化本地数据库
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.GetPreData(System.String,System.String,System.Int32)">
+            <summary>
+            获取前根Bar
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="num">前面第几根(0:前一根,1:前前根)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.GetContract(System.String)">
+            <summary>
+            获取合约信息
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.GetContractTpDetail(System.String)">
+            <summary>
+            获取合约模版
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Log(System.String,System.Boolean)">
+            <summary>
+            写日志
+            </summary>
+            <param name="msg">消息</param>
+            <param name="isError">是否错误</param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Log(System.String,System.Exception)">
+            <summary>
+            写日志
+            </summary>
+            <param name="title">标题</param>
+            <param name="ex">错误</param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.CreateMockTickDatas(System.String,System.String,System.String,System.String)">
+            <summary>
+            模拟Tick数据
+            </summary>
+            <param name="contracts">合约(如：ag000,cu000)</param>
+            <param name="subscribeCycles">订阅周期(如：1M,3M,1H)</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.ExportToCsv(System.String,System.Collections.Generic.List{EPI.Model.RspTrades})">
+            <summary>
+            导出到Csv
+            </summary>
+            <param name="fullName"></param>
+            <param name="tradeList"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.GetSubReportDetails">
+            <summary>
+            获取分品种日结明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.ExportToCsv(System.String,System.Collections.Generic.List{EPI.Model.RspOrders})">
+            <summary>
+            导出到Csv
+            </summary>
+            <param name="fullName"></param>
+            <param name="orderList"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.ExportToCsv(System.String,EPI.Model.StrategyReports)">
+            <summary>
+            导出到Csv
+            </summary>
+            <param name="fullName"></param>
+            <param name="report"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.CreateMockBarDatas(System.String,System.String,System.String,System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            模拟Bar数据
+            </summary>
+            <param name="barContracts">合约(如：1M_ag000,3M_cu000)</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="cacheBarData">缓存数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.CreateMockBarDatasFromWCF(System.String,System.String,System.String,System.Collections.Generic.List{EPI.Model.BarData},System.Action{System.Boolean})">
+            <summary>
+            模拟Bar数据
+            </summary>
+            <param name="barContracts">合约(如：1M_ag000,3M_cu000)</param>
+            <param name="start">开始时间</param>
+            <param name="end">结束时间</param>
+            <param name="cacheBarData">缓存数据</param>
+            <param name="AfterFinishedMockBar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.LoadBarDatas(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            加载Bar数据
+            </summary>
+            <param name="contract"></param>
+            <param name="cycle"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="isFuzzy"></param>
+            <param name="isBarBaseOnTick"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.LoadBarDatas(System.String,System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            加载Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="takeNumber">获取最近N条</param>
+            <param name="isFuzzy">是否模糊查询(用于查询同月合约)</param>
+            <param name="isBarBaseOnTick">是否基于Tick动态生成Bar</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.InitData(EPI.Model.Users,System.Boolean)">
+            <summary>
+            初始化数据
+            </summary>
+            <param name="ui">用户</param>
+            <param name="isLocalDB">是否本地库</param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Login(System.String,System.String,System.Boolean)">
+            <summary>
+            登录
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="userPwd">密码</param>
+            <param name="isLocalDB">是否本地库</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.InitSetting(System.String)">
+            <summary>
+            初始化配置
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.InitDatas">
+            <summary>
+            初始化数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.InitStrategy(System.Object)">
+            <summary>
+            初始化策略
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.StartStrategy">
+            <summary>
+            启动策略
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Buy(System.String,System.Int32,System.Double)">
+            <summary>
+            买入
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Buy(System.Int32,System.Double)">
+            <summary>
+            买入
+            </summary>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Buy(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            买入
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Buy(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            买入
+            </summary>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Sell(System.String,System.Int32,System.Double)">
+            <summary>
+            卖出
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Sell(System.Int32,System.Double)">
+            <summary>
+            卖出
+            </summary>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Sell(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            卖出
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Sell(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            卖出
+            </summary>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.Cancel(System.String)">
+            <summary>
+            撤单
+            </summary>
+            <param name="clientOrderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.StopStrategy">
+            <summary>
+            停止策略
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.InOutMoney(System.Double)">
+            <summary>
+            出入金
+            </summary>
+            <param name="money"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.SendMail(System.String,System.String,System.String)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="title"></param>
+            <param name="content"></param>
+            <param name="toAccount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.SendMsgToClient(System.String)">
+            <summary>
+            发送消息至客户端
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.CheckFoluma(System.String,System.Int32)">
+            <summary>
+            检查公式
+            </summary>
+            <param name="formula"></param>
+            <param name="total"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBCheckTable``1">
+            <summary>
+            检查公共库中表是否存在，不存在则创建
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>是否异常</returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBFind``1(System.String,System.Object[])">
+            <summary>
+            公共数据库查询单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBFindAll``1(System.String,System.Object[])">
+            <summary>
+            公共数据库查询多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBFindScalar``1(System.String,System.String,System.Object[])">
+            <summary>
+            公共数据查询单个字段
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="field"></param>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBBathAdd``1(System.Collections.Generic.List{``0})">
+            <summary>
+            公共数据批量添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="records"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBAdd``1(``0)">
+            <summary>
+            数据库添加记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBUpdate``1(``0)">
+            <summary>
+            数据库更新记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBDelete``1(``0)">
+            <summary>
+            数据库删除记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.PubDBDeleteAll``1(System.String,System.Object[])">
+            <summary>
+            删除所有记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBCheckTable``1">
+            <summary>
+            检查策略库中表是否存在，不存在则创建
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>是否异常</returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBFind``1(System.String,System.Object[])">
+            <summary>
+            数据库查询单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBFindAll``1(System.String,System.Object[])">
+            <summary>
+            数据库查询多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBBathAdd``1(System.Collections.Generic.List{``0})">
+            <summary>
+            批量添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="records"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBAdd``1(``0)">
+            <summary>
+            数据库添加记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBUpdate``1(``0)">
+            <summary>
+            数据库更新记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBDelete``1(``0)">
+            <summary>
+            数据库删除记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseFT.DBDeleteAll``1(System.String,System.Object[])">
+            <summary>
+            删除所有记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:EPI.Comet.BaseSTY.RtnSubMessage">
+            <summary>
+            返回订阅消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:EPI.Comet.BaseSTY.RspRcvMessage">
+            <summary>
+            Response服务器收到消息
+            </summary>
+            <param name="message"></param>
+            <param name="result">返回值</param>
+        </member>
+        <member name="T:EPI.Comet.BaseSTY.ReqRtnMessage">
+            <summary>
+            Request返回消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:EPI.Comet.BaseSTY.PullRcvMessage">
+            <summary>
+            Pull收到消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CalculateRTReport">
+            <summary>
+            计算实时盈亏
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CheckOpenVol(System.String,System.Int32)">
+            <summary>
+            检查开仓数量
+            </summary>
+            <param name="contract">合约</param>
+            <param name="openVol">本次开仓量（区分正负）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SendOrder(System.String,System.Double,EPI.Model.EnumSide,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            发送订单
+            </summary>
+            <param name="contract">合约</param>
+            <param name="price">价格</param>
+            <param name="side">买卖</param>
+            <param name="volume">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.RspServer(System.Object)">
+            <summary>
+            Response 服务
+            </summary>
+            <param name="address"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.ReqClient(System.Object)">
+            <summary>
+            Request 客户端
+            </summary>
+            <param name="srvAddress"></param>
+        </member>
+        <member name="P:EPI.Comet.BaseSTY.Status">
+            <summary>
+            策略状态
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseSTY.IsFastTest">
+            <summary>
+            是否快速回测
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseSTY.LoadDataCount">
+            <summary>
+            加载数据次数
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseSTY.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseSTY.IsChangedDay">
+            <summary>
+            是否换日
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseSTY.IsCleared">
+            <summary>
+            是否已执行清仓
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.BaseSTY.Setting">
+            <summary>
+            策略配置
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.GetReport">
+            <summary>
+            获取策略报告
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.GetThisTimeTradedVolume(EPI.Model.RspOrders)">
+            <summary>
+            获取本次成交数据
+            </summary>
+            <param name="rOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.LoadBarDatas(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            加载Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间(包含)</param>
+            <param name="end">结束时间(不包含)</param>
+            <param name="isFuzzy">是否模糊查询(用于查询同月合约)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.LoadBarDatas(System.String,System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            加载Bar数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="takeNumber">获取最近N条</param>
+            <param name="isFuzzy">是否模糊查询(用于查询同月合约)</param>
+            <param name="isBarBaseOnTick">是否基于Tick动态生成Bar</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.ConvertParams(System.Object)">
+            <summary>
+            转换参数
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SubscribeDatas(System.String,System.String)">
+            <summary>
+            订阅行情数据
+            </summary>
+            <param name="contracts">合约（如：ag000,cu000）</param>
+            <param name="subscribeCycles">周期（如：1M,3M,1D）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.InitSetting(System.String)">
+            <summary>
+            初始化配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SetNoWaitingMode">
+            <summary>
+            设置非等待模式（不等待成交回报,直接以盘口价作为成交价来更新持仓）
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.InitDBFields">
+            <summary>
+            初始化数据集
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SaveDBFields">
+            <summary>
+            保存数据库字段
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.StartStrategy">
+            <summary>
+            启动策略
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Log(System.String,System.Boolean)">
+            <summary>
+            写日志
+            </summary>
+            <param name="msg">消息</param>
+            <param name="isError">是否错误</param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Log(System.String,System.Exception)">
+            <summary>
+            写异常日志
+            </summary>
+            <param name="title">标题</param>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.GetPreData(System.String,System.String,System.Int32)">
+            <summary>
+            获取前一天数据
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="num">前几根</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CreateCustomContract(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            创建自定义合约
+            </summary>
+            <param name="ccCode">合约代码</param>
+            <param name="formula">公式</param>
+            <param name="ccInfoList">子合约清单</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Buy(System.String,System.Int32,System.Double)">
+            <summary>
+            买入
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Buy(System.Int32,System.Double)">
+            <summary>
+            买入
+            </summary>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Buy(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            买入
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Buy(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            买入
+            </summary>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Sell(System.String,System.Int32,System.Double)">
+            <summary>
+            卖出
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Sell(System.Int32,System.Double)">
+            <summary>
+            卖出
+            </summary>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Sell(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            卖出
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Sell(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            卖出
+            </summary>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-挂量小价 2-限价 3-市价 4-FOK）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.Cancel(System.String)">
+            <summary>
+            撤销订单
+            </summary>
+            <param name="clientOrderId">订单编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.GetPosition(System.String)">
+            <summary>
+            获取持仓信息（当有新的买卖时请重新获取持仓信息）
+            </summary>
+            <param name="contract">合约</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.GetPositions(System.String)">
+            <summary>
+            获取持仓信息（当有新的买卖时请重新获取持仓信息）
+            </summary>
+            <param name="contractType">合约类别</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.UpdatePosition(System.String,EPI.Model.EnumSide,System.Int32)">
+            <summary>
+            更新持仓
+            </summary>
+            <param name="contract">合约</param>
+            <param name="side">买卖</param>
+            <param name="pendingVolume">发送量</param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.UpdatePosition(System.String,EPI.Model.EnumSide,System.Double,System.Int32)">
+            <summary>
+            更新持仓
+            </summary>
+            <param name="contract">合约</param>
+            <param name="side">买卖</param>
+            <param name="tradePrice">成交价格</param>
+            <param name="openNum">开仓数量</param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.ReceiveStrategyCommand(EPI.Model.EnumStrategyCommand)">
+            <summary>
+            收到策略指令
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.StopStrategy">
+            <summary>
+            停止策略
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.AddClearOrdersTime(System.String[])">
+            <summary>
+            添加清仓时间点（如：14:59:30)
+            </summary>
+            <param name="times"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SendMail(System.String,System.String,System.String)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="title">标题</param>
+            <param name="content">内容</param>
+            <param name="toAccount">账户</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SendMsgToClient(System.String)">
+            <summary>
+            发送消息至客户端
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.GetContract(System.String)">
+            <summary>
+            获取合约
+            </summary>
+            <param name="contract">合约</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.GetContractTpDetail(System.String)">
+            <summary>
+            获取合约模版
+            </summary>
+            <param name="contract">合约</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CreatePullServer(System.String)">
+            <summary>
+            创建Pull服务端(PULL/PUSH模式)
+            </summary>
+            <param name="address"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CreatePushClient(System.String)">
+            <summary>
+            创建Push客户端(PULL/PUSH模式)
+            </summary>
+            <param name="srvAddress"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CreateRspServer(System.String)">
+            <summary>
+            创建Response服务端(RSP/REQ模式)
+            </summary>
+            <param name="address"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CreateReqClient(System.String)">
+            <summary>
+            创建Request客户端(RSP/REQ模式)
+            </summary>
+            <param name="srvAddress"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CreatePubServer(System.String)">
+            <summary>
+            创建Pub服务端(PUB/SUB模式)
+            </summary>
+            <param name="address"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.CreateSubClient(System.String,System.String[])">
+            <summary>
+            创建Sub客户端(PUB/SUB模式)
+            </summary>
+            <param name="srvAddress"></param>
+            <param name="subscribeIdentitys">需要订阅的标识</param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SendReqMessage(System.String)">
+            <summary>
+            发送Req请求消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SendPushMessage(System.String)">
+            <summary>
+            发送Push消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.SendPubMessage(System.String,System.String)">
+            <summary>
+            发送Pub消息
+            </summary>
+            <param name="key"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBCheckTable``1">
+            <summary>
+            检查公共库中表是否存在，不存在则创建
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>是否异常</returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBFind``1(System.String,System.Object[])">
+            <summary>
+            公共数据库查询单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBFindAll``1(System.String,System.Object[])">
+            <summary>
+            公共数据库查询多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBFindScalar``1(System.String,System.String,System.Object[])">
+            <summary>
+            公共数据查询单个字段
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="field"></param>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBBathAdd``1(System.Collections.Generic.List{``0})">
+            <summary>
+            公共数据批量添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="records"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBAdd``1(``0)">
+            <summary>
+            数据库添加记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBUpdate``1(``0)">
+            <summary>
+            数据库更新记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBDelete``1(``0)">
+            <summary>
+            数据库删除记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.PubDBDeleteAll``1(System.String,System.Object[])">
+            <summary>
+            删除所有记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBCheckTable``1">
+            <summary>
+            检查策略库中表是否存在，不存在则创建
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>是否异常</returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBFind``1(System.String,System.Object[])">
+            <summary>
+            数据库查询单条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBFindAll``1(System.String,System.Object[])">
+            <summary>
+            数据库查询多条记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="condition"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBBathAdd``1(System.Collections.Generic.List{``0})">
+            <summary>
+            批量添加
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="records"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBAdd``1(``0)">
+            <summary>
+            数据库添加记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBUpdate``1(``0)">
+            <summary>
+            数据库更新记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBDelete``1(``0)">
+            <summary>
+            数据库删除记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.BaseSTY.DBDeleteAll``1(System.String,System.Object[])">
+            <summary>
+            删除所有记录
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:EPI.Comet.TradeApi">
+            <summary>
+            交易接口
+            </summary>
+        </member>
+        <member name="P:EPI.Comet.TradeApi.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.#ctor(EPI.Model.Users,EPI.Comet.QuotationApi,System.String,System.Int32,System.Boolean)">
+            <summary>
+            交易API
+            </summary>
+            <param name="user">用户</param>
+            <param name="qApi">行情接口</param>
+            <param name="address">地址</param>
+            <param name="port">端口</param>
+            <param name="isClient">是否客户端应用</param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.Stop">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.AppendMonitorUser(EPI.Model.Users)">
+            <summary>
+            追加监控子账户
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.CreateRspReceiver(System.Collections.Generic.List{System.String},EPI.Comet.IResponseCallBack,System.String@)">
+            <summary>
+            创建回报接收器
+            </summary>
+            <param name="strategyIds"></param>
+            <param name="callBack"></param>
+            <param name="identity"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.AppendSubRspStrategy(System.String,System.String)">
+            <summary>
+            追加订阅策略回报
+            </summary>
+            <param name="identity"></param>
+            <param name="strategyId"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.AppendSubClientInfo(EPI.Model.Users)">
+            <summary>
+            追加订阅客户信息（账户信息、持仓信息）
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.DestoryRspReceiver(System.String)">
+            <summary>
+            销毁回报接收器
+            </summary>
+            <param name="identity"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.Buy(System.String,System.Double,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Double,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Int32)">
+            <summary>
+            买
+            </summary>
+            <param name="contract">合约</param>
+            <param name="price">价格</param>
+            <param name="volume">数量</param>
+            <param name="flag">开平标记(0-开仓,1-平仓,3-平今,4-平昨,9-自动,17-CTP开仓,18-CTP平仓,20-CTP平今,21-CTP平昨)</param>
+            <param name="isVirutal">是否模拟</param>
+            <param name="client">用户</param>
+            <param name="strategyId">策略标识</param>
+            <param name="worker">工人</param>
+            <param name="validDay">有效天数</param>
+            <param name="workerGroup">工人组</param>
+            <param name="isInnerDeal">是否内部撮合</param> 
+            <param name="executePrice">执行价格</param>
+            <param name="isSplitOrder">拆单</param>
+            <param name="randomMin">拆单下限</param>
+            <param name="randomMax">拆单上限</param>
+            <param name="fakMinTradeVolume">FAK最小值</param>  
+            <param name="sendPriceType">价格类型(0=对价,1=量小,2=限价,3=市价,4=FOK,5=FAK)</param>
+            <param name="winValue">止盈值</param>
+            <param name="lossValue">止损值</param>
+            <param name="lossWinType">止损止盈类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.Sell(System.String,System.Double,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Double,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Int32)">
+            <summary>
+            卖
+            </summary>
+            <param name="contract">合约</param>
+            <param name="price">价格</param>
+            <param name="volume">数量</param>
+            <param name="flag">开平标记(0-开仓,1-平仓,3-平今,4-平昨,9-自动,17-CTP开仓,18-CTP平仓,20-CTP平今,21-CTP平昨)</param>
+            <param name="isVirutal">是否模拟</param>
+            <param name="client">用户</param>
+            <param name="strategyId">策略标识</param>
+            <param name="worker">工人</param>
+            <param name="validDay">有效天数</param>
+            <param name="workerGroup">工人组</param>
+            <param name="isInnerDeal">是否内部撮合</param>
+            <param name="executePrice">执行价格</param>
+            <param name="isSplitOrder">拆单</param>
+            <param name="randomMin">拆单下限</param>
+            <param name="randomMax">拆单上限</param>
+            <param name="fakMinTradeVolume">FAK最小值</param>
+            <param name="sendPriceType">价格类型(0=对价,1=量小,2=限价,3=市价,4=FOK,5=FAK)</param>
+            <param name="winValue">止盈值</param>
+            <param name="lossValue">止损值</param>
+            <param name="lossWinType">止损止盈类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.Cancel(System.String)">
+            <summary>
+            发送撤单
+            </summary>
+            <param name="clientOrderId"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendMsgToServer(EPI.Model.EnumMessageType,System.String)">
+            <summary>
+            发送消息至服务端
+            </summary>
+            <param name="msgType"></param>
+            <param name="msgContent"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendCloudCommand(System.String,System.String,System.String,EPI.Model.EnumStrategyCommand)">
+            <summary>
+            发送云端策略命令
+            </summary>
+            <param name="client">用户名</param>
+            <param name="cloudId">云标识</param>
+            <param name="strategyDetailId">策略明细Id</param>
+            <param name="command">命令</param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.StatusMonitor">
+            <summary>
+            状态监控
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.Log(System.String,System.Boolean)">
+            <summary>
+            日志
+            </summary>
+            <param name="msg"></param>
+            <param name="isError"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.Log(System.String,System.Exception)">
+            <summary>
+            日志
+            </summary>
+            <param name="title"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.AddUnhandleException(System.String,System.Exception)">
+            <summary>
+            添加异常消息
+            </summary>
+            <param name="title"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.CreateClientOrderId">
+            <summary>
+            创建客户端编号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendOrder(System.String,EPI.Model.EnumSide,System.Int32,System.Double,System.Int32,System.Boolean,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Double,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Int32)">
+            <summary>
+            发送订单
+            </summary>
+            <param name="contract">合约</param>
+            <param name="side">买卖</param>
+            <param name="flag">开平标记(0-开仓,1-平仓,3-平今,4-平昨,9-自动,17-CTP开仓,18-CTP平仓,20-CTP平今,21-CTP平昨)</param>
+            <param name="price">价格</param>
+            <param name="volume">数量</param>
+            <param name="isVirutal">是否模拟</param>
+            <param name="client">用户</param>
+            <param name="strategyId">策略</param>
+            <param name="worker">工人</param>
+            <param name="validDay">有效天数</param>
+            <param name="workerGroup">工人组</param>
+            <param name="isInnerDeal">是否内部撮合</param>
+            <param name="executePrice">执行价格</param>
+            <param name="isSplitOrder">拆单</param>
+            <param name="randomMin">拆单下限</param>
+            <param name="randomMax">拆单上限</param>
+            <param name="fakMinTradeVolume">FAK最小值</param>
+            <param name="sendPriceType">价格类型(0=对价,1=量小,2=限价,3=市价,4=FOK,5=FAK)</param>
+            <param name="winValue">止盈值</param>
+            <param name="lossValue">止损值</param>
+            <param name="lossWinType">止损止盈类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendAlgoOrder(System.String,EPI.Model.EnumSide,System.Int32,System.Double,System.Int32,System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.Int32,System.String,System.Boolean,System.Double,System.Boolean,System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Int32)">
+            <summary>
+            发送算法订单
+            </summary>
+            <param name="contract">合约</param>
+            <param name="side">买卖</param>
+            /// <param name="flag">开平标记(0-开仓,1-平仓,3-平今,4-平昨,9-自动,17-CTP开仓,18-CTP平仓,20-CTP平今,21-CTP平昨)</param>
+            <param name="price">价格</param>
+            <param name="volume">数量</param>
+            <param name="singleSendVol">单次发送量</param>
+            <param name="conditionType">满足条件类型（0=等于,1=大于,2=大于等于,3=小于,4=小于等于,9=无）</param>
+            <param name="minTime">开始时间</param>
+            <param name="maxTime">结束时间</param>
+            <param name="bsSeconds">开收盘N秒内不交易</param>
+            <param name="waitingSeconds">挂单等待时间</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="isVirutal">是否模拟</param>
+            <param name="client">用户</param>
+            <param name="strategyId">策略ID</param>
+            <param name="worker">工人</param>
+            <param name="sendPriceType">发单类型(0=对价,1=量小,2=限价,3=市价,4=FOK,5=FAK)</param>
+            <param name="isChaseOrder">是否追单</param>
+            <param name="validDay">有效天数</param>
+            <param name="workerGroup">工人组</param>
+            <param name="isInnerDeal">是否内部撮合</param>
+            <param name="executePrice">执行价格</param>
+            <param name="isSplitOrder">拆单</param>
+            <param name="randomMin">拆单下限</param>
+            <param name="randomMax">拆单上限</param>
+            <param name="fakMinTradeVolume">FAK最小值</param>
+            <param name="winValue">止盈值</param>
+            <param name="lossValue">止损值</param>
+            <param name="lossWinType">止损止盈类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendAlgoOrder(System.String,EPI.Model.EnumSide,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            发送算法订单(自动追单)
+            </summary>
+            <param name="contract">合约</param>
+            <param name="side">买卖</param>
+            <param name="flag">开平标记(0-开仓,1-平仓,3-平今,4-平昨,9-自动,17-CTP开仓,18-CTP平仓,20-CTP平今,21-CTP平昨)</param>
+            <param name="volume">数量</param>
+            <param name="singleSendVol">单次发送量</param>
+            <param name="waitingSeconds">挂单等待时间</param>
+            <param name="isVirutal">是否模拟</param>
+            <param name="client">用户</param>
+            <param name="strategyId">策略ID</param>
+            <param name="worker">工人</param>
+            <param name="validDay">有效天数</param>
+            <param name="workerGroup">工人组</param>
+            <param name="isInnerDeal">是否内部撮合</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendAlgoOrder(EPI.Model.CustomContracts,EPI.Model.EnumSide,System.Int32,System.Double,System.Int32,System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.Int32,System.String,System.Boolean,System.Double,System.Boolean,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            发送自定义算法订单
+            </summary>
+            <param name="customContract">组合合约</param>
+            <param name="side">买卖</param>
+            <param name="flag">开平标记(0-开仓,1-平仓,3-平今,4-平昨,9-自动,17-CTP开仓,18-CTP平仓,20-CTP平今,21-CTP平昨)</param>
+            <param name="price">价格</param>
+            <param name="volume">数量</param>
+            <param name="singleSendVol">单次发送量</param>
+            <param name="conditionType">满足条件类型（0=等于,1=大于,2=大于等于,3=小于,4=小于等于,9=无）</param>
+            <param name="minTime">开始时间</param>
+            <param name="maxTime">结束时间</param>
+            <param name="sendMode">发单模式（-1=同时发送，0=自动选择，N=指定）</param>
+            <param name="bsSeconds">开收盘N秒内不交易</param>
+            <param name="waitingSeconds">挂单等待时间</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="isVirutal">是否模拟</param>
+            <param name="client">用户</param>
+            <param name="strategyId">策略ID</param>
+            <param name="worker">工人</param>
+            <param name="sendPriceType">发单类型(0=对价,1=量小,2=限价,3=市价,4=FOK,5=FAK)</param>
+            <param name="isChaseOrder">是否追单</param>
+            <param name="validDay">有效天数</param>
+            <param name="workerGroup">工人组</param>
+            <param name="isInnerDeal">是否内部撮合</param>
+            <param name="executePrice">执行价格</param>
+            <param name="isSplitOrder">拆单</param>
+            <param name="randomMin">拆单下限</param>
+            <param name="randomMax">拆单上限</param>
+            <param name="fakMinTradeVolume">FAK最小值</param> 
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendAlgoOrder(EPI.Model.CustomContracts,EPI.Model.EnumSide,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            发送自定义算法订单（自动追单）
+            </summary>
+            <param name="customContract">组合合约</param>
+            <param name="side">买卖</param>
+            <param name="flag">开平标记(0-开仓,1-平仓,3-平今,4-平昨,9-自动,17-CTP开仓,18-CTP平仓,20-CTP平今,21-CTP平昨)</param>
+            <param name="volume">数量</param>
+            <param name="singleSendVol">单次发送量</param>
+            <param name="sendMode">发单模式（-1=同时发送，0=自动选择，N=指定）</param>
+            <param name="bsSeconds">开收盘N秒内不交易</param>
+            <param name="waitingSeconds">挂单等待时间</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="isVirutal">是否模拟</param>
+            <param name="client">用户</param>
+            <param name="strategyId">策略ID</param>
+            <param name="worker">工人</param>
+            <param name="validDay">有效天数</param>
+            <param name="workerGroup">工人组</param>
+            <param name="isInnerDeal">是否内部撮合</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.GetGroupUsedMoney(EPI.Model.CustomContracts,System.Int32,EPI.Model.Users,System.String@)">
+            <summary>
+            获取组合占用资金
+            </summary>
+            <param name="customContract"></param>
+            <param name="volume"></param>
+            <param name="user"></param>
+            <param name="errMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.GetUsedMoney(System.String,System.Int32,EPI.Model.Users,System.String@)">
+            <summary>
+            获取占用资金
+            </summary>
+            <param name="contract"></param>
+            <param name="volume"></param>
+            <param name="user"></param>
+            <param name="errMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.AddWinLossCondition(EPI.Model.Orders,System.Double,System.Double,System.Int32)">
+            <summary>
+            添加止损止盈单
+            </summary>
+            <param name="order">订单</param>
+            <param name="winValue">止盈值</param>
+            <param name="lossValue">止损值</param>
+            <param name="lossWinType">值类型</param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.AddWinLossCondition(System.String,System.String,EPI.Model.EnumSide,System.Double,System.Int32,System.Int32,System.String,System.Double,System.Double,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            添加止损止盈单
+            </summary>
+            <param name="client">用户</param>
+            <param name="contract">合约</param>
+            <param name="side">买卖</param>
+            <param name="price">价格</param>
+            <param name="winVolume">止盈数量</param>
+            <param name="lossVolume">止损数量</param>
+            <param name="worker">工人</param>
+            <param name="winValue">止盈值</param>
+            <param name="lossValue">止损值</param>
+            <param name="winType">止盈值类型</param>
+            <param name="lossType">止损值类型</param>
+            <param name="tickId"></param>
+            <param name="groupId"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.SendSuCondition(EPI.Model.SuConditions)">
+            <summary>
+            发送超级条件单
+            </summary>
+            <param name="suCondition"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.LocalResponseMonitor(System.Object)">
+            <summary>
+            本地回报监控
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.OrderMonitor">
+            <summary>
+            订单监控
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.ResponseMonitor">
+            <summary>
+            回报监控
+            </summary>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.ConvertZMQMsg(System.String)">
+            <summary>
+            转换ZMQ消息
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Comet.TradeApi.ClientInfoMonitor">
+            <summary>
+            用户信息监控
+            </summary>
+        </member>
+    </members>
+</doc>

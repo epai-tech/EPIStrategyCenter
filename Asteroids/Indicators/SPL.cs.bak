@@ -1,0 +1,301 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using EPI.Model;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+
+namespace EPI.Asteroids.Indicators
+{
+    public class SPL:BaseIndicator
+    {
+        int _length;
+        BarData preUpdateBarData;
+
+        public SPL(List<BarData> barDatas,int length=1, bool isShowInMain = true)
+            : base(barDatas)
+        {
+            string tag = string.Format("({0})", length);
+            Name = string.Format("SPL{0}", tag);
+            Description = "三角形态";
+            valueDict.Add("SPLIT", new List<double>());
+            valueDict.Add("BLOCK", new List<double>());
+            _length = length;
+            //graphDict.Add("TRA", new IndicatorGraph() { Name = "TRA", Tag = tag, LineStyle = EnumLineStyle.SolidLine });
+            IsShowInMain = true;
+            Caculate();
+        }
+
+        public void SetParameters(int lenth= 1)
+        {
+            if (_length != lenth)
+            {
+                string tag = string.Format("({0})", lenth);
+                Name = string.Format("SPL{0}", tag);
+                _length = lenth;
+                Caculate();
+            }
+        }
+
+        protected override void Caculate()
+        {
+            UserLineList.Clear();
+            ValueDict["SPLIT"].Clear();
+            ValueDict["BLOCK"].Clear();
+            if (barDatas != null && Count != 0)
+            {
+                for (int i = 0; i < Count; i++)
+                {
+                    GenerateTRA(i);
+                }
+            }
+        }
+
+        int trendCount;//趋势
+        double preHigh, preLow;
+        int preHighIndex, preLowIndex;
+        int splitCount;//分割
+        PointF prePoint=new PointF();
+        bool isUpStyle;//是否顶分型
+
+        void GenerateTRA(int i)
+        {
+
+            if (i > 0)
+            {
+                //确立趋势
+                if (trendCount != 2&&trendCount!=-2)
+                {
+                    if (barDatas[i - 1].High < barDatas[i].High && barDatas[i - 1].Low < barDatas[i].Low)
+                    {
+                        if (trendCount >= 0)
+                            trendCount++;
+                        else trendCount = 0;
+                    }
+                    else if (barDatas[i - 1].High > barDatas[i].High && barDatas[i - 1].Low > barDatas[i].Low)
+                    {
+                        if (trendCount <= 0)
+                            trendCount--;
+                        else trendCount = 0;
+                    }
+                    else trendCount = 0;
+                }
+                else if (preHigh == 0)
+                {
+                    preHigh = barDatas[i - 1].High;
+                    preLow = barDatas[i - 1].Low;
+                    preHighIndex = i - 1;
+                    preLowIndex = i - 1;
+                }
+                else
+                {
+                    if (trendCount == 2)//向上趋势
+                    {
+                        if (splitCount == 2)
+                        {
+                            if (barDatas[i].High < preHigh && barDatas[i].Low < preLow
+                                )//出现顶分型
+                            {
+                                trendCount = -2;
+                                splitCount = 0;
+                                PointF curPoint = new PointF(i - 1, (float)preHigh); //new PointF(i, (float)barDatas[i].High);
+                                if (!isUpStyle)//前一次是底分型
+                                {
+                                    if (prePoint.Y > 0)
+                                    {
+                                        bool isValid = true;
+                                        if (i > 2)
+                                            isValid = Math.Min(barDatas[i - 2].Low, barDatas[i].Low) > prePoint.Y;
+                                        if (isValid)
+                                        {
+                                            AddUserLine(new PointF(prePoint.X, prePoint.Y), new PointF(curPoint.X, curPoint.Y), Color.Yellow, DashStyle.Custom, 1, "SPL");
+                                            prePoint = curPoint;
+                                            isUpStyle = true;
+                                        }//当本次顶分型点小于前一次底分型点
+                                        else
+                                        {
+                                            if (barDatas[i - 2].Low < barDatas[i].Low)
+                                                prePoint = new PointF(i - 2, (float)barDatas[i - 2].Low);
+                                            else
+                                                prePoint = new PointF(i, (float)barDatas[i].Low);
+                                            UpdateLastUserLine(new PointF(prePoint.X, prePoint.Y));
+                                        }
+                                    }
+                                    else
+                                    {
+                                        prePoint = curPoint;
+                                        UpdateLastUserLine(new PointF(prePoint.X, prePoint.Y));
+                                    }
+                                }
+                                else
+                                {
+                                    if (prePoint.Y > 0 && prePoint.Y < curPoint.Y)//当前顶点大于前一次分型顶点
+                                    {
+                                        prePoint = curPoint;
+                                        UpdateLastUserLine(new PointF(prePoint.X, prePoint.Y));
+                                    }
+                                }
+                            }
+
+                            //preHigh = barDatas[i].High;
+                            //preLow = barDatas[i].Low;
+                            //preHighIndex = i;
+                            //preLowIndex = i;
+                        }
+                        else
+                        {
+                            splitCount++;
+                        }
+                        //else
+                        //{
+                            if (barDatas[i].High > preHigh)
+                            {
+                                preHigh = barDatas[i].High;
+                                preHighIndex = i;
+                            }
+                            if (barDatas[i].Low > preLow)
+                            {
+                                preLow = barDatas[i].Low;
+                                preLowIndex = i;
+                            }
+                            //preHigh = Math.Max(barDatas[i].High, preHigh);
+                            //preLow = Math.Max(barDatas[i].Low, preLow);
+                        //}
+
+                    }
+                    else if (trendCount == -2)//向下趋势
+                    {
+                        if (splitCount == 2)
+                        {
+                            if (barDatas[i].High > preHigh && barDatas[i].Low > preLow)//出现底分型
+                            {
+                                trendCount = 2;
+                                splitCount = 0;
+                                PointF curPoint = new PointF(i - 1, (float)preLow);//new PointF(i, (float)barDatas[i].Low);
+                                if (isUpStyle)
+                                {
+                                    if (prePoint.Y > 0)
+                                    {
+                                        bool isValid = true;
+                                        if (i > 2)
+                                            isValid = Math.Max(barDatas[i - 2].High, barDatas[i].High) < prePoint.Y;
+                                        if (isValid)
+                                        {
+                                            AddUserLine(new PointF(prePoint.X, prePoint.Y), new PointF(curPoint.X, curPoint.Y), Color.Yellow, DashStyle.Dash, 1, "SPL");
+                                            prePoint = curPoint;
+                                            isUpStyle = false;
+                                        }
+                                        else
+                                        {
+                                            if (barDatas[i - 2].High > barDatas[i].High)
+                                                prePoint = new PointF(i - 2, (float)barDatas[i - 2].High);
+                                            else
+                                                prePoint = new PointF(i, (float)barDatas[i].High);
+                                            UpdateLastUserLine(new PointF(prePoint.X, prePoint.Y));
+                                        }
+                                    }
+                                    else
+                                    {
+                                        prePoint = curPoint;
+                                        UpdateLastUserLine(new PointF(prePoint.X, prePoint.Y));
+                                    }
+                                }
+                                else
+                                {
+                                    if (prePoint.Y > 0 && prePoint.Y > curPoint.Y)//当前低点小于前一次底分型低点
+                                    {
+                                        prePoint = curPoint;
+                                        UpdateLastUserLine(new PointF(prePoint.X, prePoint.Y));
+                                    }
+                                }
+                                //preHigh = barDatas[i].High;
+                                //preLow = barDatas[i].Low;
+                                //preHighIndex = i;
+                                //preLowIndex = i;
+                            }
+                        }
+                        else
+                        {
+                            splitCount++;
+                        }
+                        //else
+                        //{
+                            if (barDatas[i].High < preHigh)
+                            {
+                                preHigh = barDatas[i].High;
+                                preHighIndex = i;
+                            }
+                            if (barDatas[i].Low < preLow)
+                            {
+                                preLow = barDatas[i].Low;
+                                preLowIndex = i;
+                            }
+                            //preHigh = Math.Min(barDatas[i].High, preHigh);
+                            //preLow = Math.Min(barDatas[i].Low, preLow);
+                       // }
+                    }
+                }
+                //判断分笔
+            }
+        }
+
+        public override void UpdateBarData(BarData bar)
+        {
+            //base.UpdateBarData(bar);
+            //valueDict["TRA_B"].RemoveAt(Count - 1);
+            //valueDict["TRA_S"].RemoveAt(Count - 1);
+            //buyLines.RemoveAt(Count - 1);
+            //sellLines.RemoveAt(Count - 1);
+            if (preUpdateBarData != null && preUpdateBarData.RealDateTime == bar.RealDateTime)
+                preUpdateBarData = bar;
+
+            //GenerateTRA(Count - 1);
+            Dictionary<string, double> resultDict = new Dictionary<string, double>();
+            //resultDict.Add("SPLIT", GetLastSplit());
+            //resultDict.Add("BLOCK", GetLastBlock());
+            
+        }
+
+        public override void AddBarData(BarData bar)
+        {
+            //base.AddBarData(bar);
+            if (preUpdateBarData == null)
+                preUpdateBarData = bar;
+            if (preUpdateBarData.RealDateTime != bar.RealDateTime)
+            {
+                base.AddBarData(preUpdateBarData);
+                GenerateTRA(Count - 1);
+                preUpdateBarData = bar;
+            }
+            //GenerateTRA(Count - 1);
+            Dictionary<string, double> resultDict = new Dictionary<string, double>();
+            //resultDict.Add("SPLIT", GetLastSplit());
+            //resultDict.Add("BLOCK", GetLastBlock());
+            
+        }
+
+        public double GetLastSplit()
+        {
+            if (Count != 0)
+                return valueDict["SPLIT"].Last();
+            else
+                return JPR.NaN;
+        }
+
+        public double GetLastBlock()
+        {
+            if (Count != 0)
+                return valueDict["BLOCK"].Last();
+            else
+                return JPR.NaN;
+        }
+        /// <summary>
+        /// 长度
+        /// </summary>
+        public int Length
+        {
+            get { return _length; }
+        }
+    }
+}

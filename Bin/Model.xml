@@ -1,0 +1,6173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Model</name>
+    </assembly>
+    <members>
+        <member name="P:EPI.Model.AccountDetails.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AccountDetails.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AccountDetails.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="M:EPI.Model.AnalyzeDay.Clone">
+            <summary>
+            克隆函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.Id">
+            <summary>
+            ID——由数据库自动标记
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.Client">
+            <summary>
+            客户名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.StrategyId">
+            <summary>
+            策略编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DateTime">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedNum_Long">
+            <summary>
+            未平仓数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedNum_Short">
+            <summary>
+            未平仓数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedNum_All">
+            <summary>
+            未平仓数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedCapital_Long">
+            <summary>
+            未平金额——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedCapital_Short">
+            <summary>
+            未平金额——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedCapital_All">
+            <summary>
+            未平金额——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedProfit_Long">
+            <summary>
+            未平仓盈亏——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedProfit_Short">
+            <summary>
+            未平仓盈亏——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NotClosedProfit_All">
+            <summary>
+            未平仓盈亏——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NetProfit_Long">
+            <summary>
+            净盈亏——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NetProfit_Short">
+            <summary>
+            净盈亏——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NetProfit_All">
+            <summary>
+            净盈亏——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalWin_Long">
+            <summary>
+            总盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalWin_Short">
+            <summary>
+            总盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalWin_All">
+            <summary>
+            总盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalLoss_Long">
+            <summary>
+            总亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalLoss_Short">
+            <summary>
+            总亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalLoss_All">
+            <summary>
+            总亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalFee_Long">
+            <summary>
+            总手续费——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalFee_Short">
+            <summary>
+            总手续费——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalFee_All">
+            <summary>
+            总手续费——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalSlippageFee_Long">
+            <summary>
+            总滑点费——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalSlippageFee_Short">
+            <summary>
+            总滑点费——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalSlippageFee_All">
+            <summary>
+            总滑点费——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalTradeTime_Long">
+            <summary>
+            总交易次数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalTradeTime_Short">
+            <summary>
+            总交易次数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.TotalTradeTime_All">
+            <summary>
+            总交易次数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.WinTradeTime_Long">
+            <summary>
+            盈利次数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.WinTradeTime_Short">
+            <summary>
+            盈利次数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.WinTradeTime_All">
+            <summary>
+            盈利次数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.LossTradeTime_Long">
+            <summary>
+            亏损次数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.LossTradeTime_Short">
+            <summary>
+            亏损次数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.LossTradeTime_All">
+            <summary>
+            亏损次数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxOneWin_Long">
+            <summary>
+            最大单次盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxOneWin_Short">
+            <summary>
+            最大单次盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxOneWin_All">
+            <summary>
+            最大单次盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxOneLoss_Long">
+            <summary>
+            最大单次亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxOneLoss_Short">
+            <summary>
+            最大单次亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxOneLoss_All">
+            <summary>
+            最大单次亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesWinTime_Long">
+            <summary>
+            （隐藏）当前连续盈利次数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesWinTime_Short">
+            <summary>
+            （隐藏）当前连续盈利次数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesWinTime_All">
+            <summary>
+            （隐藏）当前连续盈利次数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesWinTime_Long">
+            <summary>
+            最大连续盈利次数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesWinTime_Short">
+            <summary>
+            最大连续盈利次数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesWinTime_All">
+            <summary>
+            最大连续盈利次数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesLossTime_Long">
+            <summary>
+            （隐藏）当前连续亏损次数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesLossTime_Short">
+            <summary>
+            （隐藏）当前连续亏损次数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesLossTime_All">
+            <summary>
+            （隐藏）当前连续亏损次数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesLossTime_Long">
+            <summary>
+            最大连续亏损次数——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesLossTime_Short">
+            <summary>
+            最大连续亏损次数——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesLossTime_All">
+            <summary>
+            最大连续亏损次数——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesWin_Long">
+            <summary>
+            （隐藏）当前连续盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesWin_Short">
+            <summary>
+            （隐藏）当前连续盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesWin_All">
+            <summary>
+            （隐藏）当前连续盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesWin_Long">
+            <summary>
+            最大连续盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesWin_Short">
+            <summary>
+            最大连续盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesWin_All">
+            <summary>
+            最大连续盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesLoss_Long">
+            <summary>
+            （隐藏）当前连续亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesLoss_Short">
+            <summary>
+            （隐藏）当前连续亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowSeriesLoss_All">
+            <summary>
+            （隐藏）当前连续亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesLoss_Long">
+            <summary>
+            最大连续亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesLoss_Short">
+            <summary>
+            最大连续亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxSeriesLoss_All">
+            <summary>
+            最大连续亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayCapital_Long">
+            <summary>
+            每日资金值——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayCapital_Short">
+            <summary>
+            每日资金值——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayCapital_All">
+            <summary>
+            每日资金值——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayCapitalChange_Long">
+            <summary>
+            资金值变化——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayCapitalChange_Short">
+            <summary>
+            资金值变化——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayCapitalChange_All">
+            <summary>
+            资金值变化——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTotalWin_Long">
+            <summary>
+            日总盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTotalWin_Short">
+            <summary>
+            日总盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTotalWin_All">
+            <summary>
+            日总盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTotalLoss_Long">
+            <summary>
+            日总亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTotalLoss_Short">
+            <summary>
+            日总亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTotalLoss_All">
+            <summary>
+            日总亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayHoldDays_Long">
+            <summary>
+            持仓日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayHoldDays_Short">
+            <summary>
+            持仓日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayHoldDays_All">
+            <summary>
+            持仓日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayWinDays_Long">
+            <summary>
+            盈利日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayWinDays_Short">
+            <summary>
+            盈利日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayWinDays_All">
+            <summary>
+            盈利日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayLossDays_Long">
+            <summary>
+            亏损日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayLossDays_Short">
+            <summary>
+            亏损日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayLossDays_All">
+            <summary>
+            亏损日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTradeDays_Long">
+            <summary>
+            交易日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTradeDays_Short">
+            <summary>
+            交易日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.DayTradeDays_All">
+            <summary>
+            交易日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDayWin_Long">
+            <summary>
+            最大单日盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDayWin_Short">
+            <summary>
+            最大单日盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDayWin_All">
+            <summary>
+            最大单日盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDayLoss_Long">
+            <summary>
+            最大单日亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDayLoss_Short">
+            <summary>
+            最大单日亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDayLoss_All">
+            <summary>
+            最大单日亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesWinTime_Long">
+            <summary>
+            （隐藏）当前连续盈利日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesWinTime_Short">
+            <summary>
+            （隐藏）当前连续盈利日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesWinTime_All">
+            <summary>
+            （隐藏）当前连续盈利日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesWinTime_Long">
+            <summary>
+            最大连续盈利日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesWinTime_Short">
+            <summary>
+            最大连续盈利日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesWinTime_All">
+            <summary>
+            最大连续盈利日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesLossTime_Long">
+            <summary>
+            （隐藏）当前连续亏损日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesLossTime_Short">
+            <summary>
+            （隐藏）当前连续亏损日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesLossTime_All">
+            <summary>
+            （隐藏）当前连续亏损日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesLossTime_Long">
+            <summary>
+            最大连续亏损日——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesLossTime_Short">
+            <summary>
+            最大连续亏损日——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesLossTime_All">
+            <summary>
+            最大连续亏损日——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesWin_Long">
+            <summary>
+            （隐藏）当前连续盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesWin_Short">
+            <summary>
+            （隐藏）当前连续盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesWin_All">
+            <summary>
+            （隐藏）当前连续盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesWin_Long">
+            <summary>
+            最大连续盈利——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesWin_Short">
+            <summary>
+            最大连续盈利——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesWin_All">
+            <summary>
+            最大连续盈利——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesLoss_Long">
+            <summary>
+            （隐藏）当前连续亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesLoss_Short">
+            <summary>
+            （隐藏）当前连续亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDaySeriesLoss_All">
+            <summary>
+            （隐藏）当前连续亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesLoss_Long">
+            <summary>
+            最大连续亏损——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesLoss_Short">
+            <summary>
+            最大连续亏损——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDaySeriesLoss_All">
+            <summary>
+            最大连续亏损——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.LastHigh_Long">
+            <summary>
+            （隐藏）最高——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.LastHigh_Short">
+            <summary>
+            （隐藏）最高——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.LastHigh_All">
+            <summary>
+            （隐藏）最高——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDrop_Long">
+            <summary>
+            （隐藏）当前回撤——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDrop_Short">
+            <summary>
+            （隐藏）当前回撤——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.NowDrop_All">
+            <summary>
+            （隐藏）当前回撤——所有
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDrop_Long">
+            <summary>
+            最大回撤——多头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDrop_Short">
+            <summary>
+            最大回撤——空头
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeDay.MaxDrop_All">
+            <summary>
+            最大回撤——所有
+            </summary>
+        </member>
+        <member name="M:EPI.Model.AnalyzeObject.Clone">
+            <summary>
+            克隆函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.Id">
+            <summary>
+            ID——由数据库自动标记
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.Client">
+            <summary>
+            客户名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.StrategyId">
+            <summary>
+            策略编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.InstrumentId">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.ContractMul">
+            <summary>
+            合约乘数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.MarginRate">
+            <summary>
+            保证金率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.ESide">
+            <summary>
+            买卖（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.InDateTime">
+            <summary>
+            入场时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.InTradeDay">
+            <summary>
+            入场日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.InPrice">
+            <summary>
+            入场价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.InNum">
+            <summary>
+            入场数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.InFee">
+            <summary>
+            入场手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.InSlippageFee">
+            <summary>
+            入场滑点费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.IsClosed">
+            <summary>
+            是否已经平仓
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.OutDateTime">
+            <summary>
+            平仓时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.OutTradeDay">
+            <summary>
+            平仓日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.OutPrice">
+            <summary>
+            平仓价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.OutNum">
+            <summary>
+            平仓数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.OutFee">
+            <summary>
+            出场手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.OutSlippageFee">
+            <summary>
+            出场滑点费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.ClosedProfit">
+            <summary>
+            平仓盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.MarginUsed">
+            <summary>
+            保证金占用
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.Capital">
+            <summary>
+            市值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.CapitalChange">
+            <summary>
+            资金变化
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.SettlePrice">
+            <summary>
+            结算价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.SettleDate">
+            <summary>
+            结算日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.IsFinished">
+            <summary>
+            是否已经完成结算
+            </summary>
+        </member>
+        <member name="P:EPI.Model.AnalyzeObject.IsUpdate">
+            <summary>
+            是否修改
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.UserName">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.EAuditType">
+            <summary>
+            审核类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.AuditType">
+            <summary>
+            审核类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.Content">
+            <summary>
+            审计内容
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.Remark">
+            <summary>
+            审计备注
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.Result">
+            <summary>
+            审计结果
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.EAuditStatus">
+            <summary>
+            审计状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.AuditStatus">
+            <summary>
+            审计状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Audits.AuditTime">
+            <summary>
+            审计时间
+            </summary>
+        </member>
+        <member name="F:EPI.Model.BarData._longRealSymbolList">
+            <summary>
+            买价1,买量1,买入时间1
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Contract">
+            <summary>
+            合约名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Open">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Close">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.High">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Low">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Volume">
+            <summary>
+            成交量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.OpenInterest">
+            <summary>
+            持仓量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Amount">
+            <summary>
+            成交金额
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Flag">
+            <summary>
+            标记成交量主力合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Offset">
+            <summary>
+            成交量偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Flag1">
+            <summary>
+            标记持仓量主力合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Offset1">
+            <summary>
+            持仓量偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Settle">
+            <summary>
+            结算价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.PreSettle">
+            <summary>
+            昨日结算价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.PreClose">
+            <summary>
+            昨日收盘价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.UpDown1">
+            <summary>
+            涨跌1
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.UpDown2">
+            <summary>
+            涨跌2
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Cycle">
+            <summary>
+            周期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.TradingDay">
+            <summary>
+            交易日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.FloatMoney">
+            <summary>
+            流入流出
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Seq">
+            <summary>
+            序列
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.RealDay">
+            <summary>
+            真实日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.UpdateTime">
+            <summary>
+            更新时间(HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.RealDateTime">
+            <summary>
+            真实时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Identity">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.PreMinute">
+            <summary>
+            前一分钟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.IsGroup">
+            <summary>
+            是否组合
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.IsFirstBar">
+            <summary>
+            是否第一根生成的Bar
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.TempBarList">
+            <summary>
+            临时Bar数据
+            </summary>
+        </member>
+        <member name="P:EPI.Model.BarData.TempBar">
+            <summary>
+            临时Bar
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DBFieldAttribute.FieldDBType">
+            <summary>
+            字段数据库类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DBFieldAttribute.DBFieldUsage">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DBFieldAttribute.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DBFieldAttribute.IsAutoIncrement">
+            <summary>
+            是否自增类
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DBFieldAttribute.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="T:EPI.Model.ContractCollections">
+            <summary>
+            用户自选合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractCollections.Client">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractCollections.Contract">
+            <summary>
+            合约名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractCollections.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Contract">
+            <summary>
+            合约代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.ExchangeContract">
+            <summary>
+            交易所合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.ContractName">
+            <summary>
+            合约名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Month">
+            <summary>
+            月份
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.ContractTypeId">
+            <summary>
+            合约类别ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.ContractType">
+            <summary>
+            合约类别
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.LastTradeDate">
+            <summary>
+            最后交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.IsGroup">
+            <summary>
+            是否组合合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.ComboContracts">
+            <summary>
+            组合合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.IsR">
+            <summary>
+            是否融资融券
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.IsZK">
+            <summary>
+            是否ZK合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.IsCloseToday">
+            <summary>
+            是否运行平今
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.IsOption">
+            <summary>
+            是否期权
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Exchange">
+            <summary>
+            交易所代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.ExchangeFee">
+            <summary>
+            交易所代码手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.FeeIsNumber">
+            <summary>
+            手续费是否为数字
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.MarginRatio">
+            <summary>
+            保证金率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.VolumeMultiple">
+            <summary>
+            合约乘数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.PriceTick">
+            <summary>
+            最小变动价位
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Offset">
+            <summary>
+            偏移量(按成交量)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Offset1">
+            <summary>
+            偏移量(按持仓量)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.TimeTpDetailList">
+            <summary>
+            时间模版明细
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.SpotPrice">
+            <summary>
+            现货价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.Seq">
+            <summary>
+            连续标记
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Contracts.SingleContractList">
+            <summary>
+            单合约清单
+            </summary>
+        </member>
+        <member name="M:EPI.Model.Contracts.BuildContracts">
+            <summary>
+            创建合约清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTPDetails1.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTPDetails1.Margin">
+            <summary>
+            保证金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTPDetails1.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTPDetails1.IsNumber">
+            <summary>
+            是否数字
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTPDetails1.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTPDetails1.ContractTPId">
+            <summary>
+            合约模板ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.ContractType">
+            <summary>
+            合约类别
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.Profit">
+            <summary>
+            盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.Money">
+            <summary>
+            当日金额
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.NetNumber">
+            <summary>
+            净头寸
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.SlippageFee">
+            <summary>
+            滑点费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypeReports.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.Code">
+            <summary>
+            合约代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.Name">
+            <summary>
+            合约名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.VolumeMultiple">
+            <summary>
+            合约乘数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.PriceTick">
+            <summary>
+            最小变动价位
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.ExchangeFee">
+            <summary>
+            交易所手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.FeeIsNumber">
+            <summary>
+            手续费是否数字
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.MarginRatio">
+            <summary>
+            保证金率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.MainContract">
+            <summary>
+            主力合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.MainContract1">
+            <summary>
+            主力合约1
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.McPrice">
+            <summary>
+            主力价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.McPrice1">
+            <summary>
+            主力价格1
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.IsGroup">
+            <summary>
+            是否组
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.ParentId">
+            <summary>
+            父节点Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.Offset">
+            <summary>
+            偏移量(连续合约）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.Offset1">
+            <summary>
+            偏移量1(连续合约）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.SpotPrice">
+            <summary>
+            现货价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.TimeTpId">
+            <summary>
+            时间模版ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.IsCloseToday">
+            <summary>
+            是否当天允许平仓
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.SpreadSpans">
+            <summary>
+            跨期间隔
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.PriceTickValue">
+            <summary>
+            最小变动价值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.ExchangeFeeValue">
+            <summary>
+            交易所手续费值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.MarginRatioValue">
+            <summary>
+            保证金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.FeePipValue">
+            <summary>
+            手续费/最小变动价值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.ContractTypes.TruthValue">
+            <summary>
+            市值
+            </summary>
+        </member>
+        <member name="F:EPI.Model.CustomContracts._subContracts">
+            <summary>
+            合约队列 
+            例：IF1312:0:1:4(以最新价格买入1手IF1312)
+            IF1312 - 合约
+            0 - 买卖（0-买 1-卖）
+            1 - 数量
+            2 - 价格类型
+            </summary>
+        </member>
+        <member name="F:EPI.Model.CustomContracts.SubTickDatas">
+            <summary>
+            对应合约的数据
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.Code">
+            <summary>
+            1合约代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.Name">
+            <summary>
+            2合约名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.SubContractsStr">
+            <summary>
+            3合约组字符串
+            格式：IF000:1:1:DCE|IH000:2:1:DCE
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.SPContracts">
+            <summary>
+            3合约组字符串
+            格式：IF888|IH888
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.ContractList">
+            <summary>
+            合约名称队列
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.ContractInfoList">
+            <summary>
+            合约信息队列
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.ExchangeList">
+            <summary>
+            交易所队列
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.Formula">
+            <summary>
+            4公式
+            例：{0}-{1}（其中{0}代表第一个合约价格，{1}代表第二个合约价格）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.TimeTpId">
+            <summary>
+            交易时间模版ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.IsPublic">
+            <summary>
+            是否公共合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.IsToDB">
+            <summary>
+            是否入库
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.GroupName">
+            <summary>
+            组名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.PriceTick">
+            <summary>
+            最小变动价值
+            </summary>
+        </member>
+        <member name="M:EPI.Model.CustomContracts.UpdatePriceTick">
+            <summary>
+            更新最小变动价值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.MarketValue">
+            <summary>
+            市值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.MarketValueRatio1">
+            <summary>
+            市值比1（必须在获取市值后读取）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.MarketValueRatio2">
+            <summary>
+            市值比2（必须在获取市值后读取）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.TimeTpDetailList">
+            <summary>
+            时间模版明细
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.LastPrice">
+            <summary>
+            5最新价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.AskPrice">
+            <summary>
+            6卖一价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.BidPrice">
+            <summary>
+            7买一价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.AskVolume">
+            <summary>
+            8卖一量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.BidVolume">
+            <summary>
+            9买一量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.AveragePrice">
+            <summary>
+            10均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.TradingDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.RealDay">
+            <summary>
+            真实日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.Millisecond">
+            <summary>
+            毫秒
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.RealDateTime">
+            <summary>
+            真实时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.ContractSideList">
+            <summary>
+            各合约买卖清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.ContractVolumeList">
+            <summary>
+            各合约数量清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.CustomContracts.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:EPI.Model.CustomContracts.BindContractInfo(System.Collections.Generic.List{EPI.Model.Contracts})">
+            <summary>
+            绑定合约信息
+            </summary>
+            <param name="cInfoList"></param>
+        </member>
+        <member name="M:EPI.Model.CustomContracts.GetMarketValue">
+            <summary>
+            获取市值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.CustomContracts.GetSingleMaxMarketValue">
+            <summary>
+            获取单腿最大货值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.DailyReports.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.Profit">
+            <summary>
+            当日盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.InitMoney">
+            <summary>
+            初始资金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.Money">
+            <summary>
+            资金曲线
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.NetValue">
+            <summary>
+            单位净值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.WinLossTodayRate">
+            <summary>
+            盈亏百分比
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.WinLossTotalRate">
+            <summary>
+            累计盈亏百分比
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.NetNumber">
+            <summary>
+            净头寸
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.LongMarketValue">
+            <summary>
+            多头未平市值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.ShortMarketValue">
+            <summary>
+            空头未平市值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.LongLeverRate">
+            <summary>
+            多头杠杆率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.ShortLeverRate">
+            <summary>
+            空头杠杆率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.MaxReturnValue">
+            <summary>
+            最大回撤
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.TodayReturnValue">
+            <summary>
+            当日回撤
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.AverageYieldRate">
+            <summary>
+             日均收益率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.StdAvgYieldRate">
+            <summary>
+            日均收益标准差
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.SharpRate">
+            <summary>
+            夏普比率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.DailyReports.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumAuditStatus.Success">
+            <summary>
+            审核成功
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumAuditStatus.Failure">
+            <summary>
+            审核失败
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumAuditStatus.Auditing">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumAuditStatus.Finished">
+            <summary>
+            完成
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumAuditType.Order">
+            <summary>
+            订单
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumAuditType.Account">
+            <summary>
+            账户
+            </summary>
+        </member>
+        <member name="T:EPI.Model.EnumCondtionType">
+            <summary>
+            价格条件
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumCondtionType.Equal">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumCondtionType.Great">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumCondtionType.GreatOrEqual">
+            <summary>
+            大于等于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumCondtionType.Little">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumCondtionType.LittleOrEqual">
+            <summary>
+            小于等于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumCondtionType.LessThanOrEqual">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.Open">
+            <summary>
+            开仓
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.Close">
+            <summary>
+            平仓
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.FroceClose">
+            <summary>
+            强平
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.CloseToday">
+            <summary>
+            强平
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.CloseYesterday">
+            <summary>
+            平昨
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.Auto">
+            <summary>
+            自动
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.CTPOpen">
+            <summary>
+            CTP开仓
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.CTPClose">
+            <summary>
+            CTP平仓
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.CTPCloseToday">
+            <summary>
+            CTP平今
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderFlag.CTPCloseYesterday">
+            <summary>
+            CTP平昨
+            </summary>
+        </member>
+        <member name="T:EPI.Model.Enums.EnumScreenType">
+            <summary>
+            筛选条件
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.Equal">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.NotEqual">
+            <summary>
+            不等于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.Contains">
+            <summary>
+            包含
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.NotContains">
+            <summary>
+            不包含
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.MoreThan">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.MoreThanOrEqual">
+            <summary>
+            大于等于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.LessThan">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.Enums.EnumScreenType.LessThanOrEqual">
+            <summary>
+            小于等于
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumSummaryType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumSummaryType.Count">
+            <summary>
+            计数
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumSummaryType.Sum">
+            <summary>
+            求和
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumSummaryType.Average">
+            <summary>
+            平均
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDBFieldUsage.None">
+            <summary>
+            未定义
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDBFieldUsage.PrimaryKey">
+            <summary>
+            用于主键
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDBFieldUsage.UniqueKey">
+            <summary>
+            用于唯一键
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDBFieldUsage.IndexKey">
+            <summary>
+            由系统控制该字段的值
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumFieldDBType.Oracle">
+            <summary>
+            用于Oracle
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumFieldDBType.SQLite">
+            <summary>
+            用于SQLite
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumFieldDBType.Both">
+            <summary>
+            共用
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumJControlType.JGrid">
+            <summary>
+            报价栏
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumJControlType.JTickChart">
+            <summary>
+            Tick图形
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumJControlType.JStockChart">
+            <summary>
+            K线图形
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumJControlType.JTable">
+            <summary>
+            K线图形
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.AllTraded">
+            <summary>
+            全部成交
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.PartTradedQueueing">
+            <summary>
+            部分成交还在队列中
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.PartTradedNotQueueing">
+            <summary>
+            部分成交不在队列中
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.NoTradeQueueing">
+            <summary>
+            未成交还在队列中
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.NoTradeNotQueueing">
+            <summary>
+            未成交不在队列中
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.Canceled">
+            <summary>
+            撤单
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.Limit">
+            <summary>
+            限制
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.NotTouched">
+            <summary>
+            尚未触发
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.Touched">
+            <summary>
+            已触发
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.CenterReceived">
+            <summary>
+            交易中心已收到
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.AlgServerReceived">
+            <summary>
+            算法服务器已接收
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderStatus.WaitCancel">
+            <summary>
+            待撤
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderType.Normal">
+            <summary>
+            普通报单
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderType.Cancel">
+            <summary>
+            撤单
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumOrderType.Arithmetic">
+            <summary>
+            算法单
+            </summary>
+        </member>
+        <member name="T:EPI.Model.EnumPriceType">
+            <summary>
+            不同单价格类型
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumPriceType.Opposite">
+            <summary>
+            对价
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumPriceType.SmallVolume">
+            <summary>
+            量小
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumPriceType.Limit">
+            <summary>
+            限价
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumPriceType.Market">
+            <summary>
+            市价
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumPriceType.FOK">
+            <summary>
+            FOK
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumPriceType.FAK">
+            <summary>
+            FAK
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumProgressType.CreateCsvFile">
+            <summary>
+            创建CSV文件
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumProgressType.ZipFile">
+            <summary>
+            压缩文件
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumProgressType.UnZipFile">
+            <summary>
+            解压文件
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumRightType.Depart">
+            <summary>
+            部门权限
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumRightType.User">
+            <summary>
+            人员权限
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumRightType.Front">
+            <summary>
+            前端权限
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumRightType.Backend">
+            <summary>
+            后台权限
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumServerType.QuotationServer">
+            <summary>
+            行情
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumServerType.TradingServer">
+            <summary>
+            交易
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumSide.Buy">
+            <summary>
+            买
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumSide.Sell">
+            <summary>
+            卖
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.SendError">
+            <summary>
+            发单错误
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.CancelError">
+            <summary>
+            撤单错误
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.CloudMsg">
+            <summary>
+            云端消息
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.AuditMsg">
+            <summary>
+            审核消息
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.AccountMsg">
+            <summary>
+            出入金消息
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.LimitMsg">
+            <summary>
+            限制消息（挂撤次数已满）
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.SuConditionMsg">
+            <summary>
+            超级单消息
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumMessageType.RiskMsg">
+            <summary>
+            风控消息
+            </summary>
+        </member>
+        <member name="M:EPI.Model.GridFieldAttribute.#ctor(System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            表格字段
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.FontSize">
+            <summary>
+            字体大小
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.DecimalNumber">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.FieldWidth">
+            <summary>
+            字段宽度
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.Order">
+            <summary>
+            顺序
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.IsDesc">
+            <summary>
+            是否倒序
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.SortOrder">
+            <summary>
+            排序顺序
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.IsExport">
+            <summary>
+            是否导出字段
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.IsWinLossColor">
+            <summary>
+            是否盈亏颜色
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.IsPercentage">
+            <summary>
+            是否百分比
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.ESummaryType">
+            <summary>
+            统计类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.SummaryType">
+            <summary>
+            统计类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.SummaryValue">
+            <summary>
+            统计值
+            </summary>
+        </member>
+        <member name="F:EPI.Model.GridFieldAttribute._eFilterScreenType">
+            <summary>
+            过滤条件类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.GridFieldAttribute.FilterValue">
+            <summary>
+            过滤值
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.Stop">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.Pause">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.Recovery">
+            <summary>
+            恢复
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.User1">
+            <summary>
+            用户自定义1
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.User2">
+            <summary>
+            用户自定义1
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.User3">
+            <summary>
+            用户自定义1
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.User4">
+            <summary>
+            用户自定义1
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumStrategyCommand.User5">
+            <summary>
+            用户自定义1
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.RspOrder">
+            <summary>
+            委托回报
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.RspTrade">
+            <summary>
+            委托成交
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.AccountInfo">
+            <summary>
+            账户信息
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.PositionInfo">
+            <summary>
+            持仓信息
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.PrePayOrder">
+            <summary>
+            预埋单
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.WorkerAccount">
+            <summary>
+            工人账户
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.WorkerPosition">
+            <summary>
+            工人持仓
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.StrategyData">
+            <summary>
+            策略数据
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.TraceData">
+            <summary>
+            跟单数据
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumTableDataType.AccountData">
+            <summary>
+            账户数据
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumReportType.Standard">
+            <summary>
+            标准
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumReportType.OnePair">
+            <summary>
+            逐笔
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumReportType.Reverse">
+            <summary>
+            反转
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.LongOpen">
+            <summary>
+            多开
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.ShortOpen">
+            <summary>
+            空开
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.LongClose">
+            <summary>
+            多平
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.ShortClose">
+            <summary>
+            空平
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.BothOpen">
+            <summary>
+            双开
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.BothClose">
+            <summary>
+            双平
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.LongExchange">
+            <summary>
+            多换
+            </summary>
+        </member>
+        <member name="F:EPI.Model.EnumDirection.ShortExchange">
+            <summary>
+            空换
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Exchanges.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.StaticRight">
+            <summary>
+            静态权益
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.Profit">
+            <summary>
+            盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.TodayProfit">
+            <summary>
+            当日盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.UsedMargin">
+            <summary>
+            占用保证金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.FrozenMargin">
+            <summary>
+            冻结的保证金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.FrozenMoney">
+            <summary>
+            冻结的资金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.FrozenCommission">
+            <summary>
+            冻结的手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.DynRight">
+            <summary>
+            动态权益(静态权益+盈亏-手续费)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.AvailableMoney">
+            <summary>
+            可用资金(动态权益-占用保证金-冻结保证金-冻结资金-冻结手续费)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.RiskValue">
+            <summary>
+            风险值(占用保证金/可用资金)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.IsVirtual">
+            <summary>
+            是否模拟账户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.HisTotalInMoney">
+            <summary>
+            历史总出入金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.NetValue">
+            <summary>
+            净值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.NetLeverage">
+            <summary>
+            净杠杆率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Accounts.TotalLeverage">
+            <summary>
+            总杠杆率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FastTests.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FastTests.SubContracts">
+            <summary>
+            订阅合约（如：1M_ag000,3M_cu000）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FastTests.IsTickTest">
+            <summary>
+            是否Tick测试
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FastTests.IsTestAllContracts">
+            <summary>
+            全品种测试
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FastTests.EnumTestIdentity">
+            <summary>
+            迭代测试标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FrontFuns.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FrontFuns.Name">
+            <summary>
+            功能名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FrontFuns.FunType">
+            <summary>
+            功能类别
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FrontFuns.Desc">
+            <summary>
+            功能描述
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FrontFuns.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FTDetails.ESide">
+            <summary>
+            买卖（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FTDetails.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FTDetails.EnumTestIdentity">
+            <summary>
+            迭代测试标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FTReports.EnumTestIdentity">
+            <summary>
+            迭代测试标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.FTRptDetails.EnumTestIdentity">
+            <summary>
+            迭代测试标识
+            </summary>
+        </member>
+        <member name="T:EPI.Model.IStrategy">
+            <summary>
+            策略接口
+            </summary>
+        </member>
+        <member name="P:EPI.Model.IStrategy.LoadDataCount">
+            <summary>
+            加载数据次数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.IStrategy.Setting">
+            <summary>
+            策略配置
+            </summary>
+        </member>
+        <member name="P:EPI.Model.IStrategy.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.IStrategy.IsChangedDay">
+            <summary>
+            是否换日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.IStrategy.IsFastTest">
+            <summary>
+            是否快速回测
+            </summary>
+        </member>
+        <member name="M:EPI.Model.IStrategy.LoadBarDatas(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            加载Bar数据(支持自定义合约）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="start">开始时间（包含）</param>
+            <param name="end">结束时间（不包含）</param>
+            <param name="isFuzzy">模糊查询</param>
+            <param name="isBarBaseOnTick">Bar是基于Tick生成</param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.FinishedLoadData(System.String,System.String,System.Collections.Generic.List{EPI.Model.BarData},System.Boolean)">
+            <summary>
+            数据加载完成
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="barDatas">数据</param>
+            <param name="isLast">是否最后一批数据</param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.InitStrategy(System.Object)">
+            <summary>
+            初始化
+            </summary>
+            <param name="sender">策略参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.InitSetting(System.String)">
+            <summary>
+            初始化配置
+            </summary>
+            <param name="setting">配置</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.InitDBFields">
+            <summary>
+            初始化入库字段
+            </summary>
+        </member>
+        <member name="M:EPI.Model.IStrategy.SaveDBFields">
+            <summary>
+            保存入库字段
+            </summary>
+        </member>
+        <member name="M:EPI.Model.IStrategy.InitLocalDB">
+            <summary>
+            初始化本地数据库
+            </summary>
+        </member>
+        <member name="M:EPI.Model.IStrategy.StartStrategy">
+            <summary>
+            初始化策略
+            </summary>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Log(System.String,System.Boolean)">
+            <summary>
+            写日志
+            </summary>
+            <param name="msg">消息</param>
+            <param name="isError">是否错误</param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Log(System.String,System.Exception)">
+            <summary>
+            写日志
+            </summary>
+            <param name="title">标题</param>
+            <param name="ex">错误</param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.GetPreData(System.String,System.String,System.Int32)">
+            <summary>
+            获取前根Bar
+            </summary>
+            <param name="contract">合约</param>
+            <param name="cycle">周期</param>
+            <param name="num">前面第几根(0:前一根,1:前前根)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Buy(System.String,System.Int32,System.Double)">
+            <summary>
+            买入（指定价）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Buy(System.Int32,System.Double)">
+            <summary>
+            买入（指定价）
+            </summary>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Buy(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            买入（算法单）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-超价 2-挂量小价）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Buy(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            买入（算法单）
+            </summary>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-超价 2-挂量小价）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Sell(System.String,System.Int32,System.Double)">
+            <summary>
+            卖出（指定价）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Sell(System.Int32,System.Double)">
+            <summary>
+            卖出（指定价）
+            </summary>
+            <param name="number">数量</param>
+            <param name="price">价格</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Sell(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            卖出（市价）
+            </summary>
+            <param name="contract">合约</param>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-超价 2-挂量小价）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Sell(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            卖出（市价）
+            </summary>
+            <param name="number">数量</param>
+            <param name="sendPriceType">发单类型（0-对价 1-超价 2-挂量小价）</param>
+            <param name="advPoint">超价打单点数</param>
+            <param name="waitSecond">挂等时间（秒）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.Cancel(System.String)">
+            <summary>
+            撤销订单
+            </summary>
+            <param name="clientOrderId">订单号</param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.RtnTickData(EPI.Model.TickData)">
+            <summary>
+            用于接收Tick数据（如果在里面写大量逻辑，可能导致丢包）
+            </summary>
+            <param name="tickData"></param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.RtnBarData(EPI.Model.BarData,System.Boolean)">
+            <summary>
+            用于接收Bar数据（如果在里面写大量逻辑，可能导致丢包）
+            </summary>
+            <param name="barData">Bar数据</param>
+            <param name="isNewBar">是否新Bar</param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.RtnOrder(EPI.Model.RspOrders)">
+            <summary>
+            返回交易回报
+            </summary>
+            <param name="rOrder"></param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.RtnTrade(EPI.Model.RspTrades)">
+            <summary>
+            返回成交明细
+            </summary>
+            <param name="rTrade"></param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.RtnMessage(EPI.Model.JRspMessage)">
+            <summary>
+            返回消息
+            </summary>
+            <param name="rMsg"></param>
+        </member>
+        <member name="M:EPI.Model.IStrategy.StopStrategy">
+            <summary>
+            停止策略
+            </summary>
+        </member>
+        <member name="M:EPI.Model.IStrategy.SendMail(System.String,System.String,System.String)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="title">标题</param>
+            <param name="content">内容</param>
+            <param name="toAccount">账户</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.InOutMoney(System.Double)">
+            <summary>
+            出入金
+            </summary>
+            <param name="money">入金</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.GetPosition(System.String)">
+            <summary>
+            获取持仓信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.GetReport">
+            <summary>
+            获取策略报告
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.GetContract(System.String)">
+            <summary>
+            获取合约信息
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.GetContractTpDetail(System.String)">
+            <summary>
+            获取合约模版
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.IStrategy.ConvertParams(System.Object)">
+            <summary>
+            转换参数
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.Exchanges">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.RealTimeDataList">
+            <summary>
+            实时行情数据
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.SingleOrderList">
+            <summary>
+            单合约信息
+            </summary>
+        </member>
+        <member name="F:EPI.Model.JArithmeticOrder._userParamDict">
+            <summary>
+            用户参数字典
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.OrderName">
+            <summary>
+            订单名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.Client">
+            <summary>
+            指定客户端
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.Worker">
+            <summary>
+            指定工人
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.SingleSendVolume">
+            <summary>
+            单次发单数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.UserRspOrder">
+            <summary>
+            用户回报单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.UserRspMessage">
+            <summary>
+            用户回报消息
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.WorkerRspOrderList">
+            <summary>
+            工人回报队列
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.WorkerRspTradeList">
+            <summary>
+            工人成交回报队列
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.PriceType">
+            <summary>
+            价格类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.OrderType">
+            <summary>
+            订单类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.Side">
+            <summary>
+            买卖
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.Volume">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.SubMinVolume">
+            <summary>
+            子合约最小下单单位(用于校验)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.ArithmeticContent">
+            <summary>
+            算法内容
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.ValidDays">
+            <summary>
+            有效时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.WaitSeconds">
+            <summary>
+            等待秒数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.AdvantagePoint">
+            <summary>
+            超价点数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.Formula">
+            <summary>
+            公式
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.IsNeedToCancel">
+            <summary>
+            是否需要撤单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.IsSendedCancelOrder">
+            <summary>
+            是否已发送撤单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.IsSendedOrder">
+            <summary>
+            是否已发送订单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.IsCustomContract">
+            <summary>
+            是否自定义合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.StrategyId">
+            <summary>
+            策略编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.TimeTpId">
+            <summary>
+            时间模板
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.TimeTpDetailList">
+            <summary>
+            时间模版明细
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.InsertTime">
+            <summary>
+            报单时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.IsChecking">
+            <summary>
+            检查中
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticOrder.IsQuiting">
+            <summary>
+            正在终止
+            </summary>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.IsEmptyQueue">
+            <summary>
+            是否队列中为空
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.AddUserParam``1(System.String,``0)">
+            <summary>
+            添加用户参数
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetUserParam``1(System.String)">
+            <summary>
+            获取用户参数
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.DelUserParam(System.String)">
+            <summary>
+            删除用户参数
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.SaveWorkerRspOrder(EPI.Model.RspOrders)">
+            <summary>
+            保存工人回报
+            </summary>
+            <param name="rspOrder"></param>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.FindWorkerRspOrder(System.String)">
+            <summary>
+            查询工人回报
+            </summary>
+            <param name="clientOrderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.AddWorkerRspTrade(EPI.Model.RspTrades)">
+            <summary>
+            添加工人成交
+            </summary>
+            <param name="rspTrade"></param>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetSingleOrder(System.String)">
+            <summary>
+            获取单合约信息
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.IsSingleLeg">
+            <summary>
+            是否单腿
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetLeftNumberArray">
+            <summary>
+            获取剩余下单量队列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetTradedPrice">
+            <summary>
+            获取成交价格
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetMinVolUndealContract(System.Int32)">
+            <summary>
+            获取最少量未处理合约
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetTradedNumber">
+            <summary>
+            获取成交数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.IsAllFinished">
+            <summary>
+            是否订单全部完成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.IsThisTimeAllFinished">
+            <summary>
+            本次是否全部完成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetIndex(System.String)">
+            <summary>
+            获取合约索引
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetCurrentTime">
+            <summary>
+            最新时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetLastPrice">
+            <summary>
+            获取最新价
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetAskPrice">
+            <summary>
+            获取卖一价
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetBidPrice">
+            <summary>
+            获取买一价
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetBidVolume">
+            <summary>
+            获取买一量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetAskVolume">
+            <summary>
+            获取卖一量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetSingleData(System.String)">
+            <summary>
+            获取单合约数据
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetSingleOppositePrice(System.String,System.Boolean@)">
+            <summary>
+            获取单合约打单价
+            </summary>
+            <param name="contract">单腿合约</param>
+            <param name="isUpDown">是否涨跌停</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.GetSingleOppositeVolume(System.String)">
+            <summary>
+            获取单合约当前打单量
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticOrder.UpdateSingleData(EPI.Model.TickData)">
+            <summary>
+            更新单个合约数据
+            </summary>
+            <param name="updateTickData"></param>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.OrderId">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.Side">
+            <summary>
+            买卖
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.InsertPrice">
+            <summary>
+            报入价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.WantedPrice">
+            <summary>
+            意愿价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.GroupNumber">
+            <summary>
+            组数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.Unit">
+            <summary>
+            单位数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.TradedNumber">
+            <summary>
+            成交数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.QueueNumber">
+            <summary>
+            队列中数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.TradedPrice">
+            <summary>
+            成交价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.IsWorkerReceived">
+            <summary>
+            是否工人已收到
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.IsSendCancel">
+            <summary>
+            是否已发送撤单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.MonitorBeginTime">
+            <summary>
+            监控开始时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.SingleSendVolume">
+            <summary>
+            单次下单数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.WaitSeconds">
+            <summary>
+            订单有效秒数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.AdvantagePrice">
+            <summary>
+            超价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.IsInQueue">
+            <summary>
+            是否在队列中
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.IsDealedAllTradeOrCanceled">
+            <summary>
+            是否已处理成交或已撤销(未触发状态为True)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.TotalNumber">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.UnTradedNumber">
+            <summary>
+            未成交数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.PriceTick">
+            <summary>
+            最小变动价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.VolumeMultiple">
+            <summary>
+            合约乘数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.UnSendedNumber">
+            <summary>
+            未发送数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.JArithmeticSingleOrder.IsOverTime(System.TimeSpan)">
+            <summary>
+            是否过时
+            </summary>
+            <param name="curTime"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.ThisTimeLeftNumber">
+            <summary>
+            本次剩余
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.IsThisTimeFinished">
+            <summary>
+            本次是否已完成
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JArithmeticSingleOrder.ThisTimeVolume">
+            <summary>
+            本次下单量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.JCloudState.CloudId">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JCloudState.StrategyIds">
+            <summary>
+            策略编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JCloudState.StrategyCount">
+            <summary>
+            策略数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JCloudState.CpuRate">
+            <summary>
+            CPU使用率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JCloudState.MemoryAvailable">
+            <summary>
+            可用内存
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JCloudState.DataRcvStatus">
+            <summary>
+            数据状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JCloudState.TradeStatus">
+            <summary>
+            交易状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JCloudState.Status">
+            <summary>
+            算法服务器状态
+            </summary>
+        </member>
+        <member name="T:EPI.Model.JConverter">
+            <summary>
+            Model转换类
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JFTWorkerState.WorkerId">
+            <summary>
+            工人标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JFTWorkerState.WorkerType">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JFTWorkerState.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MonthReports.ContractType">
+            <summary>
+            合约类别
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MonthReports.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MonthReports.Profit">
+            <summary>
+            当日盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MonthReports.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MonthReports.SlippageFee">
+            <summary>
+            滑点费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MonthReports.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MonthReports.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.UserName">
+            <summary>
+            客户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.LongNumber">
+            <summary>
+            多头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.ShortNumber">
+            <summary>
+            空头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.NetNumber">
+            <summary>
+            净头寸(多头-空头)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.LongAvgPrice">
+            <summary>
+            多头均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.ShortAvgPrice">
+            <summary>
+            空头均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.TotalLongAvgPrice">
+            <summary>
+            多头累计均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.TotalShortAvgPrice">
+            <summary>
+            空头累计均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.TotalLongNumber">
+            <summary>
+            多头累计数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.TotalShortNumber">
+            <summary>
+            空头累计数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.UsedMargin">
+            <summary>
+            占用保证金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.FloatProfit">
+            <summary>
+            浮动盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.TodayProfit">
+            <summary>
+            浮动盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.IsUser">
+            <summary>
+            是否组合
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.TdLongNetNumber">
+            <summary>
+            多头今仓数量
+            </summary> 
+        </member>
+        <member name="P:EPI.Model.Positions.TdShortNetNumber">
+            <summary>
+            空头今仓数量
+            </summary> 
+        </member>
+        <member name="P:EPI.Model.Positions.FrozenLong">
+            <summary>
+            多头冻结数量
+            </summary> 
+        </member>
+        <member name="P:EPI.Model.Positions.FrozenShort">
+            <summary>
+            空头冻结数量
+            </summary> 
+        </member>
+        <member name="P:EPI.Model.Positions.FrozenTdLong">
+            <summary>
+            多头今仓冻结数量
+            </summary> 
+        </member>
+        <member name="P:EPI.Model.Positions.FrozenTdShort">
+            <summary>
+            空头今仓冻结数量
+            </summary>  
+        </member>
+        <member name="P:EPI.Model.Positions.LongNetNumber">
+            <summary>
+            多头净头寸
+            </summary>  
+        </member>
+        <member name="P:EPI.Model.Positions.ShortNetNumber">
+            <summary>
+            空头净头寸
+            </summary>  
+        </member>
+        <member name="P:EPI.Model.Positions.SPLongNetNumber">
+            <summary>
+            套利合约多头 净头寸
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.SPShortNetNumber">
+            <summary>
+            套利合约空头 净头寸
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.FrozenSPLongNumber">
+            <summary>
+            套利合约多头 冻结头寸
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.FrozenSPShortNumber">
+            <summary>
+            套利合约空头 冻结头寸
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.SPLegInfo">
+            <summary>
+            SP腿绑定详情(contract|side|legindex|bigvol|smallvol)，示例 (i2005|49|0|5|0,pp2005|50|1|3|1)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.LeftHedgeNumber">
+            <summary>
+            剩余可对冲数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.LeftMarginNumber">
+            <summary>
+            剩余占保数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.IsSetWinLoss">
+            <summary>
+            是否设置止损止盈
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Positions.VolumeMultiple">
+            <summary>
+            合约乘数
+            </summary>
+        </member>
+        <member name="T:EPI.Model.JPR">
+            <summary>
+            公共资源
+            </summary>
+        </member>
+        <member name="F:EPI.Model.JPR.NaN">
+            <summary>
+            非有效数值
+            </summary>
+        </member>
+        <member name="M:EPI.Model.JPR.IsNaN(System.Double)">
+            <summary>
+            是非有效数
+            </summary>
+        </member>
+        <member name="M:EPI.Model.JPR.IsNaN(System.Single)">
+            <summary>
+            是非有效数
+            </summary>
+        </member>
+        <member name="M:EPI.Model.JPR.IsValidPrice(System.Double,System.Boolean)">
+            <summary>
+            判断是否为正常价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.MemoryAvailable">
+            <summary>
+            可用内存
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.CpuRate">
+            <summary>
+            CPU使用率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.SHFETime">
+            <summary>
+            上交所时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.DCETime">
+            <summary>
+            大交所时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.CFFEXTime">
+            <summary>
+            中金所时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.CZCETime">
+            <summary>
+            郑交所时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.ServerTime">
+            <summary>
+            服务器时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.Status">
+            <summary>
+            服务器状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JServerState.PreStatus">
+            <summary>
+            前一次状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.Cycle">
+            <summary>
+            周期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.FileLength">
+            <summary>
+            文件长度
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileInfo.IsTemp">
+            <summary>
+            是否临时文件
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JAlgState.AlgId">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JAlgState.AlgType">
+            <summary>
+            算法类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JAlgState.CpuRate">
+            <summary>
+            CPU使用率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JAlgState.MemoryAvailable">
+            <summary>
+            可用内存
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JAlgState.DataRcvStatus">
+            <summary>
+            数据状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JAlgState.Status">
+            <summary>
+            算法服务器状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JAlgState.InvalidContracts">
+            <summary>
+            无效合约
+            </summary>
+        </member>
+        <member name="T:EPI.Model.Orders">
+            <summary>
+            客户端订单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ServerOrderId">
+            <summary>
+            服务器ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ClientOrderId">
+            <summary>
+            客户端ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.OrderName">
+            <summary>
+            订单名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.EOrderType">
+            <summary>
+            订单类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.OrderType">
+            <summary>
+            订单类型（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Sender">
+            <summary>
+            发送人
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.UsedMoneys">
+            <summary>
+            使用资金(各合约占用资金，如：100,200,300)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.UsedMoneyList">
+            <summary>
+            占用资金队列
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Client">
+            <summary>
+            客户端
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Worker">
+            <summary>
+            下单账户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ArithmeticServer">
+            <summary>
+            算法服务器
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Exchanges">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.EPriceType">
+            <summary>
+            价格类型（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.PriceType">
+            <summary>
+            价格类型（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ESide">
+            <summary>
+            买卖（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Volume">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.SingleSendVolume">
+            <summary>
+            单次发单数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.WaitSeconds">
+            <summary>
+            允许挂单等待秒数（针对算法单）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ValidDays">
+            <summary>
+            有效天数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.AdvantagePoint">
+            <summary>
+            超价点数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ContractCount">
+            <summary>
+            合约数量（用于验证指令）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ArithmeticType">
+            <summary>
+            算法单类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ArithmeticContent">
+            <summary>
+            算法单内容
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.TimeTpId">
+            <summary>
+            时间模板Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.StrategyId">
+            <summary>
+            策略标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.InsertTime">
+            <summary>
+            报单时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.CreateTime">
+            <summary>
+            插入时间（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.UpdateTime">
+            <summary>
+            更新时间（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.IsCanceled">
+            <summary>
+            是否已撤单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.SpecialContract">
+            <summary>
+            特殊合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.SCOffset">
+            <summary>
+            特殊合约偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.IsCustomContract">
+            <summary>
+            是否自定义合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ExchangeList">
+            <summary>
+            交易所清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.LongFrozenNumber">
+            <summary>
+            冻结资金类型(0：不冻结，1：冻结，-1：冻结失败)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ContractList">
+            <summary>
+            合约清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.SideList">
+            <summary>
+            单品种方向
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.VolumeList">
+            <summary>
+            单品种数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.Command">
+            <summary>
+            指令
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.ExecutePrice">
+            <summary>
+            执行价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.FakMinTradeVolume">
+            <summary>
+            Fak最小量（Fak最小成交量）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Orders.WinLossType">
+            <summary>
+            止损止盈类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.ClientOrderId">
+            <summary>
+            客户端订单Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.MessageContent">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.MessageTime">
+            <summary>
+            消息时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.Publisher">
+            <summary>
+            发布人
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.StrategyId">
+            <summary>
+            策略标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.IsVirutal">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JRspMessage.MessageCode">
+            <summary>
+            消息代号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.PrePayOrder.ESide">
+            <summary>
+            买卖（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.PrePayOrder.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.UserCode">
+            <summary>
+            用户代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.StaticRight">
+            <summary>
+            静态权益
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.LongVolume">
+            <summary>
+            多头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.ShortVolume">
+            <summary>
+            空头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.ClosePrice">
+            <summary>
+            收盘价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.SettlePrice">
+            <summary>
+            结算价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.CloseProfit">
+            <summary>
+            盈亏（收盘价）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.SettleProfit">
+            <summary>
+            盈亏（结算价）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealSettles.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.UserCode">
+            <summary>
+            用户代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.TradeCode">
+            <summary>
+            成交序号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.TradedVolume">
+            <summary>
+            成交数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.TradedPrice">
+            <summary>
+            成交价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.IsLong">
+            <summary>
+            买卖
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RealTrades.IsOpen">
+            <summary>
+            开平
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RoleRights.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RoleRights.RightType">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RoleRights.RVId">
+            <summary>
+            权限值ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RoleRights.IsExcluded">
+            <summary>
+            是否排除
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ServerOrderId">
+            <summary>
+            服务器ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.Worker">
+            <summary>
+            工人
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.OrderName">
+            <summary>
+            订单名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ESide">
+            <summary>
+            买卖（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.EOrderType">
+            <summary>
+            订单类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.OrderType">
+            <summary>
+            订单类型（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.InsertVolume">
+            <summary>
+            报单数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.InsertPrice">
+            <summary>
+            报单价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.TradedPrice">
+            <summary>
+            成交价(不含偏移量)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.UsrTradedPrice">
+            <summary>
+            成交价(含偏移量)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.TradedVolume">
+            <summary>
+            成交数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.OrderStatus">
+            <summary>
+            订单状态（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.InsertTime">
+            <summary>
+            报单时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.InsertTimeMsg">
+            <summary>
+            报单时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.TradedTime">
+            <summary>
+            成交时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.TradedTimeMsg">
+            <summary>
+            成交时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.HideMsg">
+            <summary>
+            隐藏单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.Exchanges">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.Client">
+            <summary>
+            发送对象
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ValidDays">
+            <summary>
+            有效日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.Sender">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.StrategyId">
+            <summary>
+            策略标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.SpecialContract">
+            <summary>
+            特殊合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.SCOffset">
+            <summary>
+            特殊合约偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.WorkerGroup">
+            <summary>
+            账户组
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ArithmeticServer">
+            <summary>
+            策略标识
+            </summary>
+            <summary>
+            算法服务器
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ContractName">
+            <summary>
+            合约名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ClientOrderId">
+            <summary>
+            客户端标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.Command">
+            <summary>
+            公式
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.EOrderStatus">
+            <summary>
+            订单状态（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.VirtualMsg">
+            <summary>
+            模拟/真实
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.LegTradedList">
+            <summary>
+            单腿成交信息
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.TotalLegVolume">
+            <summary>
+            所有腿发单数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.Flag">
+            <summary>
+            开平标记
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsSettled">
+            <summary>
+            是否已结算
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsCanceled">
+            <summary>
+            已撤单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsFinished">
+            <summary>
+            订单已完成
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsQueueing">
+            <summary>
+            还在队列中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.RspOrders.PriceType">
+            <summary>
+            订单状态（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ArithmeticContent">
+            <summary>
+            算法清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.CondtionType">
+            <summary>
+            价格条件
+            </summary>
+        </member>
+        <member name="F:EPI.Model.RspOrders._isChaseOrder">
+            <summary>
+            追单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsChaseOrder">
+            <summary>
+            追单
+            </summary>
+        </member>
+        <member name="F:EPI.Model.RspOrders._isSplitOrder">
+            <summary>
+            拆单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsSplitOrder">
+            <summary>
+            拆单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.RandomMin">
+            <summary>
+            拆单下限
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.RandomMax">
+            <summary>
+            拆单上限
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.AdvantagePoint">
+            <summary>
+            超价点数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.ExecutePrice">
+            <summary>
+            执行价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.FakMinTradeVolume">
+            <summary>
+            FAK最小值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspOrders.IsSetWinLoss">
+            <summary>
+            是否设置止损止盈
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.ServerOrderId">
+            <summary>
+            服务端订单标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.Worker">
+            <summary>
+            工人
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.ESide">
+            <summary>
+            买卖（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.TradedPrice">
+            <summary>
+            成交价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.TradedVolume">
+            <summary>
+            成交数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.SlippageFee">
+            <summary>
+            滑点费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.TradedTime">
+            <summary>
+            成交时间(用于通讯）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.CreateTime">
+            <summary>
+            成交时间（用于入库）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.StrategyId">
+            <summary>
+            策略ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.IsFromArithmetic">
+            <summary>
+            是否来自算法单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.Sender">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.SpecialContract">
+            <summary>
+            特殊合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.SCOffset">
+            <summary>
+            特殊合约偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.RspTrades.ClientOrderId">
+            <summary>
+            客户端订单标识
+            </summary>
+        </member>
+        <member name="T:EPI.Model.JWorkerOrder">
+            <summary>
+            工人订单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.ServerOrderId">
+            <summary>
+            服务器订单ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.WorkerOrderId">
+            <summary>
+            工人订单ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.Side">
+            <summary>
+            买卖
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.PriceType">
+            <summary>
+            价格类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.Volume">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerOrder.MaturityMonthYear">
+            <summary>
+            合约到期年月（外盘用）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspMessage.ServerOrderId">
+            <summary>
+            服务端订单Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspMessage.WorkerOrderId">
+            <summary>
+            工人订单Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspMessage.MessageType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspMessage.MessageContent">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspMessage.MessageTime">
+            <summary>
+            错误时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspMessage.IsVirutal">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.ServerOrderId">
+            <summary>
+            服务端订单Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.WorkerOrderId">
+            <summary>
+            工人订单Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.Side">
+            <summary>
+            多空
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.InsertVolume">
+            <summary>
+            报单数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.InsertPrice">
+            <summary>
+            报单价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.InsertTime">
+            <summary>
+            报单时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.IsVirutal">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.OrderStatus">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.IsCanceled">
+            <summary>
+            已撤单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.IsFinished">
+            <summary>
+            订单已完成
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.IsAllTraded">
+            <summary>
+            是否全部成交
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspOrder.IsQueueing">
+            <summary>
+            还在队列中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.ServerOrderId">
+            <summary>
+            客户端订单标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.WorkerOrderId">
+            <summary>
+            工人订单Id
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.Side">
+            <summary>
+            买卖
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.TradedPrice">
+            <summary>
+            成交价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.TradedVolume">
+            <summary>
+            成交数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.TradedTime">
+            <summary>
+            成交时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.IsVirutal">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerRspTrade.TradeID">
+            <summary>
+            成交编号
+            </summary>
+        </member>
+        <member name="T:EPI.Model.JWorkerState">
+            <summary>
+            真实交易端状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.WorkerId">
+            <summary>
+            工人标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.ValidExchanges">
+            <summary>
+            可用交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.InvalidContracts">
+            <summary>
+            不可用合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.RiskRate">
+            <summary>
+            风险度
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.AvailableMoney">
+            <summary>
+            可用资金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.StaticRight">
+            <summary>
+            静态权益
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.CpuRate">
+            <summary>
+            CPU使用率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.MemoryAvailable">
+            <summary>
+            可用内存
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.TimeOfExchanges">
+            <summary>
+            交易所时间(如：2014-01-01|SHFE>10:00:00,DCE>10:00:05)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.JWorkerState.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileSetting.ServerDir">
+            <summary>
+            服务器文件夹
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileSetting.ServerAddress">
+            <summary>
+            服务器地址
+            </summary>
+        </member>
+        <member name="P:EPI.Model.MDFileSetting.ServerPort">
+            <summary>
+            服务器端口
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.LongVolume">
+            <summary>
+            多头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.ShortVolume">
+            <summary>
+            空头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.RLongVolume">
+            <summary>
+            真实多头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.RShortVolume">
+            <summary>
+            真实空头数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.NetVolume">
+            <summary>
+            净头寸
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.LongAvgPrice">
+            <summary>
+            多头均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.ShortAvgPrice">
+            <summary>
+            空头均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.StaticRight">
+            <summary>
+            静态权益
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.UserMargin">
+            <summary>
+            用户保证金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.ClosePrice">
+            <summary>
+            收盘价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.Profit">
+            <summary>
+            当日盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.CreateTime">
+            <summary>
+            交易日期
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.IsVirtual">
+            <summary>
+            是否模拟
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.VolumeMultiple">
+            <summary>
+            合约乘数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.SlippageFee">
+            <summary>
+            滑点费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.SettlePrice">
+            <summary>
+            结算价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Settles.SettleProfit">
+            <summary>
+            结算盈亏
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:EPI.Model.Settles.LongMarketValue" -->
+        <member name="P:EPI.Model.Settles.ShortMarketValue">
+            <summary>
+            空头市值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.Name">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.Version">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.Publisher">
+            <summary>
+            发布者
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.FileUrl">
+            <summary>
+            文件Url
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.FileLength">
+            <summary>
+            文件长度
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.FilePath">
+            <summary>
+            策略本地路径
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.ParamDesc">
+            <summary>
+            用户参数说明
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.DefaultParam">
+            <summary>
+            默认参数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.DefaultSetting">
+            <summary>
+            默认配置
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.IsPublic">
+            <summary>
+            是否公共
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.IsOpenedChannel">
+            <summary>
+            是否通讯
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.ButtonNames">
+            <summary>
+            按钮名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.Desc">
+            <summary>
+            策略描述
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Strategies.IsDownloaded">
+            <summary>
+            是否已下完
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.StrategyId">
+            <summary>
+            策略编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.StrategyName">
+            <summary>
+            策略名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.StrategyVersion">
+            <summary>
+            策略版本
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.StrategyFileUrl">
+            <summary>
+            策略url路径
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.StrategyFileLength">
+            <summary>
+            策略文件长度
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.StrategyButtonNames">
+            <summary>
+            策略按钮名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.StrategyStatus">
+            <summary>
+            策略状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.UserParams">
+            <summary>
+            用户参数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.IsRunning">
+            <summary>
+            是否运行
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.IsAuto">
+            <summary>
+            是否自动运行
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.SubStrategies">
+            <summary>
+            订阅策略
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyDetails.IsOpenedChannel">
+            <summary>
+            是否通讯
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyReports.Profit">
+            <summary>
+            当日盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyReports.OnePairReportDict">
+            <summary>
+            逐笔报告
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyReports.ReverseReportDict">
+            <summary>
+            反转报告
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategySettles.EReportType">
+            <summary>
+            报告类型（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategySettles.ReportType">
+            <summary>
+            报告类型（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategySubReports.EReportType">
+            <summary>
+            报告类型（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategySubReports.ReportType">
+            <summary>
+            报告类型（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.SuConditions.ESide">
+            <summary>
+            买卖（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.SuConditions.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.SuConditions.EPriceType">
+            <summary>
+            价格类型（通讯字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.SuConditions.PriceType">
+            <summary>
+            价格类型（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Identity">
+            <summary>
+            数据标识
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.ContractName">
+            <summary>
+            合约名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.LastPrice">
+            <summary>
+            最新价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.UpDown1">
+            <summary>
+            涨跌(最新-昨收)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.UpDownRate1">
+            <summary>
+            涨跌幅(最新-昨收)/昨收
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidPrice1">
+            <summary>
+            买一价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidVolume1">
+            <summary>
+            买一量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskPrice1">
+            <summary>
+            卖一价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskVolume1">
+            <summary>
+            卖一量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Volume">
+            <summary>
+            成交量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.OpenInterest">
+            <summary>
+            持仓量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AveragePrice">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PositionDiff">
+            <summary>
+            增减仓
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.HighestPrice">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.LowestPrice">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.UpperLimitPrice">
+            <summary>
+            涨停价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.LowerLimitPrice">
+            <summary>
+            跌停价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.MarketValue">
+            <summary>
+            市值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.OpenPrice">
+            <summary>
+            开盘价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PreClosePrice">
+            <summary>
+            前收盘
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PreSettlementPrice">
+            <summary>
+            前结算
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.MarketValueRatio1">
+            <summary>
+            市值比1
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskBidSpread">
+            <summary>
+            买卖差
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.TradingDay">
+            <summary>
+            交易日(yyyymmdd)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.UpdateTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.UpDown2">
+            <summary>
+            涨跌(最新-昨结)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.UpDownRate2">
+            <summary>
+            涨跌幅(最新-昨结)/昨结
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PreOpenInterest">
+            <summary>
+            前持仓
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Amount">
+            <summary>
+            成交金额
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.RealDay">
+            <summary>
+            真实日期(yyyymmdd)
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.ClosePrice">
+            <summary>
+            收盘价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.SettlementPrice">
+            <summary>
+            结算
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.MarketValueRatio2">
+            <summary>
+            市值比2
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskPrice2">
+            <summary>
+            卖二价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidPrice2">
+            <summary>
+            买二价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskPrice3">
+            <summary>
+            卖三价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidPrice3">
+            <summary>
+            买三价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskPrice4">
+            <summary>
+            卖四价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidPrice4">
+            <summary>
+            买四价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskPrice5">
+            <summary>
+            卖五价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidPrice5">
+            <summary>
+            买五价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskVolume2">
+            <summary>
+            卖二量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidVolume2">
+            <summary>
+            买二量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskVolume3">
+            <summary>
+            卖三量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidVolume3">
+            <summary>
+            买三量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskVolume4">
+            <summary>
+            卖四量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidVolume4">
+            <summary>
+            买四量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.AskVolume5">
+            <summary>
+            卖五量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.BidVolume5">
+            <summary>
+            买五量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.FloatMoney">
+            <summary>
+            资金流入流出
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Offset">
+            <summary>
+            偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Offset1">
+            <summary>
+            偏移量1
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Direction">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.CurrentPosition">
+            <summary>
+            仓差
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.CurrentVolume">
+            <summary>
+            现手
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.Seq">
+            <summary>
+            序列（01）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.UpdateMillisec">
+            <summary>
+            毫秒
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.IsGroup">
+            <summary>
+            是否组合合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.VolumeMultiple">
+            <summary>
+            合约乘数（自行维护）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PriceTick">
+            <summary>
+            最小变动价位（自行维护）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PreLastPrice">
+            <summary>
+            前一次最新价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PreAskPrice1">
+            <summary>
+            前一次卖价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.PreBidPrice1">
+            <summary>
+            前一次买价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.TotalAmount">
+            <summary>
+            总成交金额
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.TotalVolume">
+            <summary>
+            总成交量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.TmpAvgPrice1">
+            <summary>
+            临时均价
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.TmpTotalVol1">
+            <summary>
+            临时总量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.TmpAvgPrice2">
+            <summary>
+            临时均价2
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.TmpTotalVol2">
+            <summary>
+            临时总量2
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.DecLen">
+            <summary>
+            小数点位数
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.RealContract">
+            <summary>
+            真实合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TickData.RealDateTime">
+            <summary>
+            真实时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.StartTime">
+            <summary>
+            开始时间（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.BiddingTime">
+            <summary>
+            集合竞价时间（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.EndTime">
+            <summary>
+            结束时间（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.TimeTpId">
+            <summary>
+            时间模版ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.IsClose">
+            <summary>
+            是否收盘
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.IsOpen">
+            <summary>
+            是否开盘
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.StartTimeSpan">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.EndTimeSpan">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.TimeTpDetails.BiddingTimeSpan">
+            <summary>
+            集合竞价时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UpdateFiles.Name">
+            <summary>
+            程序名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UpdateFiles.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UpdateFiles.FileLength">
+            <summary>
+            文件长度
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UpdateFiles.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UpdateFiles.Link">
+            <summary>
+            下载链接
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UpdateFiles.IsDownload">
+            <summary>
+            是否下载
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.ICCode">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.IcNo">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Phone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.DeptId">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.DeptName">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.Key">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.TradeTplCode">
+            <summary>
+            合约模板明细ID
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.IsConfirmedSettle">
+            <summary>
+            是否已确认结算的
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.HasAccountAudit">
+            <summary>
+            出入金审核权限
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.HasOrderAudit">
+            <summary>
+            订单审核权限
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.HasManageAccountAudit">
+            <summary>
+            管理资金权限
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.HasKillAudit">
+            <summary>
+            一键清理权限
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.FrontFunctionList">
+            <summary>
+            前端功能列表
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.AuthorizedUserList">
+            <summary>
+            已授权用户列表
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.ContractList">
+            <summary>
+            合约信息
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.ContractTPDetailList">
+            <summary>
+            合约模板明细
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RealAccount">
+            <summary>
+            用户真实账户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.VirtualAccount">
+            <summary>
+            用户模拟账户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RealPositions">
+            <summary>
+            用户真实持仓
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.VirtualPositions">
+            <summary>
+            用户模拟持仓
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RspOrderList">
+            <summary>
+            订单回报清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RspTradeList">
+            <summary>
+            订单成交清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.PreSettleList">
+            <summary>
+            前结算信息
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.RspMessageList">
+            <summary>
+            订单消息清单
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.ContractNameDict">
+            <summary>
+            合约名字典
+            </summary>
+        </member>
+        <member name="P:EPI.Model.Users.AppName">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="M:EPI.Model.Users.FindPosition(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            查询持仓
+            </summary>
+            <param name="contract"></param>
+            <param name="worker"></param>
+            <param name="isVirtual"></param>
+            <param name="isUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.Users.IsValidContract(System.Collections.Generic.List{System.String})">
+            <summary>
+            是否有效合约
+            </summary>
+            <param name="contracts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.Users.IsEnoughMoney(EPI.Model.EnumSide,System.Collections.Generic.List{System.String},System.Collections.Generic.List{EPI.Model.EnumSide},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Double},System.Int32,System.Boolean)">
+            <summary>
+            是否资金足够
+            </summary>
+        </member>
+        <member name="M:EPI.Model.Users.FindContractTemplate(System.String)">
+            <summary>
+            查询合约模板
+            </summary>
+            <param name="contract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.Users.UpdateAccount(System.Boolean)">
+            <summary>
+            更新账户信息
+            </summary>
+            <param name="isVirtual"></param>
+        </member>
+        <member name="M:EPI.Model.Users.UpdateAccount(EPI.Model.Accounts)">
+            <summary>
+            更新账户信息
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:EPI.Model.Users.FrozenMoney(System.String,System.Double,EPI.Model.EnumSide,System.Double,System.Int32,System.Boolean,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            冻结资金
+            </summary>
+            <param name="contract"></param>
+            <param name="volumeMultiple"></param>
+            <param name="side"></param>
+            <param name="price"></param>
+            <param name="volume"></param>
+            <param name="isVirtual"></param>
+            <param name="longFrozenNumber"></param>
+            <param name="shortFrozenNumber"></param>
+            <param name="longUsedNumber"></param>
+            <param name="shortUsedMoney"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.Users.CheckFrozenMoney(System.Collections.Generic.List{EPI.Model.Positions},EPI.Model.Accounts,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Collections.Generic.Dictionary{System.String,System.Int32},System.String,System.Double,EPI.Model.EnumSide,System.Double,System.Int32,EPI.Model.UserTradeTpDetails,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            检查冻结资金
+            </summary>
+            <param name="positions"></param>
+            <param name="account"></param>
+            <param name="usedShortUnFrozenDict"></param>
+            <param name="usedLongUnFrozenDict"></param>
+            <param name="contract"></param>
+            <param name="volumeMultiple"></param>
+            <param name="side"></param>
+            <param name="price"></param>
+            <param name="volume"></param>
+            <param name="contractTemplate"></param>
+            <param name="longFrozenNumber"></param>
+            <param name="shortFrozenNumber"></param>
+            <param name="longUsedNumber"></param>
+            <param name="shortUsedMoney"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.Users.UnfrozenMoney(System.String,System.Double,EPI.Model.EnumSide,System.Double,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            解冻资金
+            </summary>
+            <param name="contract"></param>
+            <param name="volumeMultiple"></param>
+            <param name="side"></param>
+            <param name="price"></param>
+            <param name="isVirtual"></param>
+            <param name="longFrozenNumber"></param>
+            <param name="shortFrozenNumber"></param>
+            <param name="longUsedNumber"></param>
+            <param name="shortUsedMoney"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.Users.CheckUnfrozenMoney(EPI.Model.Accounts,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Collections.Generic.Dictionary{System.String,System.Int32},System.String,System.Double,EPI.Model.EnumSide,System.Double,System.Int32,System.Int32,System.Int32,System.Int32,EPI.Model.UserTradeTpDetails)">
+            <summary>
+            检查释放资金
+            </summary>
+            <param name="account"></param>
+            <param name="usedShortUnFrozenDict"></param>
+            <param name="usedLongUnFrozenDict"></param>
+            <param name="contract"></param>
+            <param name="volumeMultiple"></param>
+            <param name="side"></param>
+            <param name="price"></param>
+            <param name="longFrozenNumber"></param>
+            <param name="shortFrozenNumber"></param>
+            <param name="longUsedNumber"></param>
+            <param name="shortUsedMoney"></param>
+            <param name="contractTemplate"></param>
+        </member>
+        <member name="M:EPI.Model.Users.UpdatePosition1(System.String,System.String,System.Double,EPI.Model.EnumSide,System.Double,System.Int32,System.Boolean,System.Double@)">
+            <summary>
+            更新持仓
+            </summary>
+            <param name="contract"></param>
+            <param name="worker"></param>
+            <param name="volumeMultiple"></param>
+            <param name="side"></param>
+            <param name="tradedPrice"></param>
+            <param name="tradedVolume"></param>
+            <param name="isVirtual"></param>
+            <param name="commission"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Model.Users.UpdatePosition(EPI.Model.Positions)">
+            <summary>
+            更新持仓
+            </summary>
+            <param name="position"></param>
+        </member>
+        <member name="M:EPI.Model.Users.InitGPByRspOrder">
+            <summary>
+            初始化组合持仓
+            </summary>
+        </member>
+        <member name="M:EPI.Model.Users.InitGPBySettle">
+            <summary>
+            初始化组合结算
+            </summary>
+        </member>
+        <member name="M:EPI.Model.Users.InitPositionParams(EPI.Model.Positions,System.String,System.String)">
+            <summary>
+            初始化持仓参数
+            </summary>
+            <param name="position"></param>
+            <param name="contract"></param>
+            <param name="command"></param>
+        </member>
+        <member name="M:EPI.Model.Users.UpdateGroupPosition(EPI.Model.RspOrders,System.Boolean)">
+            <summary>
+            更新组合持仓
+            </summary>
+            <param name="rspOrder">回报消息</param>
+            <param name="isNew">是否新消息</param>
+        </member>
+        <member name="M:EPI.Model.Users.UpdateGroupPosition(EPI.Model.RspTrades)">
+            <summary>
+            更新组合持仓
+            </summary>
+            <param name="rspTrade"></param>
+        </member>
+        <member name="M:EPI.Model.Users.UpdateProfit(System.String,System.Double,System.Double)">
+            <summary>
+            更新盈亏
+            </summary>
+            <param name="contract">合约</param>
+            <param name="lastPrice">价格</param>
+            <param name="volumeMultiple">合约乘数</param>
+        </member>
+        <member name="M:EPI.Model.Users.UpdateCustomProfit(System.String,System.Double)">
+            <summary>
+            更新自定义合约盈亏
+            </summary>
+            <param name="contract"></param>
+            <param name="lastPrice"></param>
+        </member>
+        <member name="M:EPI.Model.Users.UpdateCPs(System.String,System.Double,System.Collections.Generic.List{EPI.Model.Positions})">
+            <summary>
+            批量更新组合持仓
+            </summary>
+            <param name="contract"></param>
+            <param name="lastPrice"></param>
+            <param name="positionList"></param>
+        </member>
+        <member name="M:EPI.Model.Users.UPdateCP(EPI.Model.Positions)">
+            <summary>
+            更新组合持仓
+            </summary>
+            <param name="position"></param>
+        </member>
+        <member name="P:EPI.Model.UserTradeTemplates.ParentCode">
+            <summary>
+            父类代码
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UserTradeTemplates.Multiple">
+            <summary>
+            倍率
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UserTradeTpDetails.MarginValue">
+            <summary>
+            保证金值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UserTradeTpDetails.MarginType">
+            <summary>
+            保证金类型（0-百分比，1-绝对值）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UserTradeTpDetails.FeeValue">
+            <summary>
+            手续费值
+            </summary>
+        </member>
+        <member name="P:EPI.Model.UserTradeTpDetails.FeeType">
+            <summary>
+            手续费类型（0-百分比，1-绝对值）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.DynRight">
+            <summary>
+            动态权益
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.Available">
+            <summary>
+            可用资金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.CloseProfit">
+            <summary>
+            平仓盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.PositionProfit">
+            <summary>
+            持仓盈亏
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.CurrMargin">
+            <summary>
+            当前保证金总额
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.WithdrawQuota">
+            <summary>
+            可取资金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.StaticRight">
+            <summary>
+            静态权益
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.FrozenMargin">
+            <summary>
+            冻结保证金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.FrozenCash">
+            <summary>
+            冻结的资金
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.FrozenCommission">
+            <summary>
+            冻结的手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.WorkerAccount.TradingDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.StrategyName">
+            <summary>
+            策略名
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.Client">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.Contract">
+            <summary>
+            合约
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.Side">
+            <summary>
+            买卖（数据库字段）
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.TradedPrice">
+            <summary>
+            成交价格
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.TradedVolume">
+            <summary>
+            成交数量
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.Exchange">
+            <summary>
+            交易所
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.Commission">
+            <summary>
+            手续费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.SlippageFee">
+            <summary>
+            滑点费
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.CreateTime">
+            <summary>
+            成交时间
+            </summary>
+        </member>
+        <member name="P:EPI.Model.StrategyTrades.TradeDay">
+            <summary>
+            交易日
+            </summary>
+        </member>
+    </members>
+</doc>

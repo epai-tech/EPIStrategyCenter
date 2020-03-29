@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Asteroids</name>
+    </assembly>
+    <members>
+        <member name="P:EPI.Asteroids.Functions.BaseFunction.Name">
+            <summary>
+            指标名称
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Functions.BaseFunction.Description">
+            <summary>
+            指标描述
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.ATRGrid1.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.ATRGrid2.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.Name">
+            <summary>
+            指标名称
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.Description">
+            <summary>
+            指标描述
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.IsShowInMain">
+            <summary>
+            是否在主图上显示
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.IsSimpleMode">
+            <summary>
+            精简模式
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.ValueDict">
+            <summary>
+            数据字典
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.GraphDict">
+            <summary>
+            图形字典
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.UserLineList">
+            <summary>
+            用户线段
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.Count">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BaseIndicator.MaxCacheCount">
+            <summary>
+            缓存Bar数量
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.AddUserLine(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.Color,System.Drawing.Drawing2D.DashStyle,System.Single,System.String)">
+            <summary>
+            添加用户线段
+            </summary>
+            <param name="point1"></param>
+            <param name="point2"></param>
+            <param name="title"></param>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.GetUserLine(System.Int32)">
+            <summary>
+            获取用户线段
+            </summary>
+            <param name="pIndex">倒数第几个</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.AddGuidLine(System.String,System.Double,System.Drawing.Color,EPI.Model.EnumLineStyle)">
+            <summary>
+            添加参考线
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="color"></param>
+            <param name="lineStyle"></param>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.DelGuidLine(System.String)">
+            <summary>
+            删除参考线
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.GetBarData(System.Int32)">
+            <summary>
+            根据索引获取Bar数据(0->最新一根，1->前一根,以此推类)
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.GetBarDatas">
+            <summary>
+            获取最新缓存Bar数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.AddBarData(EPI.Model.BarData)">
+            <summary>
+            添加Bar数据至最后
+            </summary>
+            <param name="bar"></param>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.UpdateBarData(EPI.Model.BarData)">
+            <summary>
+            更新Bar数据
+            </summary>
+            <param name="bar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.InsertBar(System.Int32,EPI.Model.BarData)">
+            <summary>
+            插入Bar数据
+            </summary>
+            <param name="index"></param>
+            <param name="bar"></param>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.AddBars(System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            批量添加Bars
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BaseIndicator.InsertBars(System.Int32,System.Collections.Generic.List{EPI.Model.BarData})">
+            <summary>
+            批量插入Bars
+            </summary>
+            <param name="index"></param>
+            <param name="bars"></param>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BOLL.GetValues(EPI.Asteroids.Indicators.BOLL.EnumBollLine)">
+            <summary>
+            获取所有Boll值
+            </summary>
+            <param name="bl">Boll线类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BOLL.GetValue(EPI.Asteroids.Indicators.BOLL.EnumBollLine,System.Int32)">
+            <summary>
+            获取Boll值
+            </summary>
+            <param name="bl">Boll线类型</param>
+            <param name="index">索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BOLL.GetLast(EPI.Asteroids.Indicators.BOLL.EnumBollLine)">
+            <summary>
+            获取最后一个Boll值
+            </summary>
+            <param name="bl">Boll线类型</param>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BOLL.Length">
+            <summary>
+            周期长度
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BOLL.Offset">
+            <summary>
+            偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BOLL.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BSM.GetValue(System.String,System.Int32)">
+            <summary>
+            获取BSM值
+            </summary>
+            <param name="name">V1,V2,V3,V4</param>
+            <param name="index">索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BSM.GetPosition(System.Int32)">
+            <summary>
+            获取持仓（0-多,1-空）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.Channel.MinSpan">
+            <summary>
+            最小间隔
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.Channel.MPE">
+            <summary>
+            最大偏差值
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.HighLow.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.IndicatorGraph.Name">
+            <summary>
+            图形名称
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.IndicatorGraph.Tag">
+            <summary>
+            图形标签
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.IndicatorGraph.LineStyle">
+            <summary>
+            图形样式
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.IndicatorGraph.Colors">
+            <summary>
+            图形颜色
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.IndicatorGraph.Values">
+            <summary>
+            图形值
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.IndicatorGraph.AddValue(System.Double,System.Drawing.Color)">
+            <summary>
+            添加值
+            </summary>
+            <param name="value"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.IndicatorGraph.Clear">
+            <summary>
+            清空记录
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.Kelther.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.GMA.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.SAR.GetPosition(System.Int32)">
+            <summary>
+            获取持仓（0-多,1-空）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.SAR.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.SART.GetPosition(System.Int32)">
+            <summary>
+            获取持仓（0-多,1-空）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.SPL.CheckTrend(EPI.Model.BarData,EPI.Model.BarData)">
+            <summary>
+            检查趋势方向
+            </summary>
+            <param name="i">2=向上，-2=向下</param>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.SPL.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.TRA.GetSignDatas">
+            <summary>
+            获取信号数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.TRA.MinSpan">
+            <summary>
+            最小间隔
+            </summary>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BOLLA.GetValues(EPI.Asteroids.Indicators.BOLLA.EnumBollLine)">
+            <summary>
+            获取所有Boll值
+            </summary>
+            <param name="bl">Boll线类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BOLLA.GetValue(EPI.Asteroids.Indicators.BOLLA.EnumBollLine,System.Int32)">
+            <summary>
+            获取Boll值
+            </summary>
+            <param name="bl">Boll线类型</param>
+            <param name="index">索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPI.Asteroids.Indicators.BOLLA.GetLast(EPI.Asteroids.Indicators.BOLLA.EnumBollLine)">
+            <summary>
+            获取最后一个Boll值
+            </summary>
+            <param name="bl">Boll线类型</param>
+            <returns></returns>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BOLLA.Length">
+            <summary>
+            周期长度
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BOLLA.Offset">
+            <summary>
+            偏移量
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BOLLA.Rate">
+            <summary>
+            偏离率
+            </summary>
+        </member>
+        <member name="P:EPI.Asteroids.Indicators.BOLLA.Theme">
+            <summary>
+            主题颜色
+            </summary>
+        </member>
+    </members>
+</doc>
